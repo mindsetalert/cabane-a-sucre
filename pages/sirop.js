@@ -1,5 +1,19 @@
+import Image from "next/image";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Sirop.module.css";
+
+function Canne({ size = "normal" }) {
+  return (
+    <div className={size === "small" ? styles.canneSmall : styles.canne}>
+      <Image
+        src="/images/canne.webp"
+        alt="Canne de sirop d'érable 540ml"
+        fill
+        style={{ objectFit: "contain" }}
+      />
+    </div>
+  );
+}
 
 export default function Sirop() {
   const { t } = useLanguage();
@@ -15,18 +29,11 @@ export default function Sirop() {
       </div>
 
       <div className={styles.pricingGrid}>
+
         {/* Canne à l'unité */}
         <div className={styles.pricingCard}>
           <div className={styles.canVisual}>
-            <div className={styles.can}>
-              <div className={styles.canTop} />
-              <div className={styles.canBody}>
-                <span className={styles.canLeaf}>🍁</span>
-                <span className={styles.canMl}>540 ml</span>
-              </div>
-              <div className={styles.canBottom} />
-            </div>
-            <span className={styles.canCount}>×1</span>
+            <Canne size="normal" />
           </div>
           <div className={styles.cardInfo}>
             <h2 className={styles.cardTitle}>{s.unit_title}</h2>
@@ -42,19 +49,11 @@ export default function Sirop() {
         <div className={`${styles.pricingCard} ${styles.featured}`}>
           <div className={styles.badge}>{s.best_value}</div>
           <div className={styles.canVisual}>
-            <div className={styles.canGroup}>
-              {[0,1,2].map(i => (
-                <div key={i} className={styles.can}>
-                  <div className={styles.canTop} />
-                  <div className={styles.canBody}>
-                    <span className={styles.canLeaf}>🍁</span>
-                    <span className={styles.canMl}>540 ml</span>
-                  </div>
-                  <div className={styles.canBottom} />
-                </div>
-              ))}
+            <div className={styles.canRow}>
+              <Canne size="small" />
+              <Canne size="small" />
+              <Canne size="small" />
             </div>
-            <span className={styles.canCount}>×3</span>
           </div>
           <div className={styles.cardInfo}>
             <h2 className={styles.cardTitle}>{s.trio_title}</h2>
@@ -70,29 +69,11 @@ export default function Sirop() {
         {/* Gallon */}
         <div className={styles.pricingCard}>
           <div className={styles.canVisual}>
-            <div className={styles.canGroup}>
-              {[0,1,2,3].map(i => (
-                <div key={i} className={`${styles.can} ${styles.canSmall}`}>
-                  <div className={styles.canTop} />
-                  <div className={styles.canBody}>
-                    <span className={styles.canLeaf}>🍁</span>
-                  </div>
-                  <div className={styles.canBottom} />
-                </div>
+            <div className={styles.canGrid}>
+              {[0,1,2,3,4,5,6,7].map(i => (
+                <Canne key={i} size="small" />
               ))}
             </div>
-            <div className={styles.canGroup}>
-              {[0,1,2,3].map(i => (
-                <div key={i} className={`${styles.can} ${styles.canSmall}`}>
-                  <div className={styles.canTop} />
-                  <div className={styles.canBody}>
-                    <span className={styles.canLeaf}>🍁</span>
-                  </div>
-                  <div className={styles.canBottom} />
-                </div>
-              ))}
-            </div>
-            <span className={styles.canCount}>×8</span>
           </div>
           <div className={styles.cardInfo}>
             <h2 className={styles.cardTitle}>{s.gallon_title}</h2>
@@ -104,6 +85,7 @@ export default function Sirop() {
             <p className={styles.savings}>{s.gallon_savings}</p>
           </div>
         </div>
+
       </div>
 
       <div className={styles.note}>

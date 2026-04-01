@@ -87,85 +87,40 @@
   white-space: nowrap;
 }
 
-/* === CANNES VISUELLES === */
+/* === VRAIES CANNES === */
 .canVisual {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
   margin-bottom: 1.5rem;
-  min-height: 120px;
+  min-height: 160px;
+}
+
+.canne {
+  position: relative;
+  width: 100px;
+  height: 130px;
+}
+
+.canneSmall {
+  position: relative;
+  width: 68px;
+  height: 88px;
+}
+
+.canRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
   justify-content: center;
 }
 
-.canGroup {
-  display: flex;
-  gap: 0.4rem;
-  justify-content: center;
-}
-
-.can {
-  width: 38px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.canSmall {
-  width: 28px;
-}
-
-.canTop {
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(to bottom, #d4a84b, #a87828);
-  border-radius: 4px 4px 0 0;
-}
-
-.canBody {
-  width: 100%;
-  height: 60px;
-  background: linear-gradient(135deg, #c8872a 0%, #8b5a1a 40%, #c8872a 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  border-left: 2px solid rgba(255,255,255,0.1);
-  border-right: 2px solid rgba(0,0,0,0.2);
-}
-
-.canSmall .canBody {
-  height: 45px;
-}
-
-.canLeaf {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.canSmall .canLeaf {
-  font-size: 0.75rem;
-}
-
-.canMl {
-  font-size: 0.5rem;
-  color: rgba(255,255,255,0.8);
-  font-weight: bold;
-}
-
-.canBottom {
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(to top, #7a4a10, #a87828);
-  border-radius: 0 0 4px 4px;
-}
-
-.canCount {
-  font-size: 1.1rem;
-  color: #C9872A;
-  font-weight: bold;
-  margin-top: 0.25rem;
+.canGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+  justify-items: center;
 }
 
 /* === INFO CARTE === */
