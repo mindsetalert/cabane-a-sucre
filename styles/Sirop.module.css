@@ -1,0 +1,241 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.pageIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.pageTitle {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #C9872A;
+  margin-bottom: 0.75rem;
+}
+
+.pageSubtitle {
+  color: #c8b48a;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.canInfo {
+  display: inline-block;
+  background: rgba(201,135,42,0.1);
+  border: 1px solid #C9872A;
+  color: #C9872A;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.pricingCard {
+  background: #1a160f;
+  border: 1px solid #3a2e1a;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.pricingCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(201,135,42,0.15);
+  border-color: #C9872A;
+}
+
+.featured {
+  border-color: #C9872A;
+  background: #1f1a10;
+  box-shadow: 0 4px 30px rgba(201,135,42,0.2);
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #C9872A;
+  color: #0e0c08;
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 0.3rem 1.2rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+/* === CANNES VISUELLES === */
+.canVisual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  min-height: 120px;
+  justify-content: center;
+}
+
+.canGroup {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.can {
+  width: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.canSmall {
+  width: 28px;
+}
+
+.canTop {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to bottom, #d4a84b, #a87828);
+  border-radius: 4px 4px 0 0;
+}
+
+.canBody {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(135deg, #c8872a 0%, #8b5a1a 40%, #c8872a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-left: 2px solid rgba(255,255,255,0.1);
+  border-right: 2px solid rgba(0,0,0,0.2);
+}
+
+.canSmall .canBody {
+  height: 45px;
+}
+
+.canLeaf {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.canSmall .canLeaf {
+  font-size: 0.75rem;
+}
+
+.canMl {
+  font-size: 0.5rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: bold;
+}
+
+.canBottom {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to top, #7a4a10, #a87828);
+  border-radius: 0 0 4px 4px;
+}
+
+.canCount {
+  font-size: 1.1rem;
+  color: #C9872A;
+  font-weight: bold;
+  margin-top: 0.25rem;
+}
+
+/* === INFO CARTE === */
+.cardInfo {
+  width: 100%;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  color: #e8c97a;
+  margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+  color: #c8b48a;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.priceTag {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #C9872A;
+  line-height: 1;
+}
+
+.perUnit {
+  font-size: 0.85rem;
+  color: #8a7560;
+}
+
+.savings {
+  font-size: 0.82rem;
+  color: #7ab87a;
+  font-style: italic;
+}
+
+.note {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #c8b48a;
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.note span {
+  opacity: 0.5;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .featured {
+    order: -1;
+  }
+}
