@@ -20,7 +20,7 @@ const PRODUCTS_FR = [
       { src: "/images/equipement/kit-tube-4.jpg", alt: "Clip de serrage inoxydable" },
     ],
     category: "Presse à sirop",
-    callLabel: "Appelez pour réserver",
+    callLabel: "Pour réserver ou acheter, contactez-nous :",
   },
 ];
 
@@ -41,7 +41,7 @@ const PRODUCTS_EN = [
       { src: "/images/equipement/kit-tube-4.jpg", alt: "Stainless steel clamp" },
     ],
     category: "Syrup press",
-    callLabel: "Call to reserve",
+    callLabel: "To reserve or purchase, contact us:",
   },
 ];
 
@@ -98,10 +98,19 @@ function ProductModal({ product, onClose, lang }) {
               )}
             </div>
             <div className={styles.callBox}>
-              <span className={styles.callIcon}>📞</span>
-              <div>
-                <p className={styles.callLabel}>{product.callLabel}</p>
-                <p className={styles.callNumber}>+1 (819) 743-5003</p>
+              <div className={styles.callRow}>
+                <span className={styles.callIcon}>📞</span>
+                <div>
+                  <p className={styles.callLabel}>{product.callLabel}</p>
+                  <a href="tel:+18197435003" className={styles.callNumber}>+1 (819) 743-5003</a>
+                </div>
+              </div>
+              <div className={styles.callRow}>
+                <span className={styles.callIcon}>✉️</span>
+                <div>
+                  <p className={styles.callLabel}>{lang === "fr" ? "Écrivez-nous" : "Email us"}</p>
+                  <a href="mailto:leighpigeon@hotmail.com" className={styles.callEmail}>leighpigeon@hotmail.com</a>
+                </div>
               </div>
             </div>
           </div>
