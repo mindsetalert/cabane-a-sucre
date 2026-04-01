@@ -13,7 +13,7 @@ const PRODUCTS_FR = [
     stockDate: "2026-06-15",
     description: `Ce kit de tube de verre fileté 1½" est conçu pour être installé directement sur la sortie de votre presse à sirop. Il vous permet de surveiller visuellement la couleur du sirop en temps réel et de détecter rapidement tout bris de filtre avant qu'il ne contamine votre production.\n\nIndispensable pour tout producteur soucieux de la qualité et de la pureté de son sirop d'érable, ce kit est fabriqué en acier inoxydable et verre de haute qualité, résistant à la chaleur et facile à nettoyer.\n\nLe kit comprend :\n• 1 clip à tred femelle 1½"\n• 1 tube de verre (section principale)\n• 1 tube de verre (section secondaire)\n• 1 clip de serrage inoxydable`,
     images: [
-      { src: "/images/equipement/kit-tube-0.jpg", alt: "Kit tube de verre assemblé" },
+      { src: "/images/equipement/kit-tube-2.jpg", alt: "Tube de verre pour presse à sirop" },
       { src: "/images/equipement/kit-tube-1.jpg", alt: "Clip à tred femelle 1½\"" },
       { src: "/images/equipement/kit-tube-2.jpg", alt: "Tube de verre (section principale)" },
       { src: "/images/equipement/kit-tube-3.jpg", alt: "Tube de verre (section secondaire)" },
@@ -34,7 +34,7 @@ const PRODUCTS_EN = [
     stockDate: "2026-06-15",
     description: `This 1½" threaded glass tube kit is designed to be installed directly on the output of your maple syrup press. It allows you to visually monitor the color of the syrup in real time and quickly detect any broken filter before it contaminates your production.\n\nEssential for any producer concerned with the quality and purity of their maple syrup, this kit is made from stainless steel and high-quality heat-resistant glass, easy to clean.\n\nKit includes:\n• 1 female threaded clip 1½"\n• 1 glass tube (main section)\n• 1 glass tube (secondary section)\n• 1 stainless steel clamp`,
     images: [
-      { src: "/images/equipement/kit-tube-0.jpg", alt: "Assembled glass tube kit" },
+      { src: "/images/equipement/kit-tube-2.jpg", alt: "Glass tube for maple syrup press" },
       { src: "/images/equipement/kit-tube-1.jpg", alt: "Female threaded clip 1½\"" },
       { src: "/images/equipement/kit-tube-2.jpg", alt: "Glass tube (main section)" },
       { src: "/images/equipement/kit-tube-3.jpg", alt: "Glass tube (secondary section)" },
@@ -101,7 +101,7 @@ function ProductModal({ product, onClose, lang }) {
               <span className={styles.callIcon}>📞</span>
               <div>
                 <p className={styles.callLabel}>{product.callLabel}</p>
-                <p className={styles.callNumber}>+1 (418) 000-0000</p>
+                <p className={styles.callNumber}>+1 (819) 743-5003</p>
               </div>
             </div>
           </div>

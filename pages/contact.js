@@ -100,7 +100,7 @@ export default function Contact() {
 
           <div className={styles.infoBlock}>
             <h3 className={styles.infoTitle}>📞</h3>
-            <p>+1 (418) 000-0000</p>
+            <p>+1 (819) 743-5003</p>
             <p>info@cabane-a-sucre.ca</p>
           </div>
         </div>
