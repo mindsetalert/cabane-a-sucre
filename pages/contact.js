@@ -86,8 +86,8 @@ export default function Contact() {
         <div className={styles.info}>
           <div className={styles.infoBlock}>
             <h3 className={styles.infoTitle}>{t.contact.address_title}</h3>
-            <p>123 Chemin de l'Érablière</p>
-            <p>Québec, QC G1A 1A1</p>
+            <p>935-C Chemin Deschêne</p>
+            <p>L'Ange-Gardien, QC J8L 4B6</p>
             <p>Canada</p>
           </div>
 
@@ -101,7 +101,7 @@ export default function Contact() {
           <div className={styles.infoBlock}>
             <h3 className={styles.infoTitle}>📞</h3>
             <p>+1 (819) 743-5003</p>
-            <p>info@cabane-a-sucre.ca</p>
+            <p>leighpigeon@hotmail.com</p>
           </div>
         </div>
       </div>
