@@ -310,19 +310,21 @@
 }
 
 .callLabel {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: #8a7560;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.1rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
 }
 
 .callNumber {
-  font-size: 1.15rem;
+  font-size: 1.9rem;
   color: #C9872A;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.2s;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
 }
 
 .callNumber:hover {
@@ -330,15 +332,15 @@
 }
 
 .callEmail {
-  font-size: 0.95rem;
-  color: #C9872A;
+  font-size: 0.88rem;
+  color: #8a7560;
   text-decoration: none;
   transition: color 0.2s;
   word-break: break-all;
 }
 
 .callEmail:hover {
-  color: #e09c35;
+  color: #c8b48a;
 }
 
 @media (max-width: 700px) {
