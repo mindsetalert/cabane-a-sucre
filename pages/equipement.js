@@ -11,7 +11,7 @@ const PRODUCTS_FR = [
     price: "125$ + taxes",
     stock: "6 unités disponibles à partir du 15 juin 2026",
     stockDate: "2026-06-15",
-    description: `Ce kit de tube de verre fileté 1½" est conçu pour être installé directement sur la sortie de votre presse à sirop. Il vous permet de surveiller visuellement la couleur du sirop en temps réel et de détecter rapidement tout bris de filtre avant qu'il ne contamine votre production.\n\nIndispensable pour tout producteur soucieux de la qualité et de la pureté de son sirop d'érable, ce kit est fabriqué en acier inoxydable et verre de haute qualité, résistant à la chaleur et facile à nettoyer.\n\nLe kit comprend :\n• 1 clip à tred femelle 1½"\n• 1 tube de verre (section principale)\n• 1 tube de verre (section secondaire)\n• 1 clip de serrage inoxydable`,
+    description: `Ce kit de tube de verre fileté 1½" est conçu pour être installé directement sur la sortie de votre presse à sirop. Il vous permet de surveiller visuellement la couleur du sirop en temps réel et de détecter rapidement tout bris de filtre avant qu'il ne contamine votre production.\n\nIndispensable pour tout producteur soucieux de la qualité et de la pureté de son sirop d'érable, ce kit est fabriqué en acier inoxydable et verre de haute qualité, résistant à la chaleur et facile à nettoyer.\n\nLe kit comprend :\n• 2 clips de serrage inoxydable\n• 2 réducteurs 1½" clip à NPT tred femelle\n• 2 seals de rubber\n• 1 tube de verre`,
     images: [
       { src: "/images/equipement/kit-tube-2.jpg", alt: "Tube de verre pour presse à sirop" },
       { src: "/images/equipement/kit-tube-1.jpg", alt: "Clip à tred femelle 1½\"" },
@@ -32,7 +32,7 @@ const PRODUCTS_EN = [
     price: "$125 + taxes",
     stock: "6 units available starting June 15, 2026",
     stockDate: "2026-06-15",
-    description: `This 1½" threaded glass tube kit is designed to be installed directly on the output of your maple syrup press. It allows you to visually monitor the color of the syrup in real time and quickly detect any broken filter before it contaminates your production.\n\nEssential for any producer concerned with the quality and purity of their maple syrup, this kit is made from stainless steel and high-quality heat-resistant glass, easy to clean.\n\nKit includes:\n• 1 female threaded clip 1½"\n• 1 glass tube (main section)\n• 1 glass tube (secondary section)\n• 1 stainless steel clamp`,
+    description: `This 1½" threaded glass tube kit is designed to be installed directly on the output of your maple syrup press. It allows you to visually monitor the color of the syrup in real time and quickly detect any broken filter before it contaminates your production.\n\nEssential for any producer concerned with the quality and purity of their maple syrup, this kit is made from stainless steel and high-quality heat-resistant glass, easy to clean.\n\nKit includes:\n• 2 stainless steel clamps\n• 2 reducers 1½" clip to NPT female thread\n• 2 rubber seals\n• 1 glass tube`,
     images: [
       { src: "/images/equipement/kit-tube-2.jpg", alt: "Glass tube for maple syrup press" },
       { src: "/images/equipement/kit-tube-1.jpg", alt: "Female threaded clip 1½\"" },
