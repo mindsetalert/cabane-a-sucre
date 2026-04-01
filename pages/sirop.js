@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Sirop.module.css";
 
@@ -28,6 +29,7 @@ export default function Sirop() {
         <p className={styles.canInfo}>{s.can_info}</p>
       </div>
 
+      {/* 3 options principales */}
       <div className={styles.pricingGrid}>
 
         {/* Canne à l'unité */}
@@ -46,8 +48,7 @@ export default function Sirop() {
         </div>
 
         {/* 3 cannes */}
-        <div className={`${styles.pricingCard} ${styles.featured}`}>
-          <div className={styles.badge}>{s.best_value}</div>
+        <div className={styles.pricingCard}>
           <div className={styles.canVisual}>
             <div className={styles.canRow}>
               <Canne size="small" />
@@ -59,15 +60,16 @@ export default function Sirop() {
             <h2 className={styles.cardTitle}>{s.trio_title}</h2>
             <p className={styles.cardDesc}>{s.trio_desc}</p>
             <div className={styles.priceTag}>
-              <span className={styles.price}>20$</span>
+              <span className={styles.price}>22$</span>
               <span className={styles.perUnit}>{s.per_trio}</span>
             </div>
             <p className={styles.savings}>{s.trio_savings}</p>
           </div>
         </div>
 
-        {/* Gallon */}
-        <div className={styles.pricingCard}>
+        {/* Gallon — meilleure valeur */}
+        <div className={`${styles.pricingCard} ${styles.featured}`}>
+          <div className={styles.badge}>{s.best_value}</div>
           <div className={styles.canVisual}>
             <div className={styles.canGrid}>
               {[0,1,2,3,4,5,6,7].map(i => (
@@ -86,6 +88,39 @@ export default function Sirop() {
           </div>
         </div>
 
+      </div>
+
+      {/* Section volume 5 gallons+ */}
+      <div className={styles.bulkSection}>
+        <div className={styles.bulkBadge}>{s.bulk_badge}</div>
+        <div className={styles.bulkContent}>
+          <div className={styles.bulkLeft}>
+            <div className={styles.bulkCanRow}>
+              {[0,1,2,3,4].map(i => (
+                <div key={i} className={styles.bulkGallonIcon}>
+                  <div className={styles.canGrid2}>
+                    {[0,1,2,3].map(j => <Canne key={j} size="small" />)}
+                  </div>
+                </div>
+              ))}
+              <span className={styles.bulkPlus}>+</span>
+            </div>
+          </div>
+          <div className={styles.bulkRight}>
+            <h2 className={styles.bulkTitle}>{s.bulk_title}</h2>
+            <p className={styles.bulkDesc}>{s.bulk_desc}</p>
+            <div className={styles.bulkPriceRow}>
+              <div className={styles.priceTag}>
+                <span className={styles.price}>{s.bulk_price}</span>
+                <span className={styles.perUnit}>{s.per_bulk}</span>
+              </div>
+              <p className={styles.savings}>{s.bulk_savings}</p>
+            </div>
+            <Link href="/contact" className={styles.bulkBtn}>
+              {s.bulk_contact} →
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div className={styles.note}>

@@ -167,6 +167,105 @@
   font-style: italic;
 }
 
+/* === SECTION VOLUME === */
+.bulkSection {
+  margin-top: 2.5rem;
+  background: linear-gradient(135deg, #1f1a10, #2a2010);
+  border: 1px solid #C9872A;
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.bulkBadge {
+  position: absolute;
+  top: -14px;
+  left: 2rem;
+  background: #C9872A;
+  color: #0e0c08;
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 0.3rem 1.2rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.bulkContent {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.bulkLeft {
+  flex-shrink: 0;
+}
+
+.bulkCanRow {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.bulkGallonIcon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem;
+}
+
+.canGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem;
+}
+
+.bulkPlus {
+  font-size: 2rem;
+  color: #C9872A;
+  font-weight: bold;
+}
+
+.bulkRight {
+  flex: 1;
+}
+
+.bulkTitle {
+  font-size: 1.4rem;
+  color: #e8c97a;
+  margin-bottom: 0.5rem;
+}
+
+.bulkDesc {
+  color: #c8b48a;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.bulkPriceRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.bulkBtn {
+  display: inline-block;
+  background: #C9872A;
+  color: #0e0c08;
+  padding: 0.7rem 1.8rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.bulkBtn:hover {
+  background: #e09c35;
+  transform: translateY(-2px);
+}
+
 .note {
   margin-top: 3rem;
   display: flex;
@@ -192,5 +291,12 @@
   }
   .featured {
     order: -1;
+  }
+  .bulkContent {
+    flex-direction: column;
+  }
+  .bulkCanRow {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
