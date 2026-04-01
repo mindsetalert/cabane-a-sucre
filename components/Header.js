@@ -16,8 +16,10 @@ export default function Header() {
     { href: "/contact", label: t.nav.contact },
   ];
 
+  const isHome = router.pathname === "/";
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isHome ? "" : styles.headerTransparent}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <Image
