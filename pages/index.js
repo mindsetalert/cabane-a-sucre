@@ -43,7 +43,7 @@ export default function Home() {
 
         <div className={styles.card}>
           <div className={styles.cardIcon}>
-            <Image src="/images/equipement/kit-tube-2.jpg" alt="Équipement érablière" width={90} height={110} style={{ objectFit: "contain", borderRadius: "8px" }} />
+            <Image src="/images/equipement/vacuum-1.jpg" alt="Pompe à vide érablière" width={110} height={110} style={{ objectFit: "contain", borderRadius: "8px" }} />
           </div>
           <h2 className={styles.cardTitle}>{t.home.section_equip_title}</h2>
           <p className={styles.cardDesc}>{t.home.section_equip_desc}</p>
