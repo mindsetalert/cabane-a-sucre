@@ -23,11 +23,15 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Le Spot à Sucre Érablière"
-            width={64}
-            height={64}
+            width={82}
+            height={82}
             className={styles.logoImg}
             priority
           />
+          <div className={styles.logoTextBlock}>
+            <span className={styles.logoName}>Le Spot à Sucre</span>
+            <span className={styles.logoSub}>Érablière</span>
+          </div>
         </Link>
 
         <nav className={styles.nav}>
