@@ -74,6 +74,24 @@
   margin-bottom: 1rem;
 }
 
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardPrice {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #C9872A;
+}
+
+.cardStock {
+  font-size: 0.78rem;
+  color: #7ab87a;
+}
+
 .viewBtn {
   background: transparent;
   border: 1px solid #C9872A;
@@ -228,6 +246,29 @@
   color: #e8c97a;
   line-height: 1.4;
   margin: 0;
+}
+
+.modalMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  background: rgba(201,135,42,0.08);
+  border: 1px solid #3a2e1a;
+  border-radius: 10px;
+}
+
+.modalPrice {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #C9872A;
+}
+
+.modalStock {
+  font-size: 0.82rem;
+  color: #7ab87a;
+  line-height: 1.4;
 }
 
 .description {

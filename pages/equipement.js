@@ -8,15 +8,19 @@ const PRODUCTS_FR = [
     id: "kit-tube-verre",
     name: "Kit Tube de Verre 1½\" pour Presse à Sirop",
     short: "Visualisez la couleur du sirop en temps réel à la sortie de votre presse.",
+    price: "125$ + taxes",
+    stock: "6 unités disponibles à partir du 15 juin 2026",
+    stockDate: "2026-06-15",
     description: `Ce kit de tube de verre fileté 1½" est conçu pour être installé directement sur la sortie de votre presse à sirop. Il vous permet de surveiller visuellement la couleur du sirop en temps réel et de détecter rapidement tout bris de filtre avant qu'il ne contamine votre production.\n\nIndispensable pour tout producteur soucieux de la qualité et de la pureté de son sirop d'érable, ce kit est fabriqué en acier inoxydable et verre de haute qualité, résistant à la chaleur et facile à nettoyer.\n\nLe kit comprend :\n• 1 clip à tred femelle 1½"\n• 1 tube de verre (section principale)\n• 1 tube de verre (section secondaire)\n• 1 clip de serrage inoxydable`,
     images: [
+      { src: "/images/equipement/kit-tube-0.jpg", alt: "Kit tube de verre assemblé" },
       { src: "/images/equipement/kit-tube-1.jpg", alt: "Clip à tred femelle 1½\"" },
       { src: "/images/equipement/kit-tube-2.jpg", alt: "Tube de verre (section principale)" },
       { src: "/images/equipement/kit-tube-3.jpg", alt: "Tube de verre (section secondaire)" },
       { src: "/images/equipement/kit-tube-4.jpg", alt: "Clip de serrage inoxydable" },
     ],
     category: "Presse à sirop",
-    callLabel: "Appelez pour plus d'information",
+    callLabel: "Appelez pour réserver",
   },
 ];
 
@@ -25,15 +29,19 @@ const PRODUCTS_EN = [
     id: "kit-tube-verre",
     name: "1½\" Glass Tube Kit for Maple Syrup Press",
     short: "Monitor syrup color in real time at your press output.",
+    price: "$125 + taxes",
+    stock: "6 units available starting June 15, 2026",
+    stockDate: "2026-06-15",
     description: `This 1½" threaded glass tube kit is designed to be installed directly on the output of your maple syrup press. It allows you to visually monitor the color of the syrup in real time and quickly detect any broken filter before it contaminates your production.\n\nEssential for any producer concerned with the quality and purity of their maple syrup, this kit is made from stainless steel and high-quality heat-resistant glass, easy to clean.\n\nKit includes:\n• 1 female threaded clip 1½"\n• 1 glass tube (main section)\n• 1 glass tube (secondary section)\n• 1 stainless steel clamp`,
     images: [
+      { src: "/images/equipement/kit-tube-0.jpg", alt: "Assembled glass tube kit" },
       { src: "/images/equipement/kit-tube-1.jpg", alt: "Female threaded clip 1½\"" },
       { src: "/images/equipement/kit-tube-2.jpg", alt: "Glass tube (main section)" },
       { src: "/images/equipement/kit-tube-3.jpg", alt: "Glass tube (secondary section)" },
       { src: "/images/equipement/kit-tube-4.jpg", alt: "Stainless steel clamp" },
     ],
     category: "Syrup press",
-    callLabel: "Call for more information",
+    callLabel: "Call to reserve",
   },
 ];
 
@@ -74,6 +82,10 @@ function ProductModal({ product, onClose, lang }) {
           <div className={styles.productInfo}>
             <span className={styles.category}>{product.category}</span>
             <h2 className={styles.productName}>{product.name}</h2>
+            <div className={styles.modalMeta}>
+              <span className={styles.modalPrice}>{product.price}</span>
+              <span className={styles.modalStock}>📦 {product.stock}</span>
+            </div>
             <div className={styles.description}>
               {product.description.split("\n").map((line, i) =>
                 line.startsWith("•") ? (
@@ -131,6 +143,10 @@ export default function Equipement() {
               <span className={styles.cardCategory}>{product.category}</span>
               <h3 className={styles.cardName}>{product.name}</h3>
               <p className={styles.cardShort}>{product.short}</p>
+              <div className={styles.cardMeta}>
+                <span className={styles.cardPrice}>{product.price}</span>
+                <span className={styles.cardStock}>📦 {product.stock}</span>
+              </div>
               <button className={styles.viewBtn}>
                 {lang === "fr" ? "Voir le produit →" : "View product →"}
               </button>
