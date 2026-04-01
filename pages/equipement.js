@@ -5,6 +5,25 @@ import styles from "../styles/Equipement.module.css";
 
 const PRODUCTS_FR = [
   {
+    id: "pompe-vacuum",
+    name: "Pompe à Vide avec Convertisseur VFD — 3HP à 10HP",
+    short: "Pompes à vide haute performance avec démarrage progressif VFD monophasé, refroidisseur d'huile inclus.",
+    price: "Sur demande",
+    stock: "Disponible le 1er juillet 2026 : 2 × 3HP • 2 × 5HP • 1 × 7.5HP",
+    stockDate: "2026-07-01",
+    description: `Ces pompes à vide professionnelles sont spécialement conçues pour les érablières exigeant un maximum de rendement et de fiabilité. Disponibles en 3HP, 5HP, 7.5HP et 10HP, chaque unité est livrée avec un convertisseur de fréquence (VFD) permettant un démarrage progressif (slow start) en monophasé.\n\nLe démarrage progressif réduit considérablement le stress sur le moteur électrique, prolongeant ainsi sa durée de vie et évitant les pics de courant au démarrage.\n\nChaque pompe est équipée d'un refroidisseur d'huile intégré, permettant d'atteindre et de maintenir un niveau de vide absolu optimal tout au long de la saison des sucres, même lors des longues journées de production.\n\nCaractéristiques :\n• Puissances disponibles : 3HP, 5HP, 7.5HP et 10HP\n• Convertisseur VFD inclus (monophasé, démarrage progressif)\n• Refroidisseur d'huile intégré\n• Vide absolu maximal garanti\n• Idéale pour les érablières de toutes tailles\n• Durable, fiable et facile d'entretien`,
+    images: [
+      { src: "/images/equipement/vacuum-1.jpg", alt: "Pompe à vide — vue générale" },
+      { src: "/images/equipement/vacuum-2.jpg", alt: "Pompe à vide — vue latérale" },
+      { src: "/images/equipement/vacuum-3.jpg", alt: "Pompe à vide — détail" },
+      { src: "/images/equipement/vacuum-4.jpg", alt: "Pompe à vide — vue arrière" },
+      { src: "/images/equipement/vacuum-5.jpg", alt: "Pompe à vide — vue complète" },
+      { src: "/images/equipement/vacuum-vfd.png", alt: "Convertisseur VFD monophasé inclus" },
+    ],
+    category: "Pompe à vide",
+    callLabel: "Pour réserver ou acheter, contactez-nous :",
+  },
+  {
     id: "kit-tube-verre",
     name: "Kit Tube de Verre 1½\" pour Presse à Sirop",
     short: "Visualisez la couleur du sirop en temps réel à la sortie de votre presse.",
@@ -25,6 +44,25 @@ const PRODUCTS_FR = [
 ];
 
 const PRODUCTS_EN = [
+  {
+    id: "pompe-vacuum",
+    name: "Vacuum Pump with VFD Converter — 3HP to 10HP",
+    short: "High-performance vacuum pumps with single-phase VFD slow start and integrated oil cooler.",
+    price: "On request",
+    stock: "Available July 1st, 2026: 2 × 3HP • 2 × 5HP • 1 × 7.5HP",
+    stockDate: "2026-07-01",
+    description: `These professional vacuum pumps are specifically designed for sugar shacks requiring maximum performance and reliability. Available in 3HP, 5HP, 7.5HP and 10HP, each unit comes with a Variable Frequency Drive (VFD) converter enabling single-phase slow start operation.\n\nThe slow start significantly reduces stress on the electric motor, extending its lifespan and preventing current spikes at startup.\n\nEach pump is equipped with an integrated oil cooler, allowing it to reach and maintain optimal absolute vacuum levels throughout the entire maple season, even during long production days.\n\nFeatures:\n• Available power: 3HP, 5HP, 7.5HP and 10HP\n• VFD converter included (single-phase, slow start)\n• Integrated oil cooler\n• Maximum absolute vacuum guaranteed\n• Ideal for sugar shacks of all sizes\n• Durable, reliable and easy to maintain`,
+    images: [
+      { src: "/images/equipement/vacuum-1.jpg", alt: "Vacuum pump — general view" },
+      { src: "/images/equipement/vacuum-2.jpg", alt: "Vacuum pump — side view" },
+      { src: "/images/equipement/vacuum-3.jpg", alt: "Vacuum pump — detail" },
+      { src: "/images/equipement/vacuum-4.jpg", alt: "Vacuum pump — rear view" },
+      { src: "/images/equipement/vacuum-5.jpg", alt: "Vacuum pump — full view" },
+      { src: "/images/equipement/vacuum-vfd.png", alt: "Single-phase VFD converter included" },
+    ],
+    category: "Vacuum pump",
+    callLabel: "To reserve or purchase, contact us:",
+  },
   {
     id: "kit-tube-verre",
     name: "1½\" Glass Tube Kit for Maple Syrup Press",
