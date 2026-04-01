@@ -1,0 +1,146 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pageIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.pageTitle {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--maple-red);
+  margin-bottom: 0.75rem;
+}
+
+.pageSubtitle {
+  color: var(--text-mid);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.formWrapper {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--text-mid);
+}
+
+.input,
+.textarea {
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--maple-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--maple-cream);
+  color: var(--text-dark);
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--maple-gold);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit {
+  background: var(--maple-red);
+  color: var(--white);
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.15s;
+  align-self: flex-start;
+}
+
+.submit:hover {
+  background: var(--maple-dark);
+  transform: translateY(-2px);
+}
+
+.success {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--maple-brown);
+}
+
+.success span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoBlock {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-left: 4px solid var(--maple-red);
+}
+
+.infoTitle {
+  font-size: 1rem;
+  color: var(--maple-red);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.infoBlock p {
+  color: var(--text-mid);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
