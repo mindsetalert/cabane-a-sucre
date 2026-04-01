@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <section className={styles.hero}>
         <Image
-          src="/images/tubulure.png"
+          src="/images/tubulure.jpg"
           alt="Réseau de tubulure érablière"
           fill
           className={styles.heroBg}
@@ -50,7 +50,7 @@ export default function Home() {
 
       <section className={styles.evapSection}>
         <Image
-          src="/images/evaporateur.png"
+          src="/images/evap.jpg"
           alt="Évaporateur érablière"
           fill
           className={styles.evapBg}
