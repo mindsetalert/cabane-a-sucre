@@ -318,13 +318,13 @@
 }
 
 .callNumber {
-  font-size: 1.9rem;
+  font-size: 1.35rem;
   color: #C9872A;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.2s;
-  letter-spacing: 0.03em;
-  line-height: 1.1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .callNumber:hover {
