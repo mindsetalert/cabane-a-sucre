@@ -1,9 +1,9 @@
 .footer {
-  background-color: var(--maple-brown);
-  color: var(--maple-light);
+  background-color: #0a0804;
+  border-top: 1px solid #3a2e1a;
+  color: #c8b48a;
   text-align: center;
   padding: 2rem 1rem;
-  margin-top: 4rem;
 }
 
 .container {
@@ -14,9 +14,10 @@
 .made {
   font-size: 1rem;
   margin-bottom: 0.4rem;
+  color: #C9872A;
 }
 
 .copy {
   font-size: 0.85rem;
-  opacity: 0.7;
+  opacity: 0.6;
 }

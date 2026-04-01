@@ -1,10 +1,11 @@
 .header {
-  background-color: var(--maple-red);
-  color: var(--white);
+  background-color: #0e0c08;
+  color: #f0e6d0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  border-bottom: 1px solid #3a2e1a;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.6);
 }
 
 .container {
@@ -13,14 +14,20 @@
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
-  height: 72px;
+  gap: 1.5rem;
+  height: 80px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+}
+
+.logoImg {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logoPlaceholder {
@@ -35,12 +42,13 @@
   font-weight: bold;
   letter-spacing: 0.03em;
   white-space: nowrap;
+  color: #C9872A;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.15rem;
   flex: 1;
   flex-wrap: wrap;
 }
@@ -48,36 +56,39 @@
 .navLink {
   padding: 0.4rem 0.85rem;
   border-radius: 4px;
-  font-size: 0.9rem;
-  transition: background 0.2s;
+  font-size: 0.88rem;
+  color: #c8b48a;
+  transition: background 0.2s, color 0.2s;
   white-space: nowrap;
 }
 
 .navLink:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(201,135,42,0.15);
+  color: #C9872A;
 }
 
 .active {
-  background: rgba(255,255,255,0.2);
+  background: rgba(201,135,42,0.2);
+  color: #C9872A;
   font-weight: bold;
 }
 
 .langToggle {
-  background: var(--maple-gold);
-  color: var(--maple-brown);
-  border: none;
-  padding: 0.45rem 1rem;
+  background: transparent;
+  color: #C9872A;
+  border: 1px solid #C9872A;
+  padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: bold;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.2s, color 0.2s;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .langToggle:hover {
-  background: #e09c35;
-  transform: scale(1.04);
+  background: #C9872A;
+  color: #0e0c08;
 }
 
 @media (max-width: 768px) {
@@ -91,7 +102,7 @@
     width: 100%;
     justify-content: center;
   }
-  .logoText {
-    font-size: 0.95rem;
+  .logoImg {
+    height: 52px;
   }
 }

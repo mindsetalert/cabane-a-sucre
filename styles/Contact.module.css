@@ -17,13 +17,13 @@
 
 .pageTitle {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: var(--maple-red);
+  color: #C9872A;
   margin-bottom: 0.75rem;
 }
 
 .pageSubtitle {
-  color: var(--text-mid);
-  font-size: 1.1rem;
+  color: #c8b48a;
+  font-size: 1.05rem;
   font-style: italic;
 }
 
@@ -35,10 +35,10 @@
 }
 
 .formWrapper {
-  background: var(--white);
+  background: #1a160f;
+  border: 1px solid #3a2e1a;
   border-radius: 16px;
   padding: 2.5rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
 .form {
@@ -53,18 +53,18 @@
   gap: 0.4rem;
   font-size: 0.95rem;
   font-weight: bold;
-  color: var(--text-mid);
+  color: #c8b48a;
 }
 
 .input,
 .textarea {
   padding: 0.7rem 1rem;
-  border: 2px solid var(--maple-light);
+  border: 1px solid #3a2e1a;
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
-  background: var(--maple-cream);
-  color: var(--text-dark);
+  background: #0e0c08;
+  color: #f0e6d0;
   transition: border-color 0.2s;
   width: 100%;
 }
@@ -72,7 +72,7 @@
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: var(--maple-gold);
+  border-color: #C9872A;
 }
 
 .textarea {
@@ -81,8 +81,8 @@
 }
 
 .submit {
-  background: var(--maple-red);
-  color: var(--white);
+  background: #C9872A;
+  color: #0e0c08;
   border: none;
   padding: 0.85rem 2rem;
   border-radius: 25px;
@@ -94,7 +94,7 @@
 }
 
 .submit:hover {
-  background: var(--maple-dark);
+  background: #e09c35;
   transform: translateY(-2px);
 }
 
@@ -102,7 +102,7 @@
   text-align: center;
   padding: 2rem;
   font-size: 1.2rem;
-  color: var(--maple-brown);
+  color: #C9872A;
 }
 
 .success span {
@@ -114,27 +114,27 @@
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .infoBlock {
-  background: var(--white);
+  background: #1a160f;
+  border: 1px solid #3a2e1a;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  border-left: 4px solid var(--maple-red);
+  border-left: 3px solid #C9872A;
 }
 
 .infoTitle {
-  font-size: 1rem;
-  color: var(--maple-red);
+  font-size: 0.85rem;
+  color: #C9872A;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 
 .infoBlock p {
-  color: var(--text-mid);
+  color: #c8b48a;
   font-size: 0.95rem;
   line-height: 1.7;
 }

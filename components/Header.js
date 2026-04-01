@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Header.module.css";
@@ -19,10 +20,14 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <div className={styles.logoPlaceholder}>
-            <span>🍁</span>
-            <span className={styles.logoText}>Cabane à Sucre</span>
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt="Le Spot à Sucre Érablière"
+            width={64}
+            height={64}
+            className={styles.logoImg}
+            priority
+          />
         </Link>
 
         <nav className={styles.nav}>
@@ -38,7 +43,7 @@ export default function Header() {
         </nav>
 
         <button className={styles.langToggle} onClick={toggleLang}>
-          {lang === "fr" ? "🇬🇧 English" : "🇫🇷 Français"}
+          {lang === "fr" ? "🇬🇧 EN" : "🇫🇷 FR"}
         </button>
       </div>
     </header>

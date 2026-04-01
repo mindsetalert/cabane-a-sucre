@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Home.module.css";
 
@@ -8,6 +9,13 @@ export default function Home() {
   return (
     <>
       <section className={styles.hero}>
+        <Image
+          src="/images/tubulure.png"
+          alt="Réseau de tubulure érablière"
+          fill
+          className={styles.heroBg}
+          priority
+        />
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>{t.home.hero_title}</h1>
@@ -40,12 +48,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.banner}>
-        <div className={styles.bannerLeaf}>🍁</div>
-        <p className={styles.bannerText}>
-          {t.home.hero_subtitle}
-        </p>
-        <div className={styles.bannerLeaf}>🍁</div>
+      <section className={styles.evapSection}>
+        <Image
+          src="/images/evaporateur.png"
+          alt="Évaporateur érablière"
+          fill
+          className={styles.evapBg}
+        />
+        <div className={styles.evapOverlay} />
+        <div className={styles.evapContent}>
+          <h2 className={styles.evapTitle}>{t.home.section_equip_title}</h2>
+          <p className={styles.evapDesc}>{t.home.section_equip_desc}</p>
+          <Link href="/equipement" className={styles.evapBtn}>
+            {t.home.section_equip_btn}
+          </Link>
+        </div>
       </section>
     </>
   );

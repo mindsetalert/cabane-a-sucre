@@ -10,7 +10,7 @@ export default function Footer() {
       <div className={styles.container}>
         <p className={styles.made}>{t.footer.made_in}</p>
         <p className={styles.copy}>
-          © {year} Cabane à Sucre — {t.footer.rights}
+          © {year} Le Spot à Sucre Érablière — {t.footer.rights}
         </p>
       </div>
     </footer>

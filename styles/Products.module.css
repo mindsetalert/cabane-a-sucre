@@ -17,13 +17,13 @@
 
 .pageTitle {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: var(--maple-red);
+  color: #C9872A;
   margin-bottom: 0.75rem;
 }
 
 .pageSubtitle {
-  color: var(--text-mid);
-  font-size: 1.1rem;
+  color: #c8b48a;
+  font-size: 1.05rem;
   font-style: italic;
 }
 
@@ -34,17 +34,18 @@
 }
 
 .productCard {
-  background: var(--white);
+  background: #1a160f;
+  border: 1px solid #3a2e1a;
   border-radius: 12px;
   padding: 1.75rem;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-  border-left: 4px solid var(--maple-gold);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 3px solid #C9872A;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .productCard:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(139,26,26,0.12);
+  box-shadow: 0 6px 30px rgba(201,135,42,0.15);
+  border-color: #C9872A;
 }
 
 .productTop {
@@ -56,23 +57,24 @@
 }
 
 .productName {
-  font-size: 1.1rem;
-  color: var(--maple-brown);
+  font-size: 1.05rem;
+  color: #e8c97a;
   font-weight: bold;
 }
 
 .productPrice {
-  background: var(--maple-light);
-  color: var(--maple-red);
+  background: rgba(201,135,42,0.15);
+  color: #C9872A;
   font-size: 0.85rem;
   font-weight: bold;
   padding: 0.25rem 0.7rem;
   border-radius: 12px;
   white-space: nowrap;
+  border: 1px solid #C9872A;
 }
 
 .productDesc {
-  color: var(--text-mid);
+  color: #c8b48a;
   font-size: 0.95rem;
   line-height: 1.6;
 }
