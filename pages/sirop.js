@@ -93,34 +93,17 @@ export default function Sirop() {
       {/* Section volume 5 gallons+ */}
       <div className={styles.bulkSection}>
         <div className={styles.bulkBadge}>{s.bulk_badge}</div>
-        <div className={styles.bulkContent}>
-          <div className={styles.bulkLeft}>
-            <div className={styles.bulkCanRow}>
-              {[0,1,2,3,4].map(i => (
-                <div key={i} className={styles.bulkGallonIcon}>
-                  <div className={styles.canGrid2}>
-                    {[0,1,2,3].map(j => <Canne key={j} size="small" />)}
-                  </div>
-                </div>
-              ))}
-              <span className={styles.bulkPlus}>+</span>
-            </div>
-          </div>
-          <div className={styles.bulkRight}>
-            <h2 className={styles.bulkTitle}>{s.bulk_title}</h2>
-            <p className={styles.bulkDesc}>{s.bulk_desc}</p>
-            <div className={styles.bulkPriceRow}>
-              <div className={styles.priceTag}>
-                <span className={styles.price}>{s.bulk_price}</span>
-                <span className={styles.perUnit}>{s.per_bulk}</span>
-              </div>
-              <p className={styles.savings}>{s.bulk_savings}</p>
-            </div>
-            <Link href="/contact" className={styles.bulkBtn}>
-              {s.bulk_contact} →
-            </Link>
-          </div>
+        <div className={styles.bulkIcon}>📦</div>
+        <h2 className={styles.bulkTitle}>{s.bulk_title}</h2>
+        <p className={styles.bulkDesc}>{s.bulk_desc}</p>
+        <div className={styles.bulkPriceBlock}>
+          <span className={styles.bulkPrice}>50$</span>
+          <span className={styles.bulkPer}>{s.per_bulk}</span>
         </div>
+        <p className={styles.bulkSavings}>{s.bulk_savings}</p>
+        <Link href="/contact" className={styles.bulkBtn}>
+          {s.bulk_contact} →
+        </Link>
       </div>
 
       <div className={styles.note}>
