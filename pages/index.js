@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Home.module.css";
 
+
 export default function Home() {
   const { t } = useLanguage();
 
@@ -28,7 +29,9 @@ export default function Home() {
 
       <section className={styles.sections}>
         <div className={styles.card}>
-          <div className={styles.cardIcon}>🍯</div>
+          <div className={styles.cardIcon}>
+            <Image src="/images/canne.webp" alt="Canne de sirop d'érable" width={90} height={110} style={{ objectFit: "contain" }} />
+          </div>
           <h2 className={styles.cardTitle}>{t.home.section_sirop_title}</h2>
           <p className={styles.cardDesc}>{t.home.section_sirop_desc}</p>
           <Link href="/sirop" className={styles.cardBtn}>
@@ -39,7 +42,9 @@ export default function Home() {
         <div className={styles.divider} />
 
         <div className={styles.card}>
-          <div className={styles.cardIcon}>⚙️</div>
+          <div className={styles.cardIcon}>
+            <Image src="/images/equipement/kit-tube-2.jpg" alt="Équipement érablière" width={90} height={110} style={{ objectFit: "contain", borderRadius: "8px" }} />
+          </div>
           <h2 className={styles.cardTitle}>{t.home.section_equip_title}</h2>
           <p className={styles.cardDesc}>{t.home.section_equip_desc}</p>
           <Link href="/equipement" className={styles.cardBtn}>
