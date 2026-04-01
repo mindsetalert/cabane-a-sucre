@@ -320,9 +320,22 @@
     grid-template-columns: 1fr;
   }
   .modal {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    max-height: 95vh;
   }
   .mainImgWrap {
-    height: 220px;
+    height: 200px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .overlay {
+    padding: 0.5rem;
+    align-items: flex-end;
+  }
+  .modal {
+    border-radius: 18px 18px 0 0;
+    width: 100%;
+    max-width: 100%;
   }
 }

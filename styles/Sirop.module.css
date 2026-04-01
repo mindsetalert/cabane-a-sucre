@@ -278,19 +278,20 @@
 }
 
 @media (max-width: 768px) {
+  .page {
+    padding: 2rem 1rem 4rem;
+  }
   .pricingGrid {
     grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 100%;
   }
   .featured {
     order: -1;
   }
-  .bulkContent {
-    flex-direction: column;
+  .bulkSection {
+    padding: 2rem 1.25rem;
   }
-  .bulkCanRow {
-    flex-wrap: wrap;
-    justify-content: center;
+  .canGrid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
