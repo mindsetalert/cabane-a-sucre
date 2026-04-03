@@ -21,6 +21,24 @@
   margin-bottom: 0.75rem;
 }
 
+.mapleLeaf {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1rem;
+  animation: leafFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 16px rgba(201,135,42,0.5));
+}
+
+.mapleLeaf svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes leafFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+
 .pageTitle {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   color: #C9872A;

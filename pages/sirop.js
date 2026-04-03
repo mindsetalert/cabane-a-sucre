@@ -23,8 +23,44 @@ export default function Sirop() {
   return (
     <div className={styles.page}>
       <div className={styles.pageHeader}>
-        <div className={styles.pageIconImg}>
-          <Image src="/images/canne.webp" alt="Canne de sirop d'érable" width={80} height={100} style={{ objectFit: "contain" }} />
+        <div className={styles.mapleLeaf}>
+          <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 5
+              C50 5 45 18 38 20 C30 22 22 15 22 15
+              C22 15 26 25 22 30 C18 35 8 32 8 32
+              C8 32 16 38 15 45 C14 52 5 55 5 55
+              C5 55 16 55 18 62 C20 69 12 75 12 75
+              C12 75 22 70 28 74 C34 78 33 88 33 88
+              C33 88 40 80 50 82
+              C60 80 67 88 67 88
+              C67 88 66 78 72 74 C78 70 88 75 88 75
+              C88 75 80 69 82 62 C84 55 95 55 95 55
+              C95 55 86 52 85 45 C84 38 92 32 92 32
+              C92 32 82 35 78 30 C74 25 78 15 78 15
+              C78 15 70 22 62 20 C55 18 50 5 50 5Z"
+              fill="url(#goldGradient)"
+              filter="url(#glow)"
+            />
+            <rect x="47" y="82" width="6" height="22" rx="3" fill="url(#stemGradient)" />
+            <defs>
+              <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#e8c97a" />
+                <stop offset="50%" stopColor="#C9872A" />
+                <stop offset="100%" stopColor="#a86d18" />
+              </linearGradient>
+              <linearGradient id="stemGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#C9872A" />
+                <stop offset="100%" stopColor="#7a4a10" />
+              </linearGradient>
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                <feMerge>
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+          </svg>
         </div>
         <h1 className={styles.pageTitle}>{s.title}</h1>
         <p className={styles.pageSubtitle}>{s.subtitle}</p>
