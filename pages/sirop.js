@@ -23,7 +23,9 @@ export default function Sirop() {
   return (
     <div className={styles.page}>
       <div className={styles.pageHeader}>
-        <span className={styles.pageIcon}>🍯</span>
+        <div className={styles.pageIconImg}>
+          <Image src="/images/canne.webp" alt="Canne de sirop d'érable" width={80} height={100} style={{ objectFit: "contain" }} />
+        </div>
         <h1 className={styles.pageTitle}>{s.title}</h1>
         <p className={styles.pageSubtitle}>{s.subtitle}</p>
         <p className={styles.canInfo}>{s.can_info}</p>

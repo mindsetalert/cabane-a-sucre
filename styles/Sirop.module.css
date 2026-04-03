@@ -15,6 +15,12 @@
   margin-bottom: 0.75rem;
 }
 
+.pageIconImg {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
 .pageTitle {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   color: #C9872A;
