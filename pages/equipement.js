@@ -5,6 +5,22 @@ import styles from "../styles/Equipement.module.css";
 
 const PRODUCTS_FR = [
   {
+    id: "contacteur-relai-wifi",
+    name: "Contacteur 60A AC-3 + Relai WiFi 110V — Démarrage à distance",
+    short: "Démarrez votre vacuum ou toute autre machine à distance via WiFi avec application mobile.",
+    price: "Relai WiFi : 109.99$ + taxes  |  Contacteur 60A : 124.99$ + taxes",
+    stock: "Disponible — vendus séparément ou ensemble",
+    stockDate: null,
+    description: `Ce système de démarrage à distance combine un contacteur industriel de 60 ampères AC-3 et un relai WiFi 110V avec application mobile, pour vous permettre de démarrer votre pompe à vide, votre évaporateur ou toute autre machine directement depuis votre téléphone.\n\nLe relai WiFi se connecte à votre réseau et se contrôle via une application simple et intuitive. Programmez des horaires de démarrage automatique, activez ou désactivez vos équipements à distance — même en dehors de votre érablière.\n\nLe contacteur de 60A AC-3 est un composant industriel robuste, conçu pour supporter les démarrages répétés de moteurs électriques lourds sans surchauffe ni usure prématurée.\n\nCaractéristiques :\n• Relai WiFi 110V avec application mobile incluse (iOS et Android)\n• Contacteur industriel 60A AC-3\n• Démarrage à distance via WiFi\n• Programmation horaire possible\n• Compatible avec pompes à vide, moteurs électriques et autres équipements\n• Vendus séparément ou en ensemble selon vos besoins`,
+    images: [
+      { src: "/images/equipement/relai-wifi-1.jpg", alt: "Relai WiFi 110V avec application mobile" },
+      { src: "/images/equipement/relai-wifi-2.jpg", alt: "Interface et application du relai WiFi" },
+      { src: "/images/equipement/contacteur-1.jpg", alt: "Contacteur industriel 60A AC-3" },
+    ],
+    category: "Électrique & Contrôle",
+    callLabel: "Pour réserver ou acheter, contactez-nous :",
+  },
+  {
     id: "pompe-vacuum",
     name: "Pompe à Vide avec Convertisseur VFD — 3HP à 10HP",
     short: "Pompes à vide haute performance avec démarrage progressif VFD monophasé, refroidisseur d'huile inclus.",
@@ -44,6 +60,22 @@ const PRODUCTS_FR = [
 ];
 
 const PRODUCTS_EN = [
+  {
+    id: "contacteur-relai-wifi",
+    name: "60A AC-3 Contactor + 110V WiFi Relay — Remote Start",
+    short: "Start your vacuum pump or any machine remotely via WiFi with a mobile app.",
+    price: "WiFi Relay: $109.99 + taxes  |  60A Contactor: $124.99 + taxes",
+    stock: "Available — sold separately or together",
+    stockDate: null,
+    description: `This remote start system combines an industrial 60-amp AC-3 contactor and a 110V WiFi relay with mobile app, allowing you to start your vacuum pump, evaporator or any other machine directly from your phone.\n\nThe WiFi relay connects to your network and is controlled via a simple, intuitive app. Set automatic start schedules, activate or deactivate your equipment remotely — even from outside your sugar shack.\n\nThe 60A AC-3 contactor is a robust industrial component designed to handle repeated heavy-duty motor starts without overheating or premature wear.\n\nFeatures:\n• 110V WiFi relay with mobile app included (iOS and Android)\n• Industrial 60A AC-3 contactor\n• Remote start via WiFi\n• Programmable scheduling\n• Compatible with vacuum pumps, electric motors and other equipment\n• Sold separately or together depending on your needs`,
+    images: [
+      { src: "/images/equipement/relai-wifi-1.jpg", alt: "110V WiFi relay with mobile app" },
+      { src: "/images/equipement/relai-wifi-2.jpg", alt: "WiFi relay app interface" },
+      { src: "/images/equipement/contacteur-1.jpg", alt: "Industrial 60A AC-3 contactor" },
+    ],
+    category: "Electrical & Control",
+    callLabel: "To reserve or purchase, contact us:",
+  },
   {
     id: "pompe-vacuum",
     name: "Vacuum Pump with VFD Converter — 3HP to 10HP",
