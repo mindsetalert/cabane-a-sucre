@@ -262,17 +262,60 @@
 }
 
 .modalPrice {
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #C9872A;
-  line-height: 1.8;
-  white-space: pre-line;
 }
 
 .modalStock {
   font-size: 0.82rem;
   color: #7ab87a;
   line-height: 1.4;
+}
+
+/* Tableau de prix aligné */
+.priceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.25rem;
+}
+
+.priceRow td, .priceRowTotal td {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+.priceRow td {
+  color: #c8b48a;
+}
+
+.priceRowTotal td {
+  color: #C9872A;
+  font-weight: bold;
+  font-size: 1.05rem;
+  border-top: 1px solid #3a2e1a;
+  padding-top: 0.5rem;
+}
+
+.priceLabel {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.priceAmount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: 'Courier New', monospace;
+  padding-left: 1.5rem !important;
+  white-space: nowrap;
+}
+
+.priceTax {
+  text-align: left;
+  padding-left: 0.5rem !important;
+  font-size: 0.78rem;
+  opacity: 0.6;
+  white-space: nowrap;
 }
 
 .description {

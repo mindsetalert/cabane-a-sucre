@@ -8,7 +8,12 @@ const PRODUCTS_FR = [
     id: "contacteur-relai-wifi",
     name: "Contacteur 60A AC-3 + Relai WiFi 110V — Démarrage à distance",
     short: "Démarrez votre vacuum ou toute autre machine à distance via WiFi avec application mobile.",
-    price: "Relai WiFi : 109.99$ + taxes\nContacteur 60A : 124.99$ + taxes\nKit complet : 234.98$ + taxes",
+    prices: [
+      { label: "Relai WiFi", amount: "109.99$" },
+      { label: "Contacteur 60A", amount: "124.99$" },
+      { label: "Kit complet", amount: "234.98$" },
+    ],
+    price: "Kit complet : 234.98$ + taxes",
     stock: "En stock : 3 relais WiFi • 1 contacteur 60A",
     stockDate: null,
     description: `Ce système de démarrage à distance combine un contacteur industriel de 60 ampères AC-3 et un relai WiFi 110V avec application mobile, pour vous permettre de démarrer votre pompe à vide, votre évaporateur ou toute autre machine directement depuis votre téléphone.\n\nLe relai WiFi se connecte à votre réseau et se contrôle via une application simple et intuitive. Programmez des horaires de démarrage automatique, activez ou désactivez vos équipements à distance — même en dehors de votre érablière.\n\nLe contacteur de 60A AC-3 est un composant industriel robuste, conçu pour supporter les démarrages répétés de moteurs électriques lourds sans surchauffe ni usure prématurée.\n\nCaractéristiques :\n• Relai WiFi 110V avec application mobile incluse (iOS et Android)\n• Contacteur industriel 60A AC-3\n• Démarrage à distance via WiFi\n• Programmation horaire possible\n• Compatible avec pompes à vide, moteurs électriques et autres équipements\n• Vendus séparément ou en ensemble selon vos besoins`,
@@ -64,7 +69,12 @@ const PRODUCTS_EN = [
     id: "contacteur-relai-wifi",
     name: "60A AC-3 Contactor + 110V WiFi Relay — Remote Start",
     short: "Start your vacuum pump or any machine remotely via WiFi with a mobile app.",
-    price: "WiFi Relay: $109.99 + taxes\n60A Contactor: $124.99 + taxes\nComplete Kit: $234.98 + taxes",
+    prices: [
+      { label: "WiFi Relay", amount: "$109.99" },
+      { label: "60A Contactor", amount: "$124.99" },
+      { label: "Complete Kit", amount: "$234.98" },
+    ],
+    price: "Complete Kit: $234.98 + taxes",
     stock: "In stock: 3 WiFi relays • 1 contactor 60A",
     stockDate: null,
     description: `This remote start system combines an industrial 60-amp AC-3 contactor and a 110V WiFi relay with mobile app, allowing you to start your vacuum pump, evaporator or any other machine directly from your phone.\n\nThe WiFi relay connects to your network and is controlled via a simple, intuitive app. Set automatic start schedules, activate or deactivate your equipment remotely — even from outside your sugar shack.\n\nThe 60A AC-3 contactor is a robust industrial component designed to handle repeated heavy-duty motor starts without overheating or premature wear.\n\nFeatures:\n• 110V WiFi relay with mobile app included (iOS and Android)\n• Industrial 60A AC-3 contactor\n• Remote start via WiFi\n• Programmable scheduling\n• Compatible with vacuum pumps, electric motors and other equipment\n• Sold separately or together depending on your needs`,
@@ -153,7 +163,21 @@ function ProductModal({ product, onClose, lang }) {
             <span className={styles.category}>{product.category}</span>
             <h2 className={styles.productName}>{product.name}</h2>
             <div className={styles.modalMeta}>
-              <span className={styles.modalPrice}>{product.price}</span>
+              {product.prices ? (
+                <table className={styles.priceTable}>
+                  <tbody>
+                    {product.prices.map((p, i) => (
+                      <tr key={i} className={i === product.prices.length - 1 ? styles.priceRowTotal : styles.priceRow}>
+                        <td className={styles.priceLabel}>{p.label}</td>
+                        <td className={styles.priceAmount}>{p.amount}</td>
+                        <td className={styles.priceTax}>+ taxes</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : (
+                <span className={styles.modalPrice}>{product.price}</span>
+              )}
               <span className={styles.modalStock}>📦 {product.stock}</span>
             </div>
             <div className={styles.description}>
