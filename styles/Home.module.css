@@ -27,6 +27,11 @@
   transition: transform 0.6s ease;
 }
 
+.equipmentBg {
+  object-fit: contain;
+  background: #050403;
+}
+
 .splitPanel:hover .splitBg {
   transform: scale(1.05);
 }

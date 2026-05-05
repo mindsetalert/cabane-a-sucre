@@ -53,7 +53,7 @@ export default function Home() {
             src="/images/equipement-promo-0910.png"
             alt="Équipement d'érablière professionnel"
             fill
-            className={styles.splitBg}
+            className={`${styles.splitBg} ${styles.equipmentBg}`}
             priority
           />
           <div className={styles.splitOverlay} />
