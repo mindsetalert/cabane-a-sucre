@@ -48,8 +48,14 @@ export default function Home() {
       <div className={styles.splitPage}>
 
         {/* ── Équipement ── */}
-        <Link href="/equipement" className={styles.splitPanel}
-          style={{ backgroundImage: "url('/images/equipement-promo.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <Link href="/equipement" className={styles.splitPanel}>
+          <Image
+            src="/images/tubulure.jpg"
+            alt="Équipement d'érablière professionnel"
+            fill
+            className={styles.splitBg}
+            priority
+          />
           <div className={styles.splitOverlay} />
           <div className={styles.splitContent}>
             <span className={styles.splitIcon}>⚙️</span>
