@@ -50,7 +50,7 @@ export default function Home() {
         {/* ── Équipement ── */}
         <Link href="/equipement" className={styles.splitPanel}>
           <Image
-            src="/images/equipement-hero.png"
+            src="/images/equipement-promo.png"
             alt="Équipement d'érablière professionnel"
             fill
             className={styles.splitBg}

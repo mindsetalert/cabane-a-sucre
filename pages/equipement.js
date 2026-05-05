@@ -343,7 +343,7 @@ export default function Equipement() {
       <div className={styles.heroSection}>
         <div className={styles.heroImgWrap}>
           <Image
-            src="/images/equipement-hero.png"
+            src="/images/equipement-promo.png"
             alt="Équipement érablière professionnel — Le Spot à Sucre"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
