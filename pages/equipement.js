@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Equipement.module.css";
@@ -9,11 +10,11 @@ const PRODUCTS_FR = [
     name: "Contacteur 60A AC-3 + Relai WiFi 110V — Démarrage à distance",
     short: "Démarrez votre vacuum ou toute autre machine à distance via WiFi avec application mobile.",
     prices: [
-      { label: "Relai WiFi", amount: "109.99$" },
-      { label: "Contacteur 60A", amount: "124.99$" },
-      { label: "Kit complet", amount: "234.98$" },
+      { label: "Relai WiFi 110V — 63 Amp", amount: "109.99$" },
+      { label: "Contacteur 60A — Monophasé/Triphasé 240V", amount: "124.99$" },
+      { label: "Kit complet", amount: "229.99$", total: true },
     ],
-    price: "Kit complet : 234.98$ + taxes",
+    price: "Kit complet : 229.99$ + taxes",
     stock: "En stock : 3 relais WiFi • 1 contacteur 60A",
     stockDate: null,
     description: `Ce système de démarrage à distance combine un contacteur industriel de 60 ampères AC-3 et un relai WiFi 110V avec application mobile, pour vous permettre de démarrer votre pompe à vide, votre évaporateur ou toute autre machine directement depuis votre téléphone.\n\nLe relai WiFi se connecte à votre réseau et se contrôle via une application simple et intuitive. Programmez des horaires de démarrage automatique, activez ou désactivez vos équipements à distance — même en dehors de votre érablière.\n\nLe contacteur de 60A AC-3 est un composant industriel robuste, conçu pour supporter les démarrages répétés de moteurs électriques lourds sans surchauffe ni usure prématurée.\n\nCaractéristiques :\n• Relai WiFi 110V avec application mobile incluse (iOS et Android)\n• Contacteur industriel 60A AC-3\n• Démarrage à distance via WiFi\n• Programmation horaire possible\n• Compatible avec pompes à vide, moteurs électriques et autres équipements\n• Vendus séparément ou en ensemble selon vos besoins`,
@@ -27,12 +28,19 @@ const PRODUCTS_FR = [
   },
   {
     id: "pompe-vacuum",
-    name: "Pompe à Vide avec Convertisseur VFD — 3HP à 10HP",
+    name: "Pompe à Vide avec Convertisseur VFD — 1.5HP à 10HP",
     short: "Pompes à vide haute performance avec démarrage progressif VFD monophasé, refroidisseur d'huile inclus.",
-    price: "Sur demande",
+    prices: [
+      { label: "1.5 HP — Drive inclut — 21 CFM (800 entailles)",   amount: "2 099.99$" },
+      { label: "3 HP   — Drive inclut — 45 CFM (1 500 entailles)", amount: "3 199.99$" },
+      { label: "5 HP   — Drive inclut — 71 CFM (3 000 entailles)", amount: "4 499.99$" },
+      { label: "7.5 HP — Drive inclut — 113 CFM (6 000 entailles)",amount: "4 999.99$" },
+      { label: "10 HP  — Drive inclut — 142 CFM (8 000 entailles)",amount: "5 499.99$" },
+    ],
+    price: "À partir de 2 099.99$ + taxes",
     stock: "Disponible le 1er juillet 2026 : 2 × 3HP • 2 × 5HP • 1 × 7.5HP",
     stockDate: "2026-07-01",
-    description: `Ces pompes à vide professionnelles sont spécialement conçues pour les érablières exigeant un maximum de rendement et de fiabilité. Disponibles en 3HP, 5HP, 7.5HP et 10HP, chaque unité est livrée avec un convertisseur de fréquence (VFD) permettant un démarrage progressif (slow start) en monophasé.\n\nLe démarrage progressif réduit considérablement le stress sur le moteur électrique, prolongeant ainsi sa durée de vie et évitant les pics de courant au démarrage.\n\nChaque pompe est équipée d'un refroidisseur d'huile intégré, permettant d'atteindre et de maintenir un niveau de vide absolu optimal tout au long de la saison des sucres, même lors des longues journées de production.\n\nCaractéristiques :\n• Puissances disponibles : 3HP, 5HP, 7.5HP et 10HP\n• Convertisseur VFD inclus (monophasé, démarrage progressif)\n• Refroidisseur d'huile intégré\n• Vide absolu maximal garanti\n• Idéale pour les érablières de toutes tailles\n• Durable, fiable et facile d'entretien`,
+    description: `Ces pompes à vide à l'huile à palettes rotatives professionnelles sont spécialement conçues pour les érablières exigeant un maximum de rendement et de fiabilité. La technologie à palettes rotatives lubrifiées à l'huile garantit un vide absolu profond et stable, même lors des longues journées de production en saison des sucres.\n\nChaque unité est livrée complète avec un convertisseur de fréquence (VFD) permettant un démarrage progressif (slow start) en monophasé. Le démarrage progressif réduit considérablement le stress sur le moteur électrique, prolongeant sa durée de vie et évitant les pics de courant.\n\nChaque pompe est équipée d'un refroidisseur d'huile intégré pour maintenir un vide absolu optimal tout au long de la saison.\n\nModèles disponibles :\n• 1.5 HP — Drive inclut — 21 CFM — 800 entailles\n• 3 HP — Drive inclut — 45 CFM — 1 500 entailles\n• 5 HP — Drive inclut — 71 CFM — 3 000 entailles\n• 7.5 HP — Drive inclut — 113 CFM — 6 000 entailles\n• 10 HP — Drive inclut — 142 CFM — 8 000 entailles\n\nCaractéristiques :\n• Type : pompe à vide à l'huile à palettes rotatives\n• Convertisseur VFD inclus (monophasé, démarrage progressif)\n• Refroidisseur d'huile intégré\n• Vide absolu maximal garanti\n• Idéale pour les érablières de toutes tailles\n• Durable, fiable et facile d'entretien`,
     images: [
       { src: "/images/equipement/vacuum-1.jpg", alt: "Pompe à vide — vue générale" },
       { src: "/images/equipement/vacuum-2.jpg", alt: "Pompe à vide — vue latérale" },
@@ -40,8 +48,50 @@ const PRODUCTS_FR = [
       { src: "/images/equipement/vacuum-4.jpg", alt: "Pompe à vide — vue arrière" },
       { src: "/images/equipement/vacuum-5.jpg", alt: "Pompe à vide — vue complète" },
       { src: "/images/equipement/vacuum-vfd.png", alt: "Convertisseur VFD monophasé inclus" },
+      { src: "/images/equipement/vacuum-7.png", alt: "Pompe à vide 7.5 HP et 10 HP" },
     ],
     category: "Pompe à vide",
+    callLabel: "Pour réserver ou acheter, contactez-nous :",
+  },
+  {
+    id: "tote-inox",
+    name: "Totes en Acier Inoxydable — 650 L et 1000 L",
+    short: "Alternative aux barils. Remplissage 7x plus rapide, empilables, acier inoxydable. Dépôt de 400$ requis.",
+    stock: "Disponible sur commande — livraison rapide",
+    stockDate: null,
+    prices: [
+      { label: "Tote 650 L (143 gal imp.)", amount: "1 395$" },
+      { label: "Tote 1000 L (220 gal imp.)", amount: "1 795$" },
+      { label: "Valve papillon (option)", amount: "75$" },
+    ],
+    price: "À partir de 1 395$ — Dépôt 400$",
+    description: `Totes conçues pour offrir une alternative aux barils. Cette transaction s'agit d'un dépôt de 400$ sur le prix de vente. La balance sera payable lors du ramassage.\n\nCapacités disponibles :\n• 650 litres (143 gallons impériaux) — 39-3/8'' × 47-3/8'' × 30'' de haut\n• 1000 litres (220 gallons impériaux) — 39-3/8'' × 47-3/8'' × 45'' de haut\n\nMatériau : Acier inoxydable 1/16''\n\nInclus :\n• Sortie ferrule 2'' avec capuchon et collier en bas\n• Entrée de 6'' avec collier, capuchon et bouchon fileté 2'' (comme les barils) sur le dessus\n• Palette et cage de protection en acier galvanisé\n• Option : valve papillon de sortie 75$\n\nAvantages :\n• Classement 7x plus rapide — Soyez payés plus rapidement\n• Se vide complètement au niveau — Évite tout résidu, facilite le nettoyage\n• 1 tote 1000 L = 6.5 barils de 34 gallons • 1 tote 650 L = 4.2 barils de 34 gallons\n• Entreposage en hauteur — Empilable 3 de haut\n• Moins de manutention — Réduit le risque de bris et perte de sirop\n• Transport facile par chariot élévateur ou transpalette\n• Refroidit plus vite que la tote de plastique — Limite le foncissement du sirop\n• Meilleure conservation — Barrière contre l'oxygène et la lumière, conserve plusieurs années sans oxydation ni fermentation\n• Entreposage extérieur sans risque — Résiste au soleil et à la pluie\n\nConditions de vente :\n• Dépôt requis : 400$ (balance payable au ramassage)\n• Ramassage : Estrie (Sainte-Cécile-de-Whitton) ou Bas-Saint-Laurent (Sainte-Rita)\n• Livraison possible — Contactez-nous pour les détails et grandes quantités`,
+    images: [
+      { src: "/images/equipement/tote-1.jpg", alt: "Tote en acier inoxydable — vue générale" },
+      { src: "/images/equipement/tote-2.jpg", alt: "Tote en acier inoxydable — couvercle" },
+      { src: "/images/equipement/tote-3.jpg", alt: "Tote en acier inoxydable — valve" },
+      { src: "/images/equipement/tote-4.jpg", alt: "Tote en acier inoxydable — façade" },
+    ],
+    category: "Entreposage",
+    callLabel: "Pour commander ou réserver, contactez-nous :",
+  },
+  {
+    id: "canneuse-automatique",
+    name: "Canneuse Automatique",
+    short: "18 cannes par minute, 3 secondes par canne. Compatible cannes standard et petit baril. Acier inoxydable, 120V.",
+    stock: "Disponible sur commande — livraison rapide",
+    stockDate: null,
+    prices: [
+      { label: "🍁 Prix en vente", amount: "1 795$", total: true },
+      { label: "Prix régulier", amount: "2 095$" },
+    ],
+    price: "1 795$ 🍁 (En vente)",
+    description: `Canneuse automatique pour toutes les cannes de sirop d'érable standards ainsi que les cannes petit barils.\n\nVient avec un adaptateur pour canne petit barils.\n\nComplètement en acier inoxydable, durable et simple à l'utilisation.\n\nCaractéristiques :\n• 3 secondes seulement par canne\n• Production d'environ 18 cannes par minute\n• Très rapide — pièces de rechange disponibles\n• 120 Volt standard\n• Vient avec une pédale\n• Garantie de 2 ans\n• Livraison possible`,
+    images: [
+      { src: "/images/equipement/canneuse-1.jpg", alt: "Canneuse automatique — vue principale" },
+      { src: "/images/equipement/canneuse-2.jpg", alt: "Canneuse automatique — vue détaillée" },
+    ],
+    category: "Canneuse",
     callLabel: "Pour réserver ou acheter, contactez-nous :",
   },
   {
@@ -58,6 +108,7 @@ const PRODUCTS_FR = [
       { src: "/images/equipement/kit-tube-2.jpg", alt: "Tube de verre (section principale)" },
       { src: "/images/equipement/kit-tube-3.jpg", alt: "Tube de verre (section secondaire)" },
       { src: "/images/equipement/kit-tube-4.jpg", alt: "Clip de serrage inoxydable" },
+      { src: "/images/equipement/kit-tube-seal.jpg", alt: "Seals de rubber inclus" },
     ],
     category: "Presse à sirop",
     callLabel: "Pour réserver ou acheter, contactez-nous :",
@@ -70,11 +121,11 @@ const PRODUCTS_EN = [
     name: "60A AC-3 Contactor + 110V WiFi Relay — Remote Start",
     short: "Start your vacuum pump or any machine remotely via WiFi with a mobile app.",
     prices: [
-      { label: "WiFi Relay", amount: "$109.99" },
-      { label: "60A Contactor", amount: "$124.99" },
-      { label: "Complete Kit", amount: "$234.98" },
+      { label: "WiFi Relay 110V — 63 Amp", amount: "$109.99" },
+      { label: "60A Contactor — Single/Three Phase 240V", amount: "$124.99" },
+      { label: "Complete Kit", amount: "$229.99", total: true },
     ],
-    price: "Complete Kit: $234.98 + taxes",
+    price: "Complete Kit: $229.99 + taxes",
     stock: "In stock: 3 WiFi relays • 1 contactor 60A",
     stockDate: null,
     description: `This remote start system combines an industrial 60-amp AC-3 contactor and a 110V WiFi relay with mobile app, allowing you to start your vacuum pump, evaporator or any other machine directly from your phone.\n\nThe WiFi relay connects to your network and is controlled via a simple, intuitive app. Set automatic start schedules, activate or deactivate your equipment remotely — even from outside your sugar shack.\n\nThe 60A AC-3 contactor is a robust industrial component designed to handle repeated heavy-duty motor starts without overheating or premature wear.\n\nFeatures:\n• 110V WiFi relay with mobile app included (iOS and Android)\n• Industrial 60A AC-3 contactor\n• Remote start via WiFi\n• Programmable scheduling\n• Compatible with vacuum pumps, electric motors and other equipment\n• Sold separately or together depending on your needs`,
@@ -88,12 +139,19 @@ const PRODUCTS_EN = [
   },
   {
     id: "pompe-vacuum",
-    name: "Vacuum Pump with VFD Converter — 3HP to 10HP",
+    name: "Vacuum Pump with VFD Converter — 1.5HP to 10HP",
     short: "High-performance vacuum pumps with single-phase VFD slow start and integrated oil cooler.",
-    price: "On request",
+    prices: [
+      { label: "1.5 HP — Drive included — 21 CFM (800 taps)",    amount: "$2,099.99" },
+      { label: "3 HP   — Drive included — 45 CFM (1,500 taps)",  amount: "$3,199.99" },
+      { label: "5 HP   — Drive included — 71 CFM (3,000 taps)",  amount: "$4,499.99" },
+      { label: "7.5 HP — Drive included — 113 CFM (6,000 taps)", amount: "$4,999.99" },
+      { label: "10 HP  — Drive included — 142 CFM (8,000 taps)", amount: "$5,499.99" },
+    ],
+    price: "From $2,099.99 + taxes",
     stock: "Available July 1st, 2026: 2 × 3HP • 2 × 5HP • 1 × 7.5HP",
     stockDate: "2026-07-01",
-    description: `These professional vacuum pumps are specifically designed for sugar shacks requiring maximum performance and reliability. Available in 3HP, 5HP, 7.5HP and 10HP, each unit comes with a Variable Frequency Drive (VFD) converter enabling single-phase slow start operation.\n\nThe slow start significantly reduces stress on the electric motor, extending its lifespan and preventing current spikes at startup.\n\nEach pump is equipped with an integrated oil cooler, allowing it to reach and maintain optimal absolute vacuum levels throughout the entire maple season, even during long production days.\n\nFeatures:\n• Available power: 3HP, 5HP, 7.5HP and 10HP\n• VFD converter included (single-phase, slow start)\n• Integrated oil cooler\n• Maximum absolute vacuum guaranteed\n• Ideal for sugar shacks of all sizes\n• Durable, reliable and easy to maintain`,
+    description: `These professional rotary vane oil vacuum pumps are specifically designed for sugar shacks requiring maximum performance and reliability. The oil-lubricated rotary vane technology delivers deep, stable absolute vacuum even during long production days throughout the maple season.\n\nEach unit comes complete with a Variable Frequency Drive (VFD) converter enabling single-phase slow start operation. The slow start significantly reduces stress on the electric motor, extending its lifespan and preventing current spikes at startup.\n\nEach pump is equipped with an integrated oil cooler to maintain optimal absolute vacuum levels throughout the entire maple season.\n\nAvailable models:\n• 1.5 HP — Drive included — 21 CFM — 800 taps\n• 3 HP — Drive included — 45 CFM — 1,500 taps\n• 5 HP — Drive included — 71 CFM — 3,000 taps\n• 7.5 HP — Drive included — 113 CFM — 6,000 taps\n• 10 HP — Drive included — 142 CFM — 8,000 taps\n\nFeatures:\n• Type: rotary vane oil vacuum pump\n• VFD converter included (single-phase, slow start)\n• Integrated oil cooler\n• Maximum absolute vacuum guaranteed\n• Ideal for sugar shacks of all sizes\n• Durable, reliable and easy to maintain`,
     images: [
       { src: "/images/equipement/vacuum-1.jpg", alt: "Vacuum pump — general view" },
       { src: "/images/equipement/vacuum-2.jpg", alt: "Vacuum pump — side view" },
@@ -101,8 +159,50 @@ const PRODUCTS_EN = [
       { src: "/images/equipement/vacuum-4.jpg", alt: "Vacuum pump — rear view" },
       { src: "/images/equipement/vacuum-5.jpg", alt: "Vacuum pump — full view" },
       { src: "/images/equipement/vacuum-vfd.png", alt: "Single-phase VFD converter included" },
+      { src: "/images/equipement/vacuum-7.png", alt: "Vacuum pump 7.5 HP and 10 HP" },
     ],
     category: "Vacuum pump",
+    callLabel: "To reserve or purchase, contact us:",
+  },
+  {
+    id: "tote-inox",
+    name: "Stainless Steel Totes — 650 L and 1000 L",
+    short: "Alternative to barrels. 7x faster grading, stackable, stainless steel. $400 deposit required.",
+    stock: "Available on order — fast delivery",
+    stockDate: null,
+    prices: [
+      { label: "650 L Tote (143 imp. gal.)", amount: "$1,395" },
+      { label: "1000 L Tote (220 imp. gal.)", amount: "$1,795" },
+      { label: "Butterfly valve (option)", amount: "$75" },
+    ],
+    price: "From $1,395 — $400 Deposit",
+    description: `Totes designed as an alternative to barrels. This transaction requires a $400 deposit on the sale price. The balance is payable at pickup.\n\nAvailable capacities:\n• 650 litres (143 imperial gallons) — 39-3/8'' × 47-3/8'' × 30'' high\n• 1000 litres (220 imperial gallons) — 39-3/8'' × 47-3/8'' × 45'' high\n\nMaterial: 1/16'' Stainless steel\n\nIncluded:\n• 2'' ferrule outlet with cap and clamp at the bottom\n• 6'' top opening with clamp, cap and 2'' threaded plug (like barrels) on top\n• Galvanized steel pallet and protective cage\n• Option: butterfly outlet valve $75\n\nAdvantages:\n• 7x faster grading — Get paid faster\n• Drains completely when level — Avoids residue, easy to clean\n• 1 tote 1000 L = 6.5 barrels of 34 gallons • 1 tote 650 L = 4.2 barrels of 34 gallons\n• Vertical storage — Stackable 3 high\n• Less handling — Reduces risk of breakage and syrup loss\n• Easy transport by forklift or pallet jack\n• Cools faster than plastic totes — Limits darkening of syrup\n• Better preservation — Barrier against oxygen and light, preserves for years without oxidation or fermentation\n• Outdoor storage safe — Resistant to sun and rain\n\nTerms of sale:\n• Required deposit: $400 (balance payable at pickup)\n• Pickup: Estrie (Sainte-Cécile-de-Whitton) or Lower St. Lawrence (Sainte-Rita)\n• Delivery available — Contact us for details and large quantities`,
+    images: [
+      { src: "/images/equipement/tote-1.jpg", alt: "Stainless steel tote — general view" },
+      { src: "/images/equipement/tote-2.jpg", alt: "Stainless steel tote — lid" },
+      { src: "/images/equipement/tote-3.jpg", alt: "Stainless steel tote — valve" },
+      { src: "/images/equipement/tote-4.jpg", alt: "Stainless steel tote — front" },
+    ],
+    category: "Storage",
+    callLabel: "To order or reserve, contact us:",
+  },
+  {
+    id: "canneuse-automatique",
+    name: "Automatic Canning Machine",
+    short: "18 cans per minute, 3 seconds per can. Compatible with standard maple syrup cans and small barrels. Stainless steel, 120V.",
+    stock: "Available on order — fast delivery",
+    stockDate: null,
+    prices: [
+      { label: "🍁 Sale price", amount: "$1,795", total: true },
+      { label: "Regular price", amount: "$2,095" },
+    ],
+    price: "$1,795 🍁 (On Sale)",
+    description: `Automatic canning machine for all standard maple syrup cans as well as small barrel cans.\n\nComes with an adapter for small barrel cans.\n\nCompletely made of stainless steel, durable and easy to use.\n\nFeatures:\n• Only 3 seconds per can\n• Production of approximately 18 cans per minute\n• Very fast — replacement parts available\n• Standard 120 Volt\n• Comes with a foot pedal\n• 2-year warranty\n• Delivery available`,
+    images: [
+      { src: "/images/equipement/canneuse-1.jpg", alt: "Automatic canning machine — main view" },
+      { src: "/images/equipement/canneuse-2.jpg", alt: "Automatic canning machine — detailed view" },
+    ],
+    category: "Canning Machine",
     callLabel: "To reserve or purchase, contact us:",
   },
   {
@@ -119,6 +219,7 @@ const PRODUCTS_EN = [
       { src: "/images/equipement/kit-tube-2.jpg", alt: "Glass tube (main section)" },
       { src: "/images/equipement/kit-tube-3.jpg", alt: "Glass tube (secondary section)" },
       { src: "/images/equipement/kit-tube-4.jpg", alt: "Stainless steel clamp" },
+      { src: "/images/equipement/kit-tube-seal.jpg", alt: "Rubber seals included" },
     ],
     category: "Syrup press",
     callLabel: "To reserve or purchase, contact us:",
@@ -167,10 +268,10 @@ function ProductModal({ product, onClose, lang }) {
                 <table className={styles.priceTable}>
                   <tbody>
                     {product.prices.map((p, i) => (
-                      <tr key={i} className={i === product.prices.length - 1 ? styles.priceRowTotal : styles.priceRow}>
+                      <tr key={i} className={p.total ? styles.priceRowTotal : styles.priceRow}>
                         <td className={styles.priceLabel}>{p.label}</td>
                         <td className={styles.priceAmount}>{p.amount}</td>
-                        <td className={styles.priceTax}>+ taxes</td>
+                        <td className={styles.priceTax}>{p.amount !== "Sur demande" && p.amount !== "On request" ? "+ taxes" : ""}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -178,7 +279,7 @@ function ProductModal({ product, onClose, lang }) {
               ) : (
                 <span className={styles.modalPrice}>{product.price}</span>
               )}
-              <span className={styles.modalStock}>📦 {product.stock}</span>
+              {product.stock && <span className={styles.modalStock}>✅ {product.stock}</span>}
             </div>
             <div className={styles.description}>
               {product.description.split("\n").map((line, i) =>
@@ -203,7 +304,7 @@ function ProductModal({ product, onClose, lang }) {
                 <span className={styles.callIcon}>✉️</span>
                 <div>
                   <p className={styles.callLabel}>{lang === "fr" ? "Écrivez-nous" : "Email us"}</p>
-                  <a href="mailto:leighpigeon@hotmail.com" className={styles.callEmail}>leighpigeon@hotmail.com</a>
+                  <a href="mailto:erabliere.lespotasucre@gmail.com" className={styles.callEmail}>erabliere.lespotasucre@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -220,11 +321,40 @@ export default function Equipement() {
   const products = lang === "fr" ? PRODUCTS_FR : PRODUCTS_EN;
   const e = t.equipement;
 
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      const product = products.find(p => p.id === hash);
+      if (product) setSelected(product);
+    }
+  }, [lang]);
+
   return (
     <div className={styles.page}>
-      <div className={styles.pageHeader}>
-        <h1 className={styles.pageTitle}>{e.title}</h1>
-        <p className={styles.pageSubtitle}>{e.subtitle}</p>
+      <Head>
+        <title>Équipement Érablière — Le Spot à Sucre</title>
+        <meta name="description" content="Équipement professionnel pour érablières : pompes à vide VFD 1.5HP à 10HP, totes inox 650L et 1000L, canneuse automatique, contacteur 60A et relai WiFi. Livraison possible." />
+        <meta name="keywords" content="équipement érablière, pompe à vide érablière, vacuum pump maple, pompe VFD érablière, tote inox érablière, canneuse automatique sirop, contacteur 60A érablière, démarrage automatique érablière, équipement acéricole, Québec, Outaouais, L'Ange-Gardien" />
+        <meta property="og:title" content="Équipement Érablière — Le Spot à Sucre" />
+        <meta property="og:description" content="Pompes à vide, totes inox, canneuse automatique et plus pour votre érablière." />
+        <meta property="og:url" content="https://erablierelespotasucre.com/equipement" />
+        <link rel="canonical" href="https://erablierelespotasucre.com/equipement" />
+      </Head>
+      <div className={styles.heroSection}>
+        <div className={styles.heroImgWrap}>
+          <Image
+            src="/images/equipement-hero.png"
+            alt="Équipement érablière professionnel — Le Spot à Sucre"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
+            priority
+          />
+          <div className={styles.heroOverlay} />
+        </div>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>{e.title}</h1>
+          <p className={styles.heroSubtitle}>{e.subtitle}</p>
+        </div>
       </div>
 
       <div className={styles.grid}>
@@ -248,7 +378,7 @@ export default function Equipement() {
               <p className={styles.cardShort}>{product.short}</p>
               <div className={styles.cardMeta}>
                 <span className={styles.cardPrice}>{product.price}</span>
-                <span className={styles.cardStock}>📦 {product.stock}</span>
+                {product.stock && <span className={styles.cardStock}>✅ {product.stock}</span>}
               </div>
               <button className={styles.viewBtn}>
                 {lang === "fr" ? "Voir le produit →" : "View product →"}
@@ -275,3 +405,4 @@ export default function Equipement() {
     </div>
   );
 }
+
