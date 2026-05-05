@@ -28,14 +28,14 @@ const PRODUCTS_FR = [
   },
   {
     id: "pompe-vacuum",
-    name: "Pompe à Vide avec Convertisseur VFD — 1.5HP à 10HP",
+    name: "Pompe à Vide SPS avec Convertisseur VFD — SPS 150 à SPS 1000",
     short: "Pompes à vide haute performance avec démarrage progressif VFD monophasé, refroidisseur d'huile inclus.",
     prices: [
-      { label: "SPS 150 — 1.5 HP — Drive inclut — 21 CFM (800 entailles)",    amount: "2 099.99$" },
-      { label: "SPS 300 — 3 HP — Drive inclut — 45 CFM (1 500 entailles)",    amount: "3 199.99$" },
-      { label: "SPS 500 — 5 HP — Drive inclut — 71 CFM (3 000 entailles)",    amount: "4 499.99$" },
-      { label: "SPS 750 — 7.5 HP — Drive inclut — 113 CFM (6 000 entailles)", amount: "4 999.99$" },
-      { label: "SPS 1000 — 10 HP — Drive inclut — 142 CFM (8 000 entailles)", amount: "5 499.99$" },
+      { label: "MODÈLE SPS 150 — 1.5 HP — Drive inclut — 21 CFM (800 entailles)",    amount: "2 099.99$" },
+      { label: "MODÈLE SPS 300 — 3 HP — Drive inclut — 45 CFM (1 500 entailles)",    amount: "3 199.99$" },
+      { label: "MODÈLE SPS 500 — 5 HP — Drive inclut — 71 CFM (3 000 entailles)",    amount: "4 499.99$" },
+      { label: "MODÈLE SPS 750 — 7.5 HP — Drive inclut — 113 CFM (6 000 entailles)", amount: "4 999.99$" },
+      { label: "MODÈLE SPS 1000 — 10 HP — Drive inclut — 142 CFM (8 000 entailles)", amount: "5 499.99$" },
     ],
     price: "À partir de 2 099.99$ + taxes",
     stock: "Disponible le 1er juillet 2026 : 2 × SPS 300 (3HP) • 2 × SPS 500 (5HP) • 1 × SPS 750 (7.5HP)",
@@ -139,14 +139,14 @@ const PRODUCTS_EN = [
   },
   {
     id: "pompe-vacuum",
-    name: "Vacuum Pump with VFD Converter — 1.5HP to 10HP",
+    name: "SPS Vacuum Pump with VFD Converter — SPS 150 to SPS 1000",
     short: "High-performance vacuum pumps with single-phase VFD slow start and integrated oil cooler.",
     prices: [
-      { label: "SPS 150 — 1.5 HP — Drive included — 21 CFM (800 taps)",    amount: "$2,099.99" },
-      { label: "SPS 300 — 3 HP — Drive included — 45 CFM (1,500 taps)",    amount: "$3,199.99" },
-      { label: "SPS 500 — 5 HP — Drive included — 71 CFM (3,000 taps)",    amount: "$4,499.99" },
-      { label: "SPS 750 — 7.5 HP — Drive included — 113 CFM (6,000 taps)", amount: "$4,999.99" },
-      { label: "SPS 1000 — 10 HP — Drive included — 142 CFM (8,000 taps)", amount: "$5,499.99" },
+      { label: "MODEL SPS 150 — 1.5 HP — Drive included — 21 CFM (800 taps)",    amount: "$2,099.99" },
+      { label: "MODEL SPS 300 — 3 HP — Drive included — 45 CFM (1,500 taps)",    amount: "$3,199.99" },
+      { label: "MODEL SPS 500 — 5 HP — Drive included — 71 CFM (3,000 taps)",    amount: "$4,499.99" },
+      { label: "MODEL SPS 750 — 7.5 HP — Drive included — 113 CFM (6,000 taps)", amount: "$4,999.99" },
+      { label: "MODEL SPS 1000 — 10 HP — Drive included — 142 CFM (8,000 taps)", amount: "$5,499.99" },
     ],
     price: "From $2,099.99 + taxes",
     stock: "Available July 1st, 2026: 2 × SPS 300 (3HP) • 2 × SPS 500 (5HP) • 1 × SPS 750 (7.5HP)",
@@ -343,7 +343,7 @@ export default function Equipement() {
       <div className={styles.heroSection}>
         <div className={styles.heroImgWrap}>
           <Image
-            src="/images/equipement-promo.png"
+            src="/images/tubulure.jpg"
             alt="Équipement érablière professionnel — Le Spot à Sucre"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
