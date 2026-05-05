@@ -331,6 +331,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 0.25rem;
+  table-layout: fixed;
 }
 
 .priceRow td, .priceRowTotal td {
@@ -352,23 +353,27 @@
 
 .priceLabel {
   text-align: left;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  width: 70%;
 }
 
 .priceAmount {
   text-align: right;
   font-variant-numeric: tabular-nums;
   font-family: 'Courier New', monospace;
-  padding-left: 1.5rem !important;
+  padding-left: 0.5rem !important;
   white-space: nowrap;
+  width: 20%;
 }
 
 .priceTax {
   text-align: left;
-  padding-left: 0.5rem !important;
+  padding-left: 0.25rem !important;
   font-size: 0.78rem;
   opacity: 0.6;
   white-space: nowrap;
+  width: 10%;
 }
 
 .description {
