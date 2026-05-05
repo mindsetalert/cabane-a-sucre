@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erablierelespotasucre.com/sitemap.xml
+

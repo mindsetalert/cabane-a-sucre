@@ -1,217 +1,137 @@
-.hero {
+/* ── Split portal page ── */
+.splitPage {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 64px);
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.splitPanel {
   position: relative;
-  min-height: 580px;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.heroBg {
+.splitBg {
   position: absolute;
   inset: 0;
   object-fit: cover;
   object-position: center;
   z-index: 0;
+  transition: transform 0.6s ease;
 }
 
-.heroOverlay {
+.splitPanel:hover .splitBg {
+  transform: scale(1.05);
+}
+
+.splitOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10,8,4,0.55) 0%, rgba(10,8,4,0.75) 100%);
+  background: linear-gradient(to bottom, rgba(10,8,4,0.45) 0%, rgba(10,8,4,0.75) 100%);
   z-index: 1;
+  transition: background 0.4s ease;
 }
 
-.heroContent {
+.splitPanel:hover .splitOverlay {
+  background: linear-gradient(to bottom, rgba(10,8,4,0.35) 0%, rgba(10,8,4,0.65) 100%);
+}
+
+.splitContent {
   position: relative;
   z-index: 2;
   text-align: center;
   color: #f0e6d0;
-  padding: 2rem;
-  max-width: 720px;
-}
-
-.heroTitle {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #e8c97a;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
-}
-
-.heroSubtitle {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-.heroCta {
-  display: inline-block;
-  background: #C9872A;
-  color: #0e0c08;
-  padding: 0.9rem 2.4rem;
-  border-radius: 30px;
-  font-size: 1.05rem;
-  font-weight: bold;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.heroCta:hover {
-  background: #e09c35;
-  transform: translateY(-2px);
-}
-
-.sections {
-  max-width: 1100px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
-  display: flex;
-  gap: 2rem;
-  align-items: stretch;
-}
-
-.card {
-  flex: 1;
-  background: #1a160f;
-  border: 1px solid #3a2e1a;
-  border-radius: 16px;
-  padding: 2.5rem;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  gap: 1rem;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 40px rgba(201,135,42,0.2);
-  border-color: #C9872A;
+.splitIcon {
+  font-size: 3.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
 }
 
-.cardIcon {
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.cardTitle {
-  font-size: 1.5rem;
-  color: #C9872A;
-  margin-bottom: 1rem;
-}
-
-.cardDesc {
-  color: #c8b48a;
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  flex: 1;
-  line-height: 1.7;
-}
-
-.cardBtn {
-  display: inline-block;
-  background: transparent;
-  color: #C9872A;
-  border: 1px solid #C9872A;
-  padding: 0.65rem 1.8rem;
-  border-radius: 25px;
-  font-size: 0.95rem;
+.splitTitle {
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: bold;
-  transition: background 0.2s, color 0.2s;
-}
-
-.cardBtn:hover {
-  background: #C9872A;
-  color: #0e0c08;
-}
-
-.divider {
-  width: 1px;
-  background: #3a2e1a;
-  align-self: stretch;
-}
-
-.evapSection {
-  position: relative;
-  min-height: 400px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.evapBg {
-  position: absolute;
-  inset: 0;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-}
-
-.evapOverlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10,8,4,0.65);
-  z-index: 1;
-}
-
-.evapContent {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 3rem 2rem;
-  color: #f0e6d0;
-  max-width: 700px;
-}
-
-.evapTitle {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
   color: #e8c97a;
-  margin-bottom: 1rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.9);
+  margin: 0;
+  letter-spacing: 0.02em;
 }
 
-.evapDesc {
-  color: #c8b48a;
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+.splitSub {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: #ddd0b0;
+  max-width: 320px;
+  line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.8);
+  margin: 0;
 }
 
-.evapBtn {
+.splitBtn {
   display: inline-block;
+  margin-top: 0.5rem;
   background: #C9872A;
   color: #0e0c08;
-  padding: 0.8rem 2rem;
-  border-radius: 25px;
+  padding: 0.8rem 2.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
   font-weight: bold;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-.evapBtn:hover {
+.splitPanel:hover .splitBtn {
   background: #e09c35;
+  transform: translateY(-3px);
 }
 
+.splitDivider {
+  width: 2px;
+  background: rgba(232,201,122,0.3);
+  align-self: stretch;
+  z-index: 3;
+  flex-shrink: 0;
+}
+
+/* ── Mobile ── */
 @media (max-width: 700px) {
-  .hero {
-    min-height: 420px;
-  }
-  .sections {
+  .splitPage {
     flex-direction: column;
-    gap: 1.5rem;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    height: auto;
+    min-height: calc(100vh - 60px);
   }
-  .divider {
+
+  .splitPanel {
+    min-height: 45vh;
+  }
+
+  .splitDivider {
     width: 100%;
-    height: 1px;
+    height: 2px;
   }
-  .evapSection {
-    min-height: 280px;
+
+  .splitContent {
+    padding: 2rem 1.5rem;
+    gap: 0.8rem;
+  }
+
+  .splitIcon {
+    font-size: 2.5rem;
+  }
+
+  .splitSub {
+    max-width: 280px;
   }
 }

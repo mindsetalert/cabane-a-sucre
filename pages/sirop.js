@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../lib/LanguageContext";
@@ -22,33 +23,24 @@ export default function Sirop() {
 
   return (
     <div className={styles.page}>
+      <Head>
+        <title>Sirop d'Érable Pur — Le Spot à Sucre Érablière</title>
+        <meta name="description" content="Sirop d'érable pur du Québec, récolté et transformé avec passion. Disponible à la canne, en trio ou au gallon. Producteur local en Outaouais." />
+        <meta name="keywords" content="sirop d'érable pur, sirop d'érable Québec, sirop d'érable Outaouais, achat sirop d'érable, sirop claire médium foncé, sirop érable producteur local, érablière L'Ange-Gardien, Le Spot à Sucre sirop, pure maple syrup Quebec" />
+        <meta property="og:title" content="Sirop d'Érable Pur — Le Spot à Sucre" />
+        <meta property="og:description" content="Sirop d'érable pur du Québec. À la canne, trio ou gallon. Producteur local en Outaouais." />
+        <meta property="og:url" content="https://erablierelespotasucre.com/sirop" />
+        <link rel="canonical" href="https://erablierelespotasucre.com/sirop" />
+      </Head>
       <div className={styles.pageHeader}>
         <div className={styles.mapleLeaf}>
-          <svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="goldGrad" x1="20%" y1="0%" x2="80%" y2="100%">
-                <stop offset="0%" stopColor="#f0d878" />
-                <stop offset="45%" stopColor="#C9872A" />
-                <stop offset="100%" stopColor="#8b5210" />
-              </linearGradient>
-              <filter id="leafGlow">
-                <feGaussianBlur stdDeviation="3" result="blur" />
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-            {/* Vraie feuille d'érable — 11 pointes */}
-            <path
-              d="M50,4
-                 L45,22 L30,14 L37,30 L18,27 L27,43
-                 L4,44 L18,57 L10,73 L32,65 L29,84
-                 L50,76 L71,84 L68,65 L90,73 L82,57
-                 L96,44 L73,43 L82,27 L63,30 L70,14 Z"
-              fill="url(#goldGrad)"
-              filter="url(#leafGlow)"
-            />
-            {/* Tige */}
-            <rect x="47" y="80" width="6" height="28" rx="3" fill="#a86d18" />
-          </svg>
+          <Image
+            src="/images/feuille-derable.png"
+            alt="Feuille d'érable"
+            width={110}
+            height={110}
+            style={{ objectFit: "contain" }}
+          />
         </div>
         <h1 className={styles.pageTitle}>{s.title}</h1>
         <p className={styles.pageSubtitle}>{s.subtitle}</p>
@@ -80,13 +72,14 @@ export default function Sirop() {
               <Canne size="small" />
               <Canne size="small" />
               <Canne size="small" />
+              <Canne size="small" />
             </div>
           </div>
-          <div className={styles.cardInfo}>
+            <div className={styles.cardInfo}>
             <h2 className={styles.cardTitle}>{s.trio_title}</h2>
             <p className={styles.cardDesc}>{s.trio_desc}</p>
             <div className={styles.priceTag}>
-              <span className={styles.price}>22$</span>
+              <span className={styles.price}>30$</span>
               <span className={styles.perUnit}>{s.per_trio}</span>
             </div>
             <p className={styles.savings}>{s.trio_savings}</p>
@@ -140,3 +133,4 @@ export default function Sirop() {
     </div>
   );
 }
+

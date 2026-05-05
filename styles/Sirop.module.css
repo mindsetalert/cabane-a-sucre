@@ -22,16 +22,11 @@
 }
 
 .mapleLeaf {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto 1rem;
   animation: leafFloat 3s ease-in-out infinite;
-  filter: drop-shadow(0 4px 16px rgba(201,135,42,0.5));
-}
-
-.mapleLeaf svg {
-  width: 100%;
-  height: 100%;
+  filter: drop-shadow(0 4px 16px rgba(201,135,42,0.4));
 }
 
 @keyframes leafFloat {

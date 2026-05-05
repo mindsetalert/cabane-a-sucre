@@ -9,7 +9,7 @@ export default function Header() {
   const router = useRouter();
 
   const navLinks = [
-    { href: "/", label: t.nav.home },
+    { href: "/accueil", label: t.nav.home },
     { href: "/sirop", label: t.nav.sirop },
     { href: "/equipement", label: t.nav.equipement },
     { href: "/histoire", label: t.nav.histoire },
@@ -49,7 +49,7 @@ export default function Header() {
         </nav>
 
         <button className={styles.langToggle} onClick={toggleLang}>
-          {lang === "fr" ? "🇬🇧 EN" : "🇫🇷 FR"}
+          {lang === "fr" ? "🇨🇦 EN" : "🇫🇷 FR"}
         </button>
       </div>
     </header>
