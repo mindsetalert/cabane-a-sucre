@@ -8,6 +8,8 @@ export const translations = {
       title: "Équipement Érablière",
       subtitle: "Pompes à vide, totes inox, canneuse automatique, démarrage automatique et plus — Prix compétitifs",
       cta: "Cliquez sur un produit pour voir les détails — Appelez au (819) 743-5003 pour commander",
+      carousel: "Nos Produits",
+      catalog: "Catalogue complet",
     },
     contact: {
       title: "Contactez-nous",
@@ -41,6 +43,8 @@ export const translations = {
       title: "Sugar Shack Equipment",
       subtitle: "Vacuum pumps, stainless totes, canning machine, automatic start and more — Competitive prices",
       cta: "Click on a product to see details — Call (819) 743-5003 to order",
+      carousel: "Our Products",
+      catalog: "Full catalog",
     },
     contact: {
       title: "Contact Us",

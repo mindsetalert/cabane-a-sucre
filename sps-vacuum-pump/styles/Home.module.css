@@ -1,0 +1,67 @@
+.heroLanding {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 72px);
+  min-height: 520px;
+  background: #050403;
+  overflow: hidden;
+}
+
+.heroImg {
+  object-fit: contain;
+  object-position: center;
+}
+
+.heroScrollBtn {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  background: #C9872A;
+  color: #0e0c08;
+  border: none;
+  padding: 0.85rem 2.4rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.heroScrollBtn:hover {
+  background: #e09c35;
+  transform: translateX(-50%) translateY(-3px);
+}
+
+.catalogHeader {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.catalogTitle {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: #C9872A;
+  margin-bottom: 0.5rem;
+}
+
+.catalogSubtitle {
+  color: #c8b48a;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .heroLanding {
+    height: auto;
+    min-height: calc(100vh - 60px);
+    aspect-ratio: 3 / 4;
+  }
+
+  .heroScrollBtn {
+    bottom: 1.2rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
