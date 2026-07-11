@@ -6,6 +6,8 @@ import styles from "../styles/Contact.module.css";
 
 export default function Contact() {
   const { lang, t } = useLanguage();
+  const c = t.contact;
+  const m = t.meta;
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -33,9 +35,7 @@ export default function Contact() {
       setForm({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
       console.error("EmailJS error:", err);
-      alert(lang === "fr"
-        ? "Erreur lors de l'envoi. Veuillez réessayer ou nous appeler au (819) 743-5003."
-        : "Error sending message. Please try again or call us at (819) 743-5003.");
+      alert(c.error);
     }
     setLoading(false);
   };
@@ -43,16 +43,16 @@ export default function Contact() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>Contact — SPS Vacuum Pump</title>
-        <meta name="description" content="Contactez SPS Vacuum Pump pour acheter de l'équipement d'érablière. Téléphone : (819) 743-5003." />
-        <meta property="og:title" content="Contact — SPS Vacuum Pump" />
+        <title>{m.contact_title}</title>
+        <meta name="description" content={m.contact_description} />
+        <meta property="og:title" content={m.contact_title} />
         <meta property="og:url" content="https://spsvacuumpump.com/contact" />
         <link rel="canonical" href="https://spsvacuumpump.com/contact" />
       </Head>
       <div className={styles.pageHeader}>
         <span className={styles.pageIcon}>✉️</span>
-        <h1 className={styles.pageTitle}>{t.contact.title}</h1>
-        <p className={styles.pageSubtitle}>{t.contact.subtitle}</p>
+        <h1 className={styles.pageTitle}>{c.title}</h1>
+        <p className={styles.pageSubtitle}>{c.subtitle}</p>
       </div>
 
       <div className={styles.layout}>
@@ -60,28 +60,28 @@ export default function Contact() {
           {sent ? (
             <div className={styles.success}>
               <span>✅</span>
-              <p>{lang === "fr" ? "Message envoyé! On vous recontacte bientôt." : "Message sent! We'll get back to you soon."}</p>
+              <p>{c.sent}</p>
             </div>
           ) : (
             <form className={styles.form} onSubmit={handleSubmit}>
               <label className={styles.label}>
-                {t.contact.name}
+                {c.name}
                 <input className={styles.input} type="text" name="name" value={form.name} onChange={handleChange} required />
               </label>
               <label className={styles.label}>
-                {t.contact.email}
+                {c.email}
                 <input className={styles.input} type="email" name="email" value={form.email} onChange={handleChange} required />
               </label>
               <label className={styles.label}>
-                {t.contact.phone}
+                {c.phone}
                 <input className={styles.input} type="tel" name="phone" value={form.phone} onChange={handleChange} />
               </label>
               <label className={styles.label}>
-                {t.contact.message}
+                {c.message}
                 <textarea className={styles.textarea} name="message" value={form.message} onChange={handleChange} rows={5} required />
               </label>
               <button className={styles.submit} type="submit" disabled={loading}>
-                {loading ? (lang === "fr" ? "Envoi en cours..." : "Sending...") : t.contact.send}
+                {loading ? c.sending : c.send}
               </button>
             </form>
           )}
@@ -89,15 +89,15 @@ export default function Contact() {
 
         <div className={styles.info}>
           <div className={styles.infoBlock}>
-            <h3 className={styles.infoTitle}>{t.contact.address_title}</h3>
+            <h3 className={styles.infoTitle}>{c.address_title}</h3>
             <p>621 Avenue de L'Ange-Gardien</p>
             <p>L'Ange-Gardien, QC J8L 4B6</p>
             <p>Canada</p>
           </div>
 
           <div className={styles.infoBlock}>
-            <h3 className={styles.infoTitle}>{t.contact.hours_title}</h3>
-            {t.contact.hours.map((h, i) => (
+            <h3 className={styles.infoTitle}>{c.hours_title}</h3>
+            {c.hours.map((h, i) => (
               <p key={i}>{h}</p>
             ))}
           </div>

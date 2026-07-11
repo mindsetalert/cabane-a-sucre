@@ -1,8 +1,18 @@
 export const translations = {
   fr: {
+    meta: {
+      home_title: "Équipement Érablière — SPS Vacuum Pump",
+      home_description: "Équipement professionnel pour érablières : pompes à vide SPS VFD 1.5HP à 10HP, totes inox 650L et 1000L, canneuse automatique, contacteur 60A et relai WiFi. Livraison possible.",
+      home_og_description: "Pompes à vide SPS, totes inox, canneuse automatique et plus pour votre érablière.",
+      contact_title: "Contact — SPS Vacuum Pump",
+      contact_description: "Contactez SPS Vacuum Pump pour acheter de l'équipement d'érablière. Téléphone : (819) 743-5003.",
+      keywords: "SPS vacuum pump, équipement érablière, pompe à vide érablière, vacuum pump maple, pompe VFD érablière, tote inox érablière, canneuse automatique sirop, contacteur 60A érablière, démarrage automatique érablière, équipement acéricole, Québec",
+      hero_alt: "Équipement érablière professionnel — SPS Vacuum Pump",
+    },
     nav: {
       products: "Produits",
       contact: "Contact",
+      logo_sub: "Équipement Érablière",
     },
     equipement: {
       title: "Équipement Érablière",
@@ -10,6 +20,14 @@ export const translations = {
       cta: "Cliquez sur un produit pour voir les détails — Appelez au (819) 743-5003 pour commander",
       carousel: "Nos Produits",
       catalog: "Catalogue complet",
+      view_equipment: "Voir l'équipement →",
+      view_product: "Voir le produit →",
+      inventory_banner: "📞 Tout notre inventaire est disponible sur appel. Contactez-nous pour connaître les disponibilités.",
+      contact_us: "Nous contacter →",
+      taxes: "+ taxes",
+      email_us: "Écrivez-nous",
+      prev: "Précédent",
+      next: "Suivant",
     },
     contact: {
       title: "Contactez-nous",
@@ -19,6 +37,9 @@ export const translations = {
       phone: "Téléphone",
       message: "Message",
       send: "Envoyer",
+      sending: "Envoi en cours...",
+      sent: "Message envoyé! On vous recontacte bientôt.",
+      error: "Erreur lors de l'envoi. Veuillez réessayer ou nous appeler au (819) 743-5003.",
       address_title: "Notre adresse",
       hours_title: "Heures d'ouverture",
       hours: [
@@ -35,9 +56,19 @@ export const translations = {
   },
 
   en: {
+    meta: {
+      home_title: "Sugar Shack Equipment — SPS Vacuum Pump",
+      home_description: "Professional sugar shack equipment: SPS VFD vacuum pumps 1.5HP to 10HP, 650L and 1000L stainless totes, canning machine, 60A contactor and WiFi relay. Delivery available.",
+      home_og_description: "SPS vacuum pumps, stainless totes, canning machine and more for your sugar shack.",
+      contact_title: "Contact — SPS Vacuum Pump",
+      contact_description: "Contact SPS Vacuum Pump to purchase sugar shack equipment. Phone: (819) 743-5003.",
+      keywords: "SPS vacuum pump, sugar shack equipment, maple vacuum pump, VFD vacuum pump, stainless tote maple, automatic canning machine, 60A contactor, remote start sugar shack, maple equipment, Quebec",
+      hero_alt: "Professional sugar shack equipment — SPS Vacuum Pump",
+    },
     nav: {
       products: "Products",
       contact: "Contact",
+      logo_sub: "Sugar Shack Equipment",
     },
     equipement: {
       title: "Sugar Shack Equipment",
@@ -45,6 +76,14 @@ export const translations = {
       cta: "Click on a product to see details — Call (819) 743-5003 to order",
       carousel: "Our Products",
       catalog: "Full catalog",
+      view_equipment: "View equipment →",
+      view_product: "View product →",
+      inventory_banner: "📞 All our inventory is available by phone. Contact us for availability.",
+      contact_us: "Contact us →",
+      taxes: "+ taxes",
+      email_us: "Email us",
+      prev: "Previous",
+      next: "Next",
     },
     contact: {
       title: "Contact Us",
@@ -54,6 +93,9 @@ export const translations = {
       phone: "Phone",
       message: "Message",
       send: "Send",
+      sending: "Sending...",
+      sent: "Message sent! We'll get back to you soon.",
+      error: "Error sending message. Please try again or call us at (819) 743-5003.",
       address_title: "Our address",
       hours_title: "Opening hours",
       hours: [

@@ -27,7 +27,7 @@ export default function Header() {
           />
           <div className={styles.logoTextBlock}>
             <span className={styles.logoName}>SPS Vacuum Pump</span>
-            <span className={styles.logoSub}>Équipement Érablière</span>
+            <span className={styles.logoSub}>{t.nav.logo_sub}</span>
           </div>
         </Link>
 
@@ -43,7 +43,11 @@ export default function Header() {
           ))}
         </nav>
 
-        <button className={styles.langToggle} onClick={toggleLang}>
+        <button
+          className={styles.langToggle}
+          onClick={toggleLang}
+          aria-label={lang === "fr" ? "Switch to English" : "Passer en français"}
+        >
           {lang === "fr" ? "🇨🇦 EN" : "🇫🇷 FR"}
         </button>
       </div>

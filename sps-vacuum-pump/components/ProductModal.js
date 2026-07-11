@@ -1,14 +1,17 @@
 import { useState } from "react";
 import Image from "next/image";
+import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Equipement.module.css";
 
-export default function ProductModal({ product, onClose, lang }) {
+export default function ProductModal({ product, onClose }) {
+  const { t } = useLanguage();
   const [activeImg, setActiveImg] = useState(0);
+  const e = t.equipement;
 
   return (
     <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.modal} onClick={e => e.stopPropagation()}>
-        <button className={styles.closeBtn} onClick={onClose}>✕</button>
+      <div className={styles.modal} onClick={ev => ev.stopPropagation()}>
+        <button className={styles.closeBtn} onClick={onClose} aria-label="Close">✕</button>
 
         <div className={styles.modalLayout}>
           <div className={styles.gallery}>
@@ -45,7 +48,9 @@ export default function ProductModal({ product, onClose, lang }) {
                       <tr key={i} className={p.total ? styles.priceRowTotal : styles.priceRow}>
                         <td className={styles.priceLabel}>{p.label}</td>
                         <td className={styles.priceAmount}>{p.amount}</td>
-                        <td className={styles.priceTax}>{p.amount !== "Sur demande" && p.amount !== "On request" ? "+ taxes" : ""}</td>
+                        <td className={styles.priceTax}>
+                          {p.amount !== "Sur demande" && p.amount !== "On request" ? e.taxes : ""}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -77,7 +82,7 @@ export default function ProductModal({ product, onClose, lang }) {
               <div className={styles.callRow}>
                 <span className={styles.callIcon}>✉️</span>
                 <div>
-                  <p className={styles.callLabel}>{lang === "fr" ? "Écrivez-nous" : "Email us"}</p>
+                  <p className={styles.callLabel}>{e.email_us}</p>
                   <a href="mailto:erabliere.lespotasucre@gmail.com" className={styles.callEmail}>erabliere.lespotasucre@gmail.com</a>
                 </div>
               </div>

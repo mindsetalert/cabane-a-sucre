@@ -1,11 +1,12 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
+import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Accueil.module.css";
 
-export default function ProductCarousel({ products, lang, onSelect }) {
+export default function ProductCarousel({ products, onSelect }) {
+  const { t } = useLanguage();
   const ref = useRef(null);
-  const label = lang === "fr" ? "Voir le produit →" : "View product →";
-  const title = lang === "fr" ? "Nos Produits" : "Our Products";
+  const e = t.equipement;
 
   useEffect(() => {
     const el = ref.current;
@@ -26,9 +27,9 @@ export default function ProductCarousel({ products, lang, onSelect }) {
 
   return (
     <section className={styles.carouselSection}>
-      <h2 className={styles.carouselTitle}>{title}</h2>
+      <h2 className={styles.carouselTitle}>{e.carousel}</h2>
       <div className={styles.carouselWrapper}>
-        <button className={`${styles.carouselArrow} ${styles.arrowLeft}`} onClick={() => scroll(-1)} aria-label="Précédent">‹</button>
+        <button className={`${styles.carouselArrow} ${styles.arrowLeft}`} onClick={() => scroll(-1)} aria-label={e.prev}>‹</button>
         <div className={styles.carouselTrack} ref={ref}>
           {products.map(p => (
             <button key={p.id} type="button" className={styles.carouselCard} onClick={() => onSelect(p)}>
@@ -39,12 +40,12 @@ export default function ProductCarousel({ products, lang, onSelect }) {
                 <h3 className={styles.carouselCardName}>{p.name}</h3>
                 <p className={styles.carouselCardShort}>{p.short}</p>
                 <span className={styles.carouselCardPrice}>{p.price}</span>
-                <span className={styles.carouselCardBtn}>{label}</span>
+                <span className={styles.carouselCardBtn}>{e.view_product}</span>
               </div>
             </button>
           ))}
         </div>
-        <button className={`${styles.carouselArrow} ${styles.arrowRight}`} onClick={() => scroll(1)} aria-label="Suivant">›</button>
+        <button className={`${styles.carouselArrow} ${styles.arrowRight}`} onClick={() => scroll(1)} aria-label={e.next}>›</button>
       </div>
     </section>
   );
