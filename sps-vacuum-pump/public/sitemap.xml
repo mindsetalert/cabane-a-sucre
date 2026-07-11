@@ -6,6 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://spsvacuumpump.com/histoire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://spsvacuumpump.com/notre-but</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://spsvacuumpump.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

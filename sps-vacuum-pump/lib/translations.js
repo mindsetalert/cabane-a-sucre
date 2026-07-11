@@ -8,9 +8,15 @@ export const translations = {
       contact_description: "Contactez SPS Vacuum Pump pour acheter de l'équipement d'érablière. Téléphone : (819) 743-5003.",
       keywords: "SPS vacuum pump, équipement érablière, pompe à vide érablière, vacuum pump maple, pompe VFD érablière, tote inox érablière, canneuse automatique sirop, contacteur 60A érablière, démarrage automatique érablière, équipement acéricole, Québec",
       hero_alt: "Équipement érablière professionnel — SPS Vacuum Pump",
+      histoire_title: "Notre Histoire — SPS Vacuum Pump",
+      histoire_description: "L'histoire de SPS Vacuum Pump : 11 ans de passion acéricole au Québec, de la cabane à sucre à l'équipement professionnel.",
+      but_title: "Notre But — SPS Vacuum Pump",
+      but_description: "Pourquoi SPS Vacuum Pump : pompes à vide fiables, prix imbattables et service après-vente pour les érablières du Québec.",
     },
     nav: {
       products: "Produits",
+      histoire: "Notre histoire",
+      but: "Notre but",
       contact: "Contact",
       logo_sub: "Équipement Érablière",
     },
@@ -53,6 +59,49 @@ export const translations = {
       made_in: "Fait avec ❤️ au Québec",
       partner: "Une division de Le Spot à Sucre Érablière",
     },
+    histoire: {
+      title: "Notre Histoire",
+      subtitle: "Une passion née il y a 11 ans, qui grandit encore aujourd'hui",
+      paragraphs: [
+        "Il y a 11 ans, on a commencé à faire le sirop d'érable. Pas par hasard — par une fascination profonde pour cet art unique au Québec, ce lien entre la forêt, les saisons et un produit d'exception : le sirop d'érable pur.",
+        "On a débuté modestement. Quelques érables, du matériel de base, et surtout une passion immense pour apprendre et s'améliorer. Saison après saison, on a grandi — dans notre équipement, dans notre savoir-faire, et dans la qualité de notre sirop.",
+        "Au fil des années, on a compris une chose essentielle : le rendement d'une érablière dépend énormément de la qualité de l'équipement. On a testé, comparé et amélioré notre propre matériel printemps après printemps — jusqu'à développer nos propres pompes à vide SPS.",
+        "Aujourd'hui, SPS Vacuum Pump est né de cette expérience de terrain. On ne vend pas juste de l'équipement — on partage ce qu'on utilise nous-mêmes, chaque saison, dans notre érablière Le Spot à Sucre.",
+        "On est des producteurs avant tout. Et cette passion, elle se ressent dans chaque produit qu'on offre.",
+      ],
+    },
+    but: {
+      title: "Notre But",
+      subtitle: "Pourquoi on fait ça — et pour qui",
+      pillars: [
+        {
+          icon: "⚙️",
+          title: "Du terrain, pas du bureau",
+          text: "On vend des pompes à vide parce qu'on en a besoin nous-mêmes. Chaque modèle SPS est conçu à partir de notre propre expérience en érablière.",
+        },
+        {
+          icon: "🛡️",
+          title: "Confiance totale",
+          text: "On mise notre réputation sur chaque pompe. On les utilise dans notre propre cabane — on connaît leur fiabilité, saison après saison.",
+        },
+        {
+          icon: "💰",
+          title: "Prix imbattables",
+          text: "On sait que le budget compte. C'est pourquoi on offre des prix compétitifs sans compromettre la qualité — pour que plus de producteurs puissent performer.",
+        },
+        {
+          icon: "🔧",
+          title: "Service après-vente",
+          text: "Acheter une pompe, c'est le début de la relation. On est là pour vous accompagner avant, pendant et après la saison des sucres.",
+        },
+      ],
+      paragraphs: [
+        "Notre but est simple : aider les producteurs d'érable à tirer le maximum de leur érablière, sans se ruiner.",
+        "On croit qu'un bon équipement ne devrait pas être un luxe réservé aux grandes opérations. Que vous ayez 500 entailles ou 8 000, vous méritez une pompe fiable, un bon service et un prix juste.",
+        "C'est pour ça qu'on a créé SPS Vacuum Pump — pour mettre notre expérience au service de la vôtre.",
+      ],
+      closing: "Votre succès en érablière, c'est notre succès aussi. 🍁",
+    },
   },
 
   en: {
@@ -64,9 +113,15 @@ export const translations = {
       contact_description: "Contact SPS Vacuum Pump to purchase sugar shack equipment. Phone: (819) 743-5003.",
       keywords: "SPS vacuum pump, sugar shack equipment, maple vacuum pump, VFD vacuum pump, stainless tote maple, automatic canning machine, 60A contactor, remote start sugar shack, maple equipment, Quebec",
       hero_alt: "Professional sugar shack equipment — SPS Vacuum Pump",
+      histoire_title: "Our Story — SPS Vacuum Pump",
+      histoire_description: "The story of SPS Vacuum Pump: 11 years of maple passion in Quebec, from sugar shack to professional equipment.",
+      but_title: "Our Mission — SPS Vacuum Pump",
+      but_description: "Why SPS Vacuum Pump: reliable vacuum pumps, unbeatable prices and after-sales service for Quebec sugar shacks.",
     },
     nav: {
       products: "Products",
+      histoire: "Our Story",
+      but: "Our Mission",
       contact: "Contact",
       logo_sub: "Sugar Shack Equipment",
     },
@@ -108,6 +163,49 @@ export const translations = {
       rights: "All rights reserved",
       made_in: "Made with ❤️ in Quebec",
       partner: "A division of Le Spot à Sucre Érablière",
+    },
+    histoire: {
+      title: "Our Story",
+      subtitle: "A passion born 11 years ago, still growing today",
+      paragraphs: [
+        "Eleven years ago, we started making maple syrup. Not by chance — but through a deep fascination for this unique Quebec art, this connection between the forest, the seasons, and an exceptional product: pure maple syrup.",
+        "We started modestly. A few maple trees, basic equipment, and above all an immense passion for learning and improving. Season after season, we grew — in our equipment, in our know-how, and in the quality of our syrup.",
+        "Over the years, we learned something essential: a sugar shack's yield depends heavily on equipment quality. We tested, compared and improved our own gear spring after spring — until we developed our own SPS vacuum pumps.",
+        "Today, SPS Vacuum Pump was born from that field experience. We don't just sell equipment — we share what we use ourselves, every season, at our Le Spot à Sucre sugar shack.",
+        "We're producers first and foremost. And that passion shows in every product we offer.",
+      ],
+    },
+    but: {
+      title: "Our Mission",
+      subtitle: "Why we do this — and for whom",
+      pillars: [
+        {
+          icon: "⚙️",
+          title: "From the field, not the office",
+          text: "We sell vacuum pumps because we need them ourselves. Every SPS model is designed from our own sugar shack experience.",
+        },
+        {
+          icon: "🛡️",
+          title: "Total confidence",
+          text: "We stake our reputation on every pump. We use them in our own shack — we know their reliability, season after season.",
+        },
+        {
+          icon: "💰",
+          title: "Unbeatable prices",
+          text: "We know budget matters. That's why we offer competitive prices without compromising quality — so more producers can perform.",
+        },
+        {
+          icon: "🔧",
+          title: "After-sales service",
+          text: "Buying a pump is just the beginning of the relationship. We're here to support you before, during and after maple season.",
+        },
+      ],
+      paragraphs: [
+        "Our mission is simple: help maple producers get the most out of their sugar shack without breaking the bank.",
+        "We believe good equipment shouldn't be a luxury reserved for large operations. Whether you have 500 taps or 8,000, you deserve a reliable pump, great service and a fair price.",
+        "That's why we created SPS Vacuum Pump — to put our experience at your service.",
+      ],
+      closing: "Your success in maple farming is our success too. 🍁",
     },
   },
 };
