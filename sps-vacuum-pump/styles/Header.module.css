@@ -1,0 +1,146 @@
+.header {
+  background-color: #0e0c08;
+  color: #f0e6d0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #3a2e1a;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.6);
+  width: 100%;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.headerTransparent {
+  background-color: rgba(14, 12, 8, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(58, 46, 26, 0.5);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  min-height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(201,135,42,0.3));
+}
+
+.logoTextBlock {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logoName {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #e8c97a;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.logoSub {
+  font-size: 0.72rem;
+  color: #C9872A;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navLink {
+  padding: 0.4rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #c8b48a;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  background: rgba(201,135,42,0.15);
+  color: #C9872A;
+}
+
+.active {
+  background: rgba(201,135,42,0.2);
+  color: #C9872A;
+  font-weight: bold;
+}
+
+.langToggle {
+  background: transparent;
+  color: #C9872A;
+  border: 1px solid #C9872A;
+  padding: 0.4rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.langToggle:hover {
+  background: #C9872A;
+  color: #0e0c08;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .container {
+    padding: 0.6rem 0.75rem;
+    gap: 0.6rem;
+  }
+  .logoImg {
+    height: 48px;
+    width: 48px;
+  }
+  .logoName {
+    font-size: 0.9rem;
+  }
+  .logoSub {
+    font-size: 0.65rem;
+  }
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 0.1rem;
+  }
+  .navLink {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.5rem;
+  }
+  .langToggle {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+}

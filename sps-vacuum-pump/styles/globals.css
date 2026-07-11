@@ -1,0 +1,48 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --maple-red: #C9872A;
+  --maple-dark: #a86d18;
+  --maple-gold: #C9872A;
+  --maple-light: #2a2218;
+  --maple-cream: #13100b;
+  --maple-brown: #e8c97a;
+  --text-dark: #f0e6d0;
+  --text-mid: #c8b48a;
+  --text-light: #8a7560;
+  --white: #1c1710;
+  --bg-dark: #0e0c08;
+  --bg-card: #1a160f;
+  --bg-card2: #211c13;
+  --border: #3a2e1a;
+}
+
+html, body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}

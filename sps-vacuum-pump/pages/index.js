@@ -315,7 +315,7 @@ function ProductModal({ product, onClose, lang }) {
   );
 }
 
-export default function Equipement() {
+export default function Home() {
   const { lang, t } = useLanguage();
   const [selected, setSelected] = useState(null);
   const products = lang === "fr" ? PRODUCTS_FR : PRODUCTS_EN;
@@ -332,21 +332,23 @@ export default function Equipement() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>Équipement Érablière — Le Spot à Sucre</title>
-        <meta name="description" content="Équipement professionnel pour érablières : pompes à vide VFD 1.5HP à 10HP, totes inox 650L et 1000L, canneuse automatique, contacteur 60A et relai WiFi. Livraison possible." />
-        <meta name="keywords" content="équipement érablière, pompe à vide érablière, vacuum pump maple, pompe VFD érablière, tote inox érablière, canneuse automatique sirop, contacteur 60A érablière, démarrage automatique érablière, équipement acéricole, Québec, Outaouais, L'Ange-Gardien" />
-        <meta property="og:title" content="Équipement Érablière — Le Spot à Sucre" />
-        <meta property="og:description" content="Pompes à vide, totes inox, canneuse automatique et plus pour votre érablière." />
-        <meta property="og:url" content="https://erablierelespotasucre.com/equipement" />
-        <link rel="canonical" href="https://erablierelespotasucre.com/equipement" />
+        <title>Équipement Érablière — SPS Vacuum Pump</title>
+        <meta name="description" content="Équipement professionnel pour érablières : pompes à vide SPS VFD 1.5HP à 10HP, totes inox 650L et 1000L, canneuse automatique, contacteur 60A et relai WiFi. Livraison possible." />
+        <meta name="keywords" content="SPS vacuum pump, équipement érablière, pompe à vide érablière, vacuum pump maple, pompe VFD érablière, tote inox érablière, canneuse automatique sirop, contacteur 60A érablière, démarrage automatique érablière, équipement acéricole, Québec" />
+        <meta property="og:title" content="Équipement Érablière — SPS Vacuum Pump" />
+        <meta property="og:description" content="Pompes à vide SPS, totes inox, canneuse automatique et plus pour votre érablière." />
+        <meta property="og:url" content="https://spsvacuumpump.com" />
+        <meta property="og:image" content="https://spsvacuumpump.com/images/equipement-promo-0910.png" />
+        <link rel="canonical" href="https://spsvacuumpump.com" />
       </Head>
       <div className={styles.heroSection}>
         <div className={styles.heroImgWrap}>
           <Image
-            src="/images/tubulure.jpg"
-            alt="Équipement érablière professionnel — Le Spot à Sucre"
+            src="/images/equipement-promo-0910.png"
+            alt="Équipement érablière professionnel — SPS Vacuum Pump"
             fill
-            style={{ objectFit: "cover", objectPosition: "center" }}
+            className={styles.heroImgPromo}
+            style={{ objectFit: "contain", objectPosition: "center" }}
             priority
           />
           <div className={styles.heroOverlay} />
@@ -354,6 +356,7 @@ export default function Equipement() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>{e.title}</h1>
           <p className={styles.heroSubtitle}>{e.subtitle}</p>
+          <p className={styles.heroSubtitle}>{e.cta}</p>
         </div>
       </div>
 

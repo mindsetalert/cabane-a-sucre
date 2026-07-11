@@ -36,6 +36,11 @@
   inset: 0;
 }
 
+.heroImgPromo {
+  object-fit: contain !important;
+  background: #050403;
+}
+
 .heroOverlay {
   position: absolute;
   inset: 0;

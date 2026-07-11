@@ -43,7 +43,7 @@ export default function Contact() {
     <div className={styles.page}>
       <Head>
         <title>Contactez-nous — Le Spot à Sucre Érablière</title>
-        <meta name="description" content="Contactez Le Spot à Sucre pour acheter du sirop d'érable pur ou de l'équipement d'érablière. Téléphone : (819) 743-5003. L'Ange-Gardien, Outaouais." />
+        <meta name="description" content="Contactez Le Spot à Sucre pour acheter du sirop d'érable pur. Téléphone : (819) 743-5003. L'Ange-Gardien, Outaouais." />
         <meta property="og:title" content="Contactez-nous — Le Spot à Sucre" />
         <meta property="og:url" content="https://erablierelespotasucre.com/contact" />
         <link rel="canonical" href="https://erablierelespotasucre.com/contact" />

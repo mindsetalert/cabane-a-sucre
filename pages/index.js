@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Le Spot à Sucre Érablière — Sirop d'érable pur & Équipement d'érablière</title>
-        <meta name="description" content="Sirop d'érable pur du Québec et équipement d'érablière professionnel : pompes à vide, totes inox, canneuse automatique, démarrage automatique. L'Ange-Gardien, Outaouais." />
-        <meta name="keywords" content="sirop d'érable pur, érablière Québec, pompe à vide érablière, équipement acéricole, équipement érablière, tote inox érablière, canneuse automatique sirop, vacuum pump maple, pompe VFD, démarrage automatique érablière, Outaouais, L'Ange-Gardien, Le Spot à Sucre" />
+        <title>Le Spot à Sucre Érablière — Sirop d'érable pur du Québec</title>
+        <meta name="description" content="Sirop d'érable pur du Québec récolté et mis en canne à notre érablière. Claire, Médium, Foncé. L'Ange-Gardien, Outaouais." />
+        <meta name="keywords" content="sirop d'érable pur, érablière Québec, sirop d'érable Outaouais, achat sirop d'érable, producteur local, L'Ange-Gardien, Le Spot à Sucre" />
         <meta property="og:title" content="Le Spot à Sucre Érablière" />
-        <meta property="og:description" content="Sirop d'érable pur du Québec et équipement d'érablière professionnel." />
+        <meta property="og:description" content="Sirop d'érable pur du Québec récolté et mis en canne à notre érablière." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://erablierelespotasucre.com" />
         <meta property="og:image" content="https://erablierelespotasucre.com/images/tubulure.jpg" />
@@ -24,7 +24,7 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Le Spot à Sucre Érablière",
-          "description": "Sirop d'érable pur du Québec et équipement d'érablière professionnel.",
+          "description": "Sirop d'érable pur du Québec récolté et mis en canne à notre érablière.",
           "url": "https://erablierelespotasucre.com",
           "telephone": "+18197435003",
           "email": "erabliere.lespotasucre@gmail.com",
@@ -45,62 +45,31 @@ export default function Home() {
         })}} />
       </Head>
 
-      <div className={styles.splitPage}>
-
-        {/* ── Équipement ── */}
-        <Link href="/equipement" className={styles.splitPanel}>
-          <Image
-            src="/images/equipement-promo-0910.png"
-            alt="Équipement d'érablière professionnel"
-            fill
-            className={`${styles.splitBg} ${styles.equipmentBg}`}
-            priority
-          />
-          <div className={styles.splitOverlay} />
-          <div className={styles.splitContent}>
-            <span className={styles.splitIcon}>⚙️</span>
-            <h2 className={styles.splitTitle}>
-              {fr ? "Équipement Érablière" : "Maple Equipment"}
-            </h2>
-            <p className={styles.splitSub}>
-              {fr
-                ? "Pompes à vide, totes inox, canneuse automatique, démarrage automatique et plus — Prix compétitifs"
-                : "Vacuum pumps, stainless totes, canning machine, automatic start and more — Competitive prices"}
-            </p>
-            <span className={styles.splitBtn}>
-              {fr ? "Voir l'équipement →" : "View equipment →"}
-            </span>
-          </div>
-        </Link>
-
-        <div className={styles.splitDivider} />
-
-        {/* ── Sirop d'Érable ── */}
-        <Link href="/sirop" className={styles.splitPanel}>
+      <div className={styles.syrupLanding}>
+        <Link href="/sirop" className={styles.syrupPanel}>
           <Image
             src="/images/evap.jpg"
             alt="Érablière — sirop d'érable"
             fill
-            className={styles.splitBg}
+            className={styles.syrupBg}
             priority
           />
-          <div className={styles.splitOverlay} />
-          <div className={styles.splitContent}>
-            <span className={styles.splitIcon}>🍁</span>
-            <h2 className={styles.splitTitle}>
+          <div className={styles.syrupOverlay} />
+          <div className={styles.syrupContent}>
+            <span className={styles.syrupIcon}>🍁</span>
+            <h1 className={styles.syrupTitle}>
               {fr ? "Sirop d'Érable Pur" : "Pure Maple Syrup"}
-            </h2>
-            <p className={styles.splitSub}>
+            </h1>
+            <p className={styles.syrupSub}>
               {fr
                 ? "Sirop d'érable pur du Québec — Claire, Médium, Foncé"
                 : "Pure Quebec maple syrup — Light, Medium, Dark"}
             </p>
-            <span className={styles.splitBtn}>
+            <span className={styles.syrupBtn}>
               {fr ? "Voir notre sirop →" : "View our syrup →"}
             </span>
           </div>
         </Link>
-
       </div>
     </>
   );

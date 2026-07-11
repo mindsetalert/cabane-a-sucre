@@ -1,0 +1,146 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pageIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.pageTitle {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #C9872A;
+  margin-bottom: 0.75rem;
+}
+
+.pageSubtitle {
+  color: #c8b48a;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.formWrapper {
+  background: #1a160f;
+  border: 1px solid #3a2e1a;
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #c8b48a;
+}
+
+.input,
+.textarea {
+  padding: 0.7rem 1rem;
+  border: 1px solid #3a2e1a;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #0e0c08;
+  color: #f0e6d0;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #C9872A;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit {
+  background: #C9872A;
+  color: #0e0c08;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.15s;
+  align-self: flex-start;
+}
+
+.submit:hover {
+  background: #e09c35;
+  transform: translateY(-2px);
+}
+
+.success {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #C9872A;
+}
+
+.success span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoBlock {
+  background: #1a160f;
+  border: 1px solid #3a2e1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 3px solid #C9872A;
+}
+
+.infoTitle {
+  font-size: 0.85rem;
+  color: #C9872A;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.infoBlock p {
+  color: #c8b48a;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
