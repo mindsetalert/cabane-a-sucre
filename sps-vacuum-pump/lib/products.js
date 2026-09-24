@@ -32,7 +32,7 @@ export const PRODUCTS_FR = [
       { label: "SPS 1000 — 10 HP — 142 CFM (8 000 entailles)", amount: "5 499.99$" },
     ],
     price: "À partir de 2 099.99$ + taxes",
-    stock: "Disponible le 1er juillet 2026 : 2 × SPS 300 (3HP) • 2 × SPS 500 (5HP) • 1 × SPS 750 (7.5HP) — réservée",
+    stock: "Disponible le 1er juillet 2026 : 2 × SPS 300 (3HP) • 2 × SPS 500 (5HP) • 1 × SPS 750 (7.5HP)",
     stockDate: "2026-07-01",
     description: `Ces pompes à vide à l'huile à palettes rotatives professionnelles sont spécialement conçues pour les érablières exigeant un maximum de rendement et de fiabilité. La technologie à palettes rotatives lubrifiées à l'huile garantit un vide absolu profond et stable, même lors des longues journées de production en saison des sucres.\n\nChaque unité est livrée complète avec un convertisseur de fréquence (VFD) permettant un démarrage progressif (slow start) en monophasé. Le démarrage progressif réduit considérablement le stress sur le moteur électrique, prolongeant sa durée de vie et évitant les pics de courant.\n\nChaque pompe est équipée d'un refroidisseur d'huile intégré pour maintenir un vide absolu optimal tout au long de la saison.\n\nModèles disponibles :\n• 1.5 HP — Drive inclut — 21 CFM — 800 entailles\n• 3 HP — Drive inclut — 45 CFM — 1 500 entailles\n• 5 HP — Drive inclut — 71 CFM — 3 000 entailles\n• 7.5 HP — Drive inclut — 113 CFM — 6 000 entailles\n• 10 HP — Drive inclut — 142 CFM — 8 000 entailles\n\nCaractéristiques :\n• Type : pompe à vide à l'huile à palettes rotatives\n• Convertisseur VFD inclus (monophasé, démarrage progressif)\n• Refroidisseur d'huile intégré\n• Vide absolu maximal garanti\n• Idéale pour les érablières de toutes tailles\n• Durable, fiable et facile d'entretien`,
     images: [
@@ -143,7 +143,7 @@ const PRODUCTS_EN = [
       { label: "SPS 1000 — 10 HP — 142 CFM (8,000 taps)", amount: "$5,499.99" },
     ],
     price: "From $2,099.99 + taxes",
-    stock: "Available July 1st, 2026: 2 × SPS 300 (3HP) • 2 × SPS 500 (5HP) • 1 × SPS 750 (7.5HP) — reserved",
+    stock: "Available July 1st, 2026: 2 × SPS 300 (3HP) • 2 × SPS 500 (5HP) • 1 × SPS 750 (7.5HP)",
     stockDate: "2026-07-01",
     description: `These professional rotary vane oil vacuum pumps are specifically designed for sugar shacks requiring maximum performance and reliability. The oil-lubricated rotary vane technology delivers deep, stable absolute vacuum even during long production days throughout the maple season.\n\nEach unit comes complete with a Variable Frequency Drive (VFD) converter enabling single-phase slow start operation. The slow start significantly reduces stress on the electric motor, extending its lifespan and preventing current spikes at startup.\n\nEach pump is equipped with an integrated oil cooler to maintain optimal absolute vacuum levels throughout the entire maple season.\n\nAvailable models:\n• 1.5 HP — Drive included — 21 CFM — 800 taps\n• 3 HP — Drive included — 45 CFM — 1,500 taps\n• 5 HP — Drive included — 71 CFM — 3,000 taps\n• 7.5 HP — Drive included — 113 CFM — 6,000 taps\n• 10 HP — Drive included — 142 CFM — 8,000 taps\n\nFeatures:\n• Type: rotary vane oil vacuum pump\n• VFD converter included (single-phase, slow start)\n• Integrated oil cooler\n• Maximum absolute vacuum guaranteed\n• Ideal for sugar shacks of all sizes\n• Durable, reliable and easy to maintain`,
     images: [
