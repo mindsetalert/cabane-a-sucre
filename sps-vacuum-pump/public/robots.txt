@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# SPS Vacuum Pump — spsvacuumpump.com
 Sitemap: https://spsvacuumpump.com/sitemap.xml

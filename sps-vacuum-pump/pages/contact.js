@@ -1,4 +1,5 @@
-import Head from "next/head";
+import SeoHead from "../components/SeoHead";
+import { webPageSchema, localBusinessSchema } from "../lib/seo";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useLanguage } from "../lib/LanguageContext";
@@ -42,13 +43,19 @@ export default function Contact() {
 
   return (
     <div className={styles.page}>
-      <Head>
-        <title>{m.contact_title}</title>
-        <meta name="description" content={m.contact_description} />
-        <meta property="og:title" content={m.contact_title} />
-        <meta property="og:url" content="https://spsvacuumpump.com/contact" />
-        <link rel="canonical" href="https://spsvacuumpump.com/contact" />
-      </Head>
+      <SeoHead
+        title={m.contact_title}
+        description={m.contact_description}
+        path="/contact"
+        jsonLd={[
+          webPageSchema({
+            title: m.contact_title,
+            description: m.contact_description,
+            path: "/contact",
+          }),
+          localBusinessSchema(),
+        ]}
+      />
       <div className={styles.pageHeader}>
         <span className={styles.pageIcon}>✉️</span>
         <h1 className={styles.pageTitle}>{c.title}</h1>

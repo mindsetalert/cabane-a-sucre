@@ -1,4 +1,5 @@
-import Head from "next/head";
+import SeoHead from "../components/SeoHead";
+import { webPageSchema } from "../lib/seo";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/But.module.css";
 
@@ -9,26 +10,21 @@ export default function NotreBut() {
 
   return (
     <div className={styles.page}>
-      <Head>
-        <title>{m.but_title}</title>
-        <meta name="description" content={m.but_description} />
-        <link rel="canonical" href="https://spsvacuumpump.com/notre-but" />
-      </Head>
+      <SeoHead
+        title={m.but_title}
+        description={m.but_description}
+        path="/notre-but"
+        jsonLd={webPageSchema({
+          title: m.but_title,
+          description: m.but_description,
+          path: "/notre-but",
+        })}
+      />
 
       <div className={styles.pageHeader}>
         <span className={styles.pageIcon}>🎯</span>
         <h1 className={styles.pageTitle}>{b.title}</h1>
         <p className={styles.pageSubtitle}>{b.subtitle}</p>
-      </div>
-
-      <div className={styles.pillars}>
-        {b.pillars.map((pillar, i) => (
-          <div key={i} className={styles.pillar}>
-            <span className={styles.pillarIcon}>{pillar.icon}</span>
-            <h2 className={styles.pillarTitle}>{pillar.title}</h2>
-            <p className={styles.pillarText}>{pillar.text}</p>
-          </div>
-        ))}
       </div>
 
       <div className={styles.content}>

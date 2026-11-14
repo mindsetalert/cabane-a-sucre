@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Header.module.css";
@@ -9,9 +8,14 @@ export default function Header() {
   const router = useRouter();
 
   const navLinks = [
-    { href: "/", label: t.nav.products },
-    { href: "/histoire", label: t.nav.histoire },
+    { href: "/", label: t.nav.home },
+    { href: "/produits", label: t.nav.products },
+    { href: "/vfd", label: t.nav.vfd },
+    { href: "/voltage", label: t.nav.voltage },
+    { href: "/huile", label: t.nav.huile },
     { href: "/notre-but", label: t.nav.but },
+    { href: "/garantie", label: t.nav.garantie },
+    { href: "/pieces", label: t.nav.pieces },
     { href: "/contact", label: t.nav.contact },
   ];
 
@@ -19,18 +23,12 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <Image
-            src="/images/equipement/vacuum-1.jpg"
-            alt="SPS Vacuum Pump"
-            width={60}
-            height={60}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-reel.png"
+            alt="SPS Vacuum — Équipement Érablière"
             className={styles.logoImg}
-            priority
           />
-          <div className={styles.logoTextBlock}>
-            <span className={styles.logoName}>SPS Vacuum Pump</span>
-            <span className={styles.logoSub}>{t.nav.logo_sub}</span>
-          </div>
         </Link>
 
         <nav className={styles.nav}>

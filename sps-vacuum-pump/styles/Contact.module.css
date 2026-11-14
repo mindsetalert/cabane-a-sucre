@@ -17,14 +17,14 @@
 
 .pageTitle {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: #C9872A;
+  color: var(--text-heading);
+  font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
 .pageSubtitle {
-  color: #c8b48a;
+  color: var(--text-secondary);
   font-size: 1.05rem;
-  font-style: italic;
 }
 
 .layout {
@@ -35,9 +35,9 @@
 }
 
 .formWrapper {
-  background: #1a160f;
-  border: 1px solid #3a2e1a;
-  border-radius: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   padding: 2.5rem;
 }
 
@@ -52,27 +52,28 @@
   flex-direction: column;
   gap: 0.4rem;
   font-size: 0.95rem;
-  font-weight: bold;
-  color: #c8b48a;
+  font-weight: 600;
+  color: var(--text-secondary);
 }
 
 .input,
 .textarea {
   padding: 0.7rem 1rem;
-  border: 1px solid #3a2e1a;
-  border-radius: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   font-size: 1rem;
   font-family: inherit;
-  background: #0e0c08;
-  color: #f0e6d0;
-  transition: border-color 0.2s;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
   width: 100%;
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: #C9872A;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-muted);
 }
 
 .textarea {
@@ -81,28 +82,30 @@
 }
 
 .submit {
-  background: #C9872A;
-  color: #0e0c08;
+  background: var(--accent);
+  color: var(--bg-dark);
   border: none;
   padding: 0.85rem 2rem;
   border-radius: 25px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   font-family: inherit;
-  transition: background 0.2s, transform 0.15s;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
   align-self: flex-start;
 }
 
 .submit:hover {
-  background: #e09c35;
+  background: var(--accent-hover);
   transform: translateY(-2px);
+  box-shadow: 0 4px 20px var(--accent-glow);
 }
 
 .success {
   text-align: center;
   padding: 2rem;
   font-size: 1.2rem;
-  color: #C9872A;
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .success span {
@@ -118,23 +121,24 @@
 }
 
 .infoBlock {
-  background: #1a160f;
-  border: 1px solid #3a2e1a;
-  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   padding: 1.5rem;
-  border-left: 3px solid #C9872A;
+  border-left: 3px solid var(--accent);
 }
 
 .infoTitle {
   font-size: 0.85rem;
-  color: #C9872A;
+  color: var(--accent);
+  font-weight: 600;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .infoBlock p {
-  color: #c8b48a;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.7;
 }

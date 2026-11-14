@@ -11,21 +11,20 @@
 
 .pageTitle {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: #C9872A;
+  color: var(--text-heading);
+  font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
 .pageSubtitle {
-  color: #c8b48a;
+  color: var(--text-secondary);
   font-size: 1.05rem;
-  font-style: italic;
 }
 
-/* === HERO BANNER === */
 .heroSection {
   position: relative;
   width: 100%;
-  border-radius: 18px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   margin-bottom: 3rem;
   height: clamp(260px, 40vw, 480px);
@@ -38,7 +37,7 @@
 
 .heroImgPromo {
   object-fit: contain !important;
-  background: #050403;
+  background: var(--bg-dark);
 }
 
 .heroOverlay {
@@ -46,9 +45,9 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10, 7, 3, 0.15) 0%,
-    rgba(10, 7, 3, 0.55) 60%,
-    rgba(10, 7, 3, 0.82) 100%
+    rgba(8, 12, 16, 0.15) 0%,
+    rgba(8, 12, 16, 0.55) 60%,
+    rgba(8, 12, 16, 0.82) 100%
   );
 }
 
@@ -63,19 +62,18 @@
 
 .heroTitle {
   font-size: clamp(1.8rem, 4vw, 3rem);
-  color: #C9872A;
+  color: var(--text-heading);
+  font-weight: 700;
   margin-bottom: 0.6rem;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
 .heroSubtitle {
-  color: #e8d9bc;
+  color: var(--text-secondary);
   font-size: clamp(0.95rem, 2vw, 1.15rem);
-  font-style: italic;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* === GRILLE PRODUITS === */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -83,9 +81,9 @@
 }
 
 .card {
-  background: #1a160f;
-  border: 1px solid #3a2e1a;
-  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
@@ -93,14 +91,14 @@
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 40px rgba(201,135,42,0.2);
-  border-color: #C9872A;
+  box-shadow: var(--shadow-accent);
+  border-color: var(--accent);
 }
 
 .cardImgWrap {
   position: relative;
   height: 200px;
-  background: #111;
+  background: var(--bg-elevated);
 }
 
 .cardBody {
@@ -109,23 +107,40 @@
 
 .cardCategory {
   font-size: 0.75rem;
-  color: #C9872A;
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  font-weight: 600;
 }
 
 .cardName {
   font-size: 1rem;
-  color: #e8c97a;
+  color: var(--text-heading);
+  font-weight: 600;
   margin: 0.4rem 0 0.5rem;
   line-height: 1.4;
 }
 
 .cardShort {
-  color: #c8b48a;
+  color: var(--text-secondary);
   font-size: 0.88rem;
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardNotice {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+
+.cardVoltage {
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0 0 1rem;
 }
 
 .cardMeta {
@@ -137,106 +152,136 @@
 
 .cardPrice {
   font-size: 0.92rem;
-  font-weight: bold;
-  color: #C9872A;
+  font-weight: 600;
+  color: var(--accent);
   line-height: 1.6;
   white-space: pre-line;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.saleBadge {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: #fbbf24;
+  color: #111827;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.priceWas {
+  color: var(--text-muted);
+  font-size: 0.85em;
+  font-weight: 500;
+  text-decoration: line-through;
 }
 
 .cardStock {
   font-size: 0.8rem;
-  color: #5ec45e;
+  color: var(--success);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cardStockOut {
+  font-size: 0.8rem;
+  color: #fbbf24;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .viewBtn {
   background: transparent;
-  border: 1px solid #C9872A;
-  color: #C9872A;
+  border: 1px solid var(--border-light);
+  color: var(--accent);
   padding: 0.5rem 1.2rem;
   border-radius: 20px;
   font-size: 0.88rem;
-  font-weight: bold;
+  font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .viewBtn:hover {
-  background: #C9872A;
-  color: #0e0c08;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-dark);
 }
 
-/* === BANNIÈRE APPEL === */
 .callBanner {
   margin-top: 3rem;
-  background: rgba(201,135,42,0.08);
-  border: 1px solid #3a2e1a;
-  border-radius: 12px;
+  background: var(--accent-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   padding: 1.25rem 2rem;
   text-align: center;
-  color: #c8b48a;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-/* === OVERLAY / MODAL === */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.88);
+  background: rgba(4, 8, 12, 0.9);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
 }
 
 .modal {
-  background: #1a160f;
-  border: 1px solid #C9872A;
-  border-radius: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
   width: 100%;
   max-width: 1300px;
   height: calc(100vh - 3rem);
   overflow-y: auto;
   position: relative;
   padding: 2.5rem;
+  box-shadow: var(--shadow-card);
 }
 
 .closeBtn {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: transparent;
-  border: 1px solid #3a2e1a;
-  color: #c8b48a;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
   width: 36px;
   height: 36px;
   border-radius: 50%;
   font-size: 1rem;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .closeBtn:hover {
-  border-color: #C9872A;
-  color: #C9872A;
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-muted);
 }
 
 .modalLayout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  height: 100%;
 }
 
-/* === GALERIE === */
 .gallery {
   display: flex;
   flex-direction: column;
@@ -247,10 +292,10 @@
   position: relative;
   width: 100%;
   height: 400px;
-  background: #111;
-  border-radius: 10px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid #3a2e1a;
+  border: 1px solid var(--border);
 }
 
 .thumbRow {
@@ -262,31 +307,129 @@
   position: relative;
   width: 70px;
   height: 70px;
-  background: #111;
-  border-radius: 8px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 2px solid #3a2e1a;
+  border: 2px solid var(--border);
   cursor: pointer;
   flex-shrink: 0;
   transition: border-color 0.2s;
 }
 
 .thumbActive {
-  border-color: #C9872A;
+  border-color: var(--accent);
 }
 
 .thumb:hover {
-  border-color: #C9872A;
+  border-color: var(--accent);
 }
 
 .imgCaption {
   font-size: 0.8rem;
-  color: #8a7560;
+  color: var(--text-muted);
   text-align: center;
-  font-style: italic;
 }
 
-/* === INFOS PRODUIT === */
+.featureSheet {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.1rem 1.35rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.featureSheetTitle {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  letter-spacing: 0.01em;
+}
+
+.featureRows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.featureRow {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.featureRowHighlight {
+  border-color: rgba(80, 170, 255, 0.55);
+  background: #13283a;
+  box-shadow: inset 0 0 0 1px rgba(80, 170, 255, 0.15);
+}
+
+.featureImgWrap {
+  width: 150px;
+  height: 112px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #101820;
+  flex-shrink: 0;
+}
+
+.featureImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featureCopy {
+  min-width: 0;
+}
+
+.featureHeading {
+  margin: 0 0 0.45rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #9fd0ff;
+  line-height: 1.3;
+}
+
+.featureBullets {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.featureBullets li {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.featureBullets li::marker {
+  color: #e85a4f;
+}
+
+@media (max-width: 720px) {
+  .featureRow {
+    grid-template-columns: 1fr;
+  }
+
+  .featureImgWrap {
+    width: 100%;
+    height: 180px;
+  }
+}
+
 .productInfo {
   display: flex;
   flex-direction: column;
@@ -295,97 +438,218 @@
 
 .category {
   font-size: 0.78rem;
-  color: #C9872A;
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  font-weight: 600;
 }
 
 .productName {
   font-size: 1.3rem;
-  color: #e8c97a;
+  color: var(--text-heading);
+  font-weight: 700;
   line-height: 1.4;
   margin: 0;
 }
 
 .modalMeta {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 0.75rem 1rem;
-  background: rgba(201,135,42,0.08);
-  border: 1px solid #3a2e1a;
-  border-radius: 10px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  background: var(--accent-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
 }
 
 .modalPrice {
   font-size: 1.4rem;
-  font-weight: bold;
-  color: #C9872A;
+  font-weight: 700;
+  color: var(--accent);
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
 }
 
 .modalStock {
   font-size: 0.88rem;
-  color: #5ec45e;
+  color: var(--success);
   font-weight: 600;
   line-height: 1.4;
 }
 
-/* Tableau de prix aligné */
+.modalStockOut {
+  font-size: 0.88rem;
+  color: #fbbf24;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.priceTableWrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .priceTable {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 0.25rem;
-  table-layout: fixed;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
-.priceRow td, .priceRowTotal td {
-  padding: 0.3rem 0.5rem;
+.priceTable th,
+.priceTable td {
+  padding: 0.75rem 0.65rem;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.priceTable th {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.priceTable th:last-child,
+.priceTable td:last-child {
+  text-align: right;
+}
+
+.priceModel {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.priceHp {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  color: var(--text-muted, #9ca3af);
+}
+
+.priceTable .priceTax {
+  display: block;
+  margin-left: 0;
+  margin-top: 0.1rem;
+}
+
+.priceList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceItem,
+.priceItemTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
-.priceRow td {
-  color: #c8b48a;
+.priceItem:first-child,
+.priceItemTotal:first-child {
+  padding-top: 0.15rem;
 }
 
-.priceRowTotal td {
-  color: #C9872A;
-  font-weight: bold;
+.priceItem:last-child,
+.priceItemTotal:last-child {
+  border-bottom: none;
+  padding-bottom: 0.15rem;
+}
+
+.priceItemTotal {
+  color: var(--accent);
+  font-weight: 600;
   font-size: 1.05rem;
-  border-top: 1px solid #3a2e1a;
-  padding-top: 0.5rem;
 }
 
 .priceLabel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.4rem;
+  row-gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
   text-align: left;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  width: 70%;
+  line-height: 1.45;
+}
+
+.priceChunk {
+  white-space: nowrap;
 }
 
 .priceAmount {
   text-align: right;
-  font-variant-numeric: tabular-nums;
-  font-family: 'Courier New', monospace;
-  padding-left: 0.5rem !important;
+  flex-shrink: 0;
   white-space: nowrap;
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+}
+
+.priceValue {
+  font-variant-numeric: tabular-nums;
+  font-family: 'Inter', monospace;
 }
 
 .priceTax {
-  text-align: left;
-  padding-left: 0.25rem !important;
-  font-size: 0.78rem;
-  opacity: 0.6;
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  font-weight: 500;
   white-space: nowrap;
-  width: 10%;
+  vertical-align: baseline;
 }
 
 .description {
-  color: #c8b48a;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.7;
   flex: 1;
+}
+
+.productNotice {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0.9rem 1rem;
+  background: var(--accent-muted);
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  border-radius: var(--radius-md);
+}
+
+.voltageNote {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.85rem 0 0;
+}
+
+.voltageLink {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .description p {
@@ -394,16 +658,16 @@
 
 .bullet {
   padding-left: 0.5rem;
-  color: #e8c97a;
+  color: var(--text-heading);
 }
 
 .callBox {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  background: rgba(201,135,42,0.08);
-  border: 1px solid #C9872A;
-  border-radius: 12px;
+  background: var(--accent-muted);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
   padding: 1.1rem 1.25rem;
   margin-top: 0.5rem;
 }
@@ -421,7 +685,7 @@
 
 .callLabel {
   font-size: 0.72rem;
-  color: #8a7560;
+  color: var(--text-muted);
   margin-bottom: 0.1rem;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -429,8 +693,8 @@
 
 .callNumber {
   font-size: 1.35rem;
-  color: #C9872A;
-  font-weight: bold;
+  color: var(--accent);
+  font-weight: 700;
   text-decoration: none;
   transition: color 0.2s;
   letter-spacing: 0.02em;
@@ -438,19 +702,19 @@
 }
 
 .callNumber:hover {
-  color: #e09c35;
+  color: var(--accent-hover);
 }
 
 .callEmail {
   font-size: 0.88rem;
-  color: #8a7560;
+  color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
   word-break: break-all;
 }
 
 .callEmail:hover {
-  color: #c8b48a;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 700px) {
@@ -472,8 +736,40 @@
     align-items: flex-end;
   }
   .modal {
-    border-radius: 18px 18px 0 0;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
     width: 100%;
     max-width: 100%;
+  }
+
+  .modalMeta {
+    padding: 0.65rem 0.75rem;
+    align-items: stretch;
+  }
+
+  .priceItem,
+  .priceItemTotal {
+    gap: 0.75rem;
+    font-size: 0.88rem;
+  }
+
+  .priceAmount {
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+
+  .priceValue {
+    display: inline-block;
+  }
+
+  .priceTax {
+    margin-left: 0.25rem;
+    font-size: 0.7rem;
+  }
+
+  .cardPrice {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 }

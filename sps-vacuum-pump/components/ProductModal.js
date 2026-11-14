@@ -1,7 +1,16 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "../lib/LanguageContext";
 import styles from "../styles/Equipement.module.css";
+
+function priceChunks(label) {
+  return label.split(" — ").flatMap((part, index) => {
+    const match = part.match(/^(.*?)\s+(\(.*\))$/);
+    const pieces = match ? [match[1], match[2]] : [part];
+    return pieces.map((text, i) => ({ text, sep: index > 0 && i === 0 }));
+  });
+}
 
 export default function ProductModal({ product, onClose }) {
   const { t } = useLanguage();
@@ -39,27 +48,94 @@ export default function ProductModal({ product, onClose }) {
 
           <div className={styles.productInfo}>
             <span className={styles.category}>{product.category}</span>
+            {product.sale && <span className={styles.saleBadge}>{e.sale}</span>}
             <h2 className={styles.productName}>{product.name}</h2>
             <div className={styles.modalMeta}>
               {product.prices ? (
-                <table className={styles.priceTable}>
-                  <tbody>
+                product.prices.some((p) => p.model && p.cfm) ? (
+                  <div className={styles.priceTableWrap}>
+                    <table className={styles.priceTable}>
+                      <thead>
+                        <tr>
+                          <th>{e.col_model}</th>
+                          <th>{e.col_cfm}</th>
+                          <th>{e.col_taps}</th>
+                          <th>{e.col_vac}</th>
+                          <th>{e.col_price}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {product.prices.map((p, i) => (
+                          <tr key={i}>
+                            <td>
+                              <span className={styles.priceModel}>{p.model}</span>
+                              {p.hp && <span className={styles.priceHp}>{p.hp}</span>}
+                            </td>
+                            <td>{p.cfm}</td>
+                            <td>{p.taps}</td>
+                            <td>{p.vac || "−29.9"}</td>
+                            <td>
+                              <span className={styles.priceValue}>{p.amount}</span>
+                              {p.amount !== "Sur demande" && p.amount !== "On request" && (
+                                <span className={styles.priceTax}>{e.taxes}</span>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : (
+                <div className={styles.priceList}>
                     {product.prices.map((p, i) => (
-                      <tr key={i} className={p.total ? styles.priceRowTotal : styles.priceRow}>
-                        <td className={styles.priceLabel}>{p.label}</td>
-                        <td className={styles.priceAmount}>{p.amount}</td>
-                        <td className={styles.priceTax}>
-                          {p.amount !== "Sur demande" && p.amount !== "On request" ? e.taxes : ""}
-                        </td>
-                      </tr>
+                      <div key={i} className={p.total ? styles.priceItemTotal : styles.priceItem}>
+                        <span className={styles.priceLabel}>
+                          {priceChunks(p.label).map((part, j) => (
+                            <span key={j} className={styles.priceChunk}>
+                              {part.sep ? "— " : ""}
+                              {part.text}
+                            </span>
+                          ))}
+                        </span>
+                        <span className={styles.priceAmount}>
+                          {p.was && (
+                            <span className={styles.priceWas}>{p.was}</span>
+                          )}
+                          <span className={styles.priceValue}>{p.amount}</span>
+                          {p.amount !== "Sur demande" && p.amount !== "On request" && (
+                            <span className={styles.priceTax}>{e.taxes}</span>
+                          )}
+                        </span>
+                      </div>
                     ))}
-                  </tbody>
-                </table>
+                </div>
+                )
               ) : (
-                <span className={styles.modalPrice}>{product.price}</span>
+                <span className={styles.modalPrice}>
+                  {product.priceWas && (
+                    <span className={styles.priceWas}>{product.priceWas}</span>
+                  )}
+                  {product.price}
+                </span>
               )}
-              {product.stock && <span className={styles.modalStock}>✅ {product.stock}</span>}
+              {product.stock && (
+                <span className={product.stockOut ? styles.modalStockOut : styles.modalStock}>
+                  {product.stockOut ? "⚠ " : "✅ "}
+                  {product.stock}
+                </span>
+              )}
             </div>
+            {product.notice && (
+              <p className={styles.productNotice}>{product.notice}</p>
+            )}
+            {product.voltageInfo && (
+              <p className={styles.voltageNote}>
+                {e.voltage_pump}{" "}
+                <Link href="/voltage" className={styles.voltageLink} onClick={onClose}>
+                  {e.voltage_link}
+                </Link>
+              </p>
+            )}
             <div className={styles.description}>
               {product.description.split("\n").map((line, i) =>
                 line.startsWith("•") ? (
@@ -89,6 +165,38 @@ export default function ProductModal({ product, onClose }) {
             </div>
           </div>
         </div>
+
+        {product.featureSheet && (
+          <section className={styles.featureSheet} aria-label={product.featureSheet.title}>
+            <h3 className={styles.featureSheetTitle}>{product.featureSheet.title}</h3>
+            <div className={styles.featureRows}>
+              {product.featureSheet.rows.map((row) => (
+                <article
+                  key={row.heading}
+                  className={`${styles.featureRow} ${row.highlight ? styles.featureRowHighlight : ""}`}
+                >
+                  <div className={styles.featureImgWrap}>
+                    <Image
+                      src={row.image}
+                      alt={row.imageAlt}
+                      width={480}
+                      height={360}
+                      className={styles.featureImg}
+                    />
+                  </div>
+                  <div className={styles.featureCopy}>
+                    <h4 className={styles.featureHeading}>{row.heading}</h4>
+                    <ul className={styles.featureBullets}>
+                      {row.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );

@@ -5,8 +5,10 @@ export default function Document() {
     <Html lang="fr">
       <Head>
         <meta charSet="utf-8" />
-        <meta name="theme-color" content="#0e0c08" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#080c10" />
+        <link rel="icon" type="image/png" href="/images/logo-reel.png" />
+        <link rel="apple-touch-icon" href="/images/logo-reel.png" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       </Head>
       <body>
         <Main />
