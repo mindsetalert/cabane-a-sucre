@@ -293,10 +293,6 @@ export const translations = {
             "L'équipement doit être utilisé conformément aux instructions du fabricant et aux pratiques recommandées pour un système de vide en érablière.",
             "Un entretien régulier doit être effectué, incluant la vérification et le maintien du niveau d'huile selon les spécifications du manufacturier.",
             "L'installation doit être réalisée de façon appropriée, avec une protection adéquate contre l'entrée de liquide dans la pompe.",
-            {
-              text: "IMPORTANT — Respectez les paramètres et le schéma d'installation fournis. Toute modification non autorisée peut endommager la pompe et annuler votre garantie.",
-              required: true,
-            },
             "La garantie est non transférable sans autorisation écrite de SPS Vacuum Pump.",
           ],
           exclusions_title: "Ce que la garantie ne couvre pas",
@@ -820,10 +816,6 @@ export const translations = {
             "Equipment must be used in accordance with manufacturer instructions and recommended practices for a maple vacuum system.",
             "Regular maintenance must be performed, including checking and maintaining oil levels per manufacturer specifications.",
             "Installation must be completed properly, with adequate protection against liquid entering the pump.",
-            {
-              text: "IMPORTANT — Follow the provided parameters and installation layout. Unauthorized modifications can damage the pump and void your warranty.",
-              required: true,
-            },
             "Warranty is non-transferable without written authorization from SPS Vacuum Pump.",
           ],
           exclusions_title: "What the warranty does not cover",
