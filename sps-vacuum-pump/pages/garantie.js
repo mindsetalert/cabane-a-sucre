@@ -84,6 +84,17 @@ export default function Garantie() {
         </ul>
       </div>
 
+      {content.coverage?.length ? (
+        <div className={`${styles.section} ${styles.coverage}`}>
+          <h2 className={styles.sectionTitle}>{content.coverage_title}</h2>
+          <ul className={styles.list}>
+            {content.coverage.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+
       <div className={`${styles.section} ${styles.exclusions}`}>
         <h2 className={styles.sectionTitle}>{content.exclusions_title}</h2>
         <ul className={styles.list}>

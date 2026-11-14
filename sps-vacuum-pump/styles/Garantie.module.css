@@ -145,6 +145,14 @@
   margin-bottom: 1.5rem;
 }
 
+.coverage {
+  border-color: rgba(34, 211, 238, 0.35);
+}
+
+.coverage .list li::before {
+  color: var(--accent);
+}
+
 .exclusions {
   border-color: rgba(248, 113, 113, 0.35);
 }

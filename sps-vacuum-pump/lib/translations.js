@@ -295,6 +295,13 @@ export const translations = {
             "L'installation doit être réalisée de façon appropriée, avec une protection adéquate contre l'entrée de liquide dans la pompe.",
             "La garantie est non transférable sans autorisation écrite de SPS Vacuum Pump.",
           ],
+          coverage_title: "Ce que la garantie couvre",
+          coverage: [
+            "Les défauts de fabrication et de matériaux sur la pompe à vis SPS, à compter de la date d'achat.",
+            "Le groupe de compression (airend), le moteur et les composants électriques d'origine, lorsqu'ils présentent un défaut couvert.",
+            "Le VFD / panneau de contrôle fourni avec la pompe, en cas de défaut de fabrication.",
+            "La réparation ou le remplacement de l'équipement, selon notre évaluation, lorsque les conditions de garantie sont respectées.",
+          ],
           exclusions_title: "Ce que la garantie ne couvre pas",
           exclusions: [
             "Les dommages causés par l'entrée d'eau d'érable (eau de sève) ou de liquide dans le système de vide.",
@@ -332,6 +339,13 @@ export const translations = {
               required: true,
             },
             "La garantie est non transférable sans autorisation écrite de SPS Vacuum Pump.",
+          ],
+          coverage_title: "Ce que la garantie couvre",
+          coverage: [
+            "Les défauts de fabrication et de matériaux sur la canneuse automatique SPS, à compter de la date d'achat.",
+            "Le moteur, l'entraînement et les composants électriques d'origine, lorsqu'ils présentent un défaut couvert.",
+            "Les mécanismes de sertissage et les pièces structurelles de l'appareil, en cas de défaut de fabrication.",
+            "La réparation ou le remplacement de l'appareil, selon notre évaluation, lorsque les conditions de garantie sont respectées.",
           ],
           exclusions_title: "Ce que la garantie ne couvre pas",
           exclusions: [
@@ -818,6 +832,13 @@ export const translations = {
             "Installation must be completed properly, with adequate protection against liquid entering the pump.",
             "Warranty is non-transferable without written authorization from SPS Vacuum Pump.",
           ],
+          coverage_title: "What the warranty covers",
+          coverage: [
+            "Manufacturing and material defects on the SPS screw pump from the date of purchase.",
+            "The compression stage (airend), motor and original electrical components when they have a covered defect.",
+            "The VFD / control panel supplied with the pump, in case of a manufacturing defect.",
+            "Repair or replacement of the equipment, at our discretion, when warranty conditions are met.",
+          ],
           exclusions_title: "What the warranty does not cover",
           exclusions: [
             "Damage caused by maple sap water or liquid entering the vacuum system.",
@@ -855,6 +876,13 @@ export const translations = {
               required: true,
             },
             "Warranty is non-transferable without written authorization from SPS Vacuum Pump.",
+          ],
+          coverage_title: "What the warranty covers",
+          coverage: [
+            "Manufacturing and material defects on the SPS automatic can sealer from the date of purchase.",
+            "The motor, drive and original electrical components when they have a covered defect.",
+            "Seaming mechanisms and structural parts of the unit, in case of a manufacturing defect.",
+            "Repair or replacement of the unit, at our discretion, when warranty conditions are met.",
           ],
           exclusions_title: "What the warranty does not cover",
           exclusions: [
