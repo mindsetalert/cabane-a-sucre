@@ -26,7 +26,7 @@ export default function Header() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/logo-reel.png"
-            alt="SPS Vacuum — Équipement Érablière"
+            alt="SPS Vacuum — Équipement Érablière et industriel"
             className={styles.logoImg}
           />
         </Link>

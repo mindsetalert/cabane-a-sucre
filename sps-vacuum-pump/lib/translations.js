@@ -1,7 +1,7 @@
 export const translations = {
   fr: {
     meta: {
-      home_title: "SPS Vacuum Pump — Équipement Érablière",
+      home_title: "SPS Vacuum Pump — Équipement Érablière et industriel",
       products_title: "Produits — SPS Vacuum Pump",
       products_description: "Pompes à vide SPS, pompes à vis lubrifiées à l'huile, pompe à diaphragme, canneuse automatique, contacteur 60A et relai WiFi. Prix et stock pour érablières au Québec. Appelez (819) 743-5003.",
       home_description: "Équipement professionnel pour érablières : pompes à vide SPS VFD 1.5HP à 10HP, contacteur 60A et relai WiFi. Livraison possible.",
@@ -36,10 +36,10 @@ export const translations = {
       garantie: "Garantie",
       pieces: "Pièces",
       contact: "Contact",
-      logo_sub: "Équipement Érablière",
+      logo_sub: "Équipement Érablière et industriel",
     },
     equipement: {
-      title: "Équipement Érablière",
+      title: "Équipement Érablière et industriel",
       subtitle: "Pompes à vide, démarrage automatique et plus — Prix compétitifs",
       cta: "Cliquez sur un produit pour voir les détails — Appelez au (819) 743-5003 pour commander",
       carousel: "Nos Produits",
@@ -538,7 +538,7 @@ export const translations = {
 
   en: {
     meta: {
-      home_title: "SPS Vacuum Pump — Sugar Shack Equipment",
+      home_title: "SPS Vacuum Pump — Sugar Shack & Industrial Equipment",
       products_title: "Products — SPS Vacuum Pump",
       products_description: "SPS vacuum pumps, oil-lubricated screw vacuum pumps, diaphragm pump, automatic can sealer, 60A contactor and WiFi relay. Prices and stock for Quebec sugar shacks. Call (819) 743-5003.",
       home_description: "Professional sugar shack equipment: SPS VFD vacuum pumps 1.5HP to 10HP, 60A contactor and WiFi relay. Delivery available.",
@@ -573,10 +573,10 @@ export const translations = {
       garantie: "Warranty",
       pieces: "Parts",
       contact: "Contact",
-      logo_sub: "Sugar Shack Equipment",
+      logo_sub: "Sugar Shack & Industrial Equipment",
     },
     equipement: {
-      title: "Sugar Shack Equipment",
+      title: "Sugar Shack & Industrial Equipment",
       subtitle: "Vacuum pumps, automatic start and more — Competitive prices",
       cta: "Click on a product to see details — Call (819) 743-5003 to order",
       carousel: "Our Products",
