@@ -88,6 +88,30 @@ export default function Accueil() {
           </div>
         </section>
 
+        <section className={homeStyles.d25Section} aria-labelledby="trap-home-title">
+          <div className={homeStyles.d25Inner}>
+            <div className={homeStyles.d25Copy}>
+              <p className={homeStyles.d25Title} id="trap-home-title">
+                {h.trap_title}
+              </p>
+              <p className={homeStyles.d25Text}>{h.trap_text}</p>
+              <p className={homeStyles.noticeAlert}>{h.trap_notice}</p>
+              <Link href="/produits#trappe-humidite" className={homeStyles.infoCta}>
+                {h.trap_cta}
+              </Link>
+            </div>
+            <div className={homeStyles.d25ImgWrap}>
+              <Image
+                src="/images/equipement/trappe-humidite-fiche.png"
+                alt={h.trap_title}
+                width={1200}
+                height={900}
+                className={homeStyles.d25Img}
+              />
+            </div>
+          </div>
+        </section>
+
         <section className={homeStyles.d25Section} aria-labelledby="canneuse-home-title">
           <div className={homeStyles.d25Inner}>
             <div className={homeStyles.d25Copy}>

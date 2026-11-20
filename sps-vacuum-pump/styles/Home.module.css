@@ -118,6 +118,14 @@
   font-weight: 800;
 }
 
+.noticeAlert {
+  color: #dc2626;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.55;
+  margin: -0.5rem 0 1.25rem;
+}
+
 .priceNowrap {
   white-space: nowrap;
 }

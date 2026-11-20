@@ -136,6 +136,12 @@ export const translations = {
       vacuum_text:
         "Pompes rotatives à palettes, refroidies à l’air, avec convertisseur VFD inclus. De 2 à 10 HP.",
       vacuum_cta: "Voir le produit →",
+      trap_title: "Trappe d'humidité",
+      trap_text:
+        "Caisson entre le relâcheur et la pompe vacuum, avec interrupteur d'arrêt d'urgence pour protéger le moteur.",
+      trap_notice:
+        "Ce produit est sur commande spéciale et nécessite des frais de livraison supplémentaires de 50$.",
+      trap_cta: "Voir le produit →",
       d25_title: "SPS-D25",
       d25_text:
         "Pompe à diaphragme pour presses à sirop. FRL inclus. 3 en commande · 1 déjà réservée.",
@@ -675,6 +681,12 @@ export const translations = {
       vacuum_text:
         "Air-cooled rotary vane pumps with VFD converter included. From 2 to 10 HP.",
       vacuum_cta: "View product →",
+      trap_title: "Moisture trap",
+      trap_text:
+        "Housing between the releaser and the vacuum pump, with an emergency shutoff switch to protect the motor.",
+      trap_notice:
+        "This product is special order and requires an additional $50 shipping fee.",
+      trap_cta: "View product →",
       d25_title: "SPS-D25",
       d25_text:
         "Diaphragm pump for syrup presses. FRL included. 3 on order · 1 already reserved.",
