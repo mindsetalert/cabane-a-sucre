@@ -158,6 +158,50 @@ Points forts :
     callLabel: "Pour réserver ou acheter, contactez-nous :",
   },
   {
+    id: "trappe-humidite",
+    name: "Trappe d'humidité — Enveloppe BC ou mousse",
+    short:
+      "Deux modèles pour protéger votre pompe à vide : enveloppe BC remplaçable ou filtration à mousse.",
+    prices: [
+      { label: "Trappe enveloppe BC remplaçable", amount: "Sur demande" },
+      { label: "Trappe à mousse", amount: "Sur demande" },
+    ],
+    price: "Prix sur demande",
+    stock: null,
+    stockDate: null,
+    notice:
+      "Deux modèles distincts — enveloppe BC remplaçable ou filtration à mousse. Plus de détails à venir.",
+    description: `Trappes d'humidité conçues pour retenir l'humidité et les condensats avant qu'ils n'atteignent votre pompe à vide.
+
+Deux modèles offerts :
+
+Trappe à enveloppe BC remplaçable
+• Corps cylindrique avec enveloppe BC intérieure remplaçable
+• Facile à entretenir : on change l'enveloppe quand elle est saturée
+• Protège la pompe contre l'humidité et les condensats
+
+Trappe à mousse
+• Corps cylindrique avec filtration à mousse
+• Entrée / sortie sur le dessus
+• Retient l'humidité et les particules avant la pompe
+
+Idéales en érablière pour protéger le vacuum pendant la saison des sucres.
+
+Les prix et les spécifications complètes seront ajoutés sous peu. Appelez-nous pour commander ou pour savoir quel modèle convient à votre installation.`,
+    images: [
+      {
+        src: "/images/equipement/trappe-humidite-enveloppe.png",
+        alt: "Trappe d'humidité à enveloppe BC remplaçable",
+      },
+      {
+        src: "/images/equipement/trappe-humidite-mousse.png",
+        alt: "Trappe d'humidité à filtration mousse",
+      },
+    ],
+    category: "Trappe d'humidité",
+    callLabel: "Pour réserver ou acheter, contactez-nous :",
+  },
+  {
     id: "contacteur-relai-wifi",
     name: "Contacteur 60A AC-3 + Relai WiFi 110V — Démarrage à distance",
     short: "Démarrez votre vacuum ou toute autre machine à distance via WiFi avec application mobile.",
@@ -337,6 +381,50 @@ Highlights:
       },
     ],
     category: "Canning",
+    callLabel: "To reserve or purchase, contact us:",
+  },
+  {
+    id: "trappe-humidite",
+    name: "Moisture Trap — Replaceable BC liner or foam",
+    short:
+      "Two models to protect your vacuum pump: replaceable BC liner or foam filtration.",
+    prices: [
+      { label: "BC liner moisture trap", amount: "On request" },
+      { label: "Foam moisture trap", amount: "On request" },
+    ],
+    price: "Price on request",
+    stock: null,
+    stockDate: null,
+    notice:
+      "Two distinct models — replaceable BC liner or foam filtration. More details coming soon.",
+    description: `Moisture traps designed to catch humidity and condensate before they reach your vacuum pump.
+
+Two models available:
+
+Replaceable BC liner trap
+• Cylindrical body with replaceable BC liner inside
+• Easy maintenance: swap the liner when saturated
+• Protects the pump from humidity and condensate
+
+Foam trap
+• Cylindrical body with foam filtration
+• Inlet / outlet on top
+• Holds humidity and particles before the pump
+
+Ideal for sugar shacks to protect the vacuum during maple season.
+
+Full pricing and specs will be added soon. Call us to order or to choose the right model for your setup.`,
+    images: [
+      {
+        src: "/images/equipement/trappe-humidite-enveloppe.png",
+        alt: "Moisture trap with replaceable BC liner",
+      },
+      {
+        src: "/images/equipement/trappe-humidite-mousse.png",
+        alt: "Moisture trap with foam filtration",
+      },
+    ],
+    category: "Moisture trap",
     callLabel: "To reserve or purchase, contact us:",
   },
   {

@@ -3,7 +3,7 @@ export const translations = {
     meta: {
       home_title: "SPS Vacuum Pump — Équipement Érablière et industriel",
       products_title: "Produits — SPS Vacuum Pump",
-      products_description: "Pompes à vide SPS, pompes à vis lubrifiées à l'huile, pompe à diaphragme, canneuse automatique, contacteur 60A et relai WiFi. Prix et stock pour érablières au Québec. Appelez (819) 743-5003.",
+      products_description: "Pompes à vide SPS, pompes à vis, pompe à diaphragme, trappes d'humidité, canneuse automatique, contacteur 60A et relai WiFi. Prix et stock pour érablières au Québec. Appelez (819) 743-5003.",
       home_description: "Équipement professionnel pour érablières : pompes à vide SPS VFD 1.5HP à 10HP, contacteur 60A et relai WiFi. Livraison possible.",
       home_og_description: "Pompes à vide SPS, démarrage automatique et plus pour votre érablière.",
       contact_title: "Contact — SPS Vacuum Pump",
@@ -540,7 +540,7 @@ export const translations = {
     meta: {
       home_title: "SPS Vacuum Pump — Sugar Shack & Industrial Equipment",
       products_title: "Products — SPS Vacuum Pump",
-      products_description: "SPS vacuum pumps, oil-lubricated screw vacuum pumps, diaphragm pump, automatic can sealer, 60A contactor and WiFi relay. Prices and stock for Quebec sugar shacks. Call (819) 743-5003.",
+      products_description: "SPS vacuum pumps, screw pumps, diaphragm pump, moisture traps, automatic can sealer, 60A contactor and WiFi relay. Prices and stock for Quebec sugar shacks. Call (819) 743-5003.",
       home_description: "Professional sugar shack equipment: SPS VFD vacuum pumps 1.5HP to 10HP, 60A contactor and WiFi relay. Delivery available.",
       home_og_description: "SPS vacuum pumps, automatic start and more for your sugar shack.",
       contact_title: "Contact — SPS Vacuum Pump",
