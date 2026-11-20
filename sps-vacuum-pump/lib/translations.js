@@ -87,7 +87,7 @@ export const translations = {
       reserved_vacuum: [
         { qty: "2 ×", model: "SPS 1000 — 10 HP" },
         { qty: "1 ×", model: "SPS 500 — 5 HP" },
-        { qty: "1 ×", model: "SPS 300 — 3 HP" },
+        { qty: "3 ×", model: "SPS 300 — 3 HP" },
       ],
       reserved_diaphragm: [
         { qty: "1 ×", model: "SPS-D25" },
@@ -632,7 +632,7 @@ export const translations = {
       reserved_vacuum: [
         { qty: "2 ×", model: "SPS 1000 — 10 HP" },
         { qty: "1 ×", model: "SPS 500 — 5 HP" },
-        { qty: "1 ×", model: "SPS 300 — 3 HP" },
+        { qty: "3 ×", model: "SPS 300 — 3 HP" },
       ],
       reserved_diaphragm: [
         { qty: "1 ×", model: "SPS-D25" },
