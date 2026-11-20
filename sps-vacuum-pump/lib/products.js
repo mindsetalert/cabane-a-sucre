@@ -194,11 +194,6 @@ Points forts :
 
 La trappe d'humidité est un caisson qui s'installe entre le relâcheur et la pompe vacuum. Elle est munie d'un interrupteur d'arrêt d'urgence qui sert à protéger la pompe vacuum. L'interrupteur coupe l'alimentation au moteur de la pompe lorsque l'eau s'accumule à l'intérieur de la trappe suite à une défectuosité du relâcheur, ce qui empêche l'eau de se rendre à votre pompe et lui causer des dommages.
 
-Trois modèles BHR Experts :
-• 25F01-BHR505 — Ø 8 po × L 27 po, enveloppe 100 microns, arrêt d'urgence
-• 25F01-BHR507-D — Ø 10 po × L 24 po, électrique avec mousse
-• 25F01-BHR506 — Ø 12 po × L 24 po, enveloppe 100 microns, arrêt d'urgence
-
 Ø = diamètre · L = longueur · po = pouce`,
     images: [
       {
@@ -431,11 +426,6 @@ Highlights:
     description: `What is a moisture trap for?
 
 The moisture trap is a housing installed between the releaser and the vacuum pump. It includes an emergency shutoff switch that protects the vacuum pump. The switch cuts power to the pump motor when water builds up inside the trap after a releaser failure, preventing water from reaching your pump and damaging it.
-
-Three BHR Experts models:
-• 25F01-BHR505 — Ø 8 in × L 27 in, 100-micron liner, emergency shutoff
-• 25F01-BHR507-D — Ø 10 in × L 24 in, electric with foam
-• 25F01-BHR506 — Ø 12 in × L 24 in, 100-micron liner, emergency shutoff
 
 Ø = diameter · L = length · in = inch`,
     images: [
