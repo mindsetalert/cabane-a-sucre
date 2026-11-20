@@ -159,43 +159,47 @@ Points forts :
   },
   {
     id: "trappe-humidite",
-    name: "Trappe d'humidité — Enveloppe BC ou mousse",
+    name: "Trappes pour l'humidité et à vapeur | BHR Experts",
     short:
-      "Deux modèles pour protéger votre pompe à vide : enveloppe BC remplaçable ou filtration à mousse.",
+      "Caisson entre le relâcheur et la pompe vacuum, avec arrêt d'urgence pour protéger le moteur.",
     prices: [
-      { label: "Trappe enveloppe BC remplaçable", amount: "Sur demande" },
-      { label: "Trappe à mousse", amount: "Sur demande" },
+      {
+        label: "25F01-BHRSO5E — Trappe 8\" × 27\" sortie 2\" bec de canard",
+        amount: "561.65$",
+      },
+      {
+        label: "25F01-BHR507-D — Trappe électrique avec mousse",
+        amount: "708.65$",
+      },
+      {
+        label: "25F01-BHR506 — Trappe 12\" × 24\" sortie 2\" bec de canard",
+        amount: "735.40$",
+      },
     ],
-    price: "Prix sur demande",
+    price: "À partir de 561.65$ + taxes",
     stock: null,
     stockDate: null,
     notice:
-      "Deux modèles distincts — enveloppe BC remplaçable ou filtration à mousse. Plus de détails à venir.",
-    description: `Trappes d'humidité conçues pour retenir l'humidité et les condensats avant qu'ils n'atteignent votre pompe à vide.
+      "Ce produit est sur commande spéciale et nécessite un frais de shipping supplémentaire de 50$.",
+    noticeAlert: true,
+    description: `À quoi sert la trappe d'humidité?
 
-Deux modèles offerts :
+La trappe d'humidité est un caisson qui s'installe entre le relâcheur et la pompe vacuum. Elle est munie d'un interrupteur d'arrêt d'urgence qui sert à protéger la pompe vacuum. L'interrupteur coupe l'alimentation au moteur de la pompe lorsque l'eau s'accumule à l'intérieur de la trappe suite à une défectuosité du relâcheur, ce qui empêche l'eau de se rendre à votre pompe et lui causer des dommages.
 
-Trappe à enveloppe BC remplaçable
-• Corps cylindrique avec enveloppe BC intérieure remplaçable
-• Facile à entretenir : on change l'enveloppe quand elle est saturée
-• Protège la pompe contre l'humidité et les condensats
+Modèles offerts :
+• 25F01-BHRSO5E — Trappe d'humidité 8" × 27", sortie 2", bec de canard
+• 25F01-BHR507-D — Trappe d'humidité électrique avec mousse
+• 25F01-BHR506 — Trappe d'humidité 12" × 24", sortie 2", bec de canard
 
-Trappe à mousse
-• Corps cylindrique avec filtration à mousse
-• Entrée / sortie sur le dessus
-• Retient l'humidité et les particules avant la pompe
-
-Idéales en érablière pour protéger le vacuum pendant la saison des sucres.
-
-Les prix et les spécifications complètes seront ajoutés sous peu. Appelez-nous pour commander ou pour savoir quel modèle convient à votre installation.`,
+Produit BHR Experts, sur commande spéciale.`,
     images: [
       {
         src: "/images/equipement/trappe-humidite-enveloppe.png",
-        alt: "Trappe d'humidité à enveloppe BC remplaçable",
+        alt: "Trappe d'humidité à enveloppe BC remplaçable — bec de canard",
       },
       {
         src: "/images/equipement/trappe-humidite-mousse.png",
-        alt: "Trappe d'humidité à filtration mousse",
+        alt: "Trappe d'humidité électrique avec mousse",
       },
     ],
     category: "Trappe d'humidité",
@@ -385,43 +389,47 @@ Highlights:
   },
   {
     id: "trappe-humidite",
-    name: "Moisture Trap — Replaceable BC liner or foam",
+    name: "Moisture and Steam Traps | BHR Experts",
     short:
-      "Two models to protect your vacuum pump: replaceable BC liner or foam filtration.",
+      "Housing between the releaser and the vacuum pump, with an emergency shutoff to protect the motor.",
     prices: [
-      { label: "BC liner moisture trap", amount: "On request" },
-      { label: "Foam moisture trap", amount: "On request" },
+      {
+        label: "25F01-BHRSO5E — 8\" × 27\" trap, 2\" outlet, duckbill",
+        amount: "$561.65",
+      },
+      {
+        label: "25F01-BHR507-D — Electric foam moisture trap",
+        amount: "$708.65",
+      },
+      {
+        label: "25F01-BHR506 — 12\" × 24\" trap, 2\" outlet, duckbill",
+        amount: "$735.40",
+      },
     ],
-    price: "Price on request",
+    price: "From $561.65 + taxes",
     stock: null,
     stockDate: null,
     notice:
-      "Two distinct models — replaceable BC liner or foam filtration. More details coming soon.",
-    description: `Moisture traps designed to catch humidity and condensate before they reach your vacuum pump.
+      "This product is special order and requires an additional $50 shipping fee.",
+    noticeAlert: true,
+    description: `What is a moisture trap for?
 
-Two models available:
+The moisture trap is a housing installed between the releaser and the vacuum pump. It has an emergency shutoff switch that protects the vacuum pump. The switch cuts power to the pump motor when water builds up inside the trap after a releaser failure, keeping water from reaching your pump and damaging it.
 
-Replaceable BC liner trap
-• Cylindrical body with replaceable BC liner inside
-• Easy maintenance: swap the liner when saturated
-• Protects the pump from humidity and condensate
+Available models:
+• 25F01-BHRSO5E — 8" × 27" moisture trap, 2" outlet, duckbill
+• 25F01-BHR507-D — Electric moisture trap with foam
+• 25F01-BHR506 — 12" × 24" moisture trap, 2" outlet, duckbill
 
-Foam trap
-• Cylindrical body with foam filtration
-• Inlet / outlet on top
-• Holds humidity and particles before the pump
-
-Ideal for sugar shacks to protect the vacuum during maple season.
-
-Full pricing and specs will be added soon. Call us to order or to choose the right model for your setup.`,
+BHR Experts product, special order.`,
     images: [
       {
         src: "/images/equipement/trappe-humidite-enveloppe.png",
-        alt: "Moisture trap with replaceable BC liner",
+        alt: "Moisture trap with replaceable BC liner — duckbill",
       },
       {
         src: "/images/equipement/trappe-humidite-mousse.png",
-        alt: "Moisture trap with foam filtration",
+        alt: "Electric moisture trap with foam",
       },
     ],
     category: "Moisture trap",

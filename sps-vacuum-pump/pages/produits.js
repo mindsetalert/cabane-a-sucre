@@ -87,7 +87,9 @@ export default function Produits() {
                 <h3 className={styles.cardName}>{product.name}</h3>
                 <p className={styles.cardShort}>{product.short}</p>
                 {product.notice && (
-                  <p className={styles.cardNotice}>{product.notice}</p>
+                  <p className={product.noticeAlert ? styles.cardNoticeAlert : styles.cardNotice}>
+                    {product.notice}
+                  </p>
                 )}
                 {product.voltageInfo && (
                   <p className={styles.cardVoltage}>

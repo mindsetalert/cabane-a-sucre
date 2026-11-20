@@ -126,7 +126,9 @@ export default function ProductModal({ product, onClose }) {
               )}
             </div>
             {product.notice && (
-              <p className={styles.productNotice}>{product.notice}</p>
+              <p className={product.noticeAlert ? styles.productNoticeAlert : styles.productNotice}>
+                {product.notice}
+              </p>
             )}
             {product.voltageInfo && (
               <p className={styles.voltageNote}>
