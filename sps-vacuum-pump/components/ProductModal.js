@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../lib/LanguageContext";
@@ -16,6 +16,14 @@ export default function ProductModal({ product, onClose }) {
   const { t } = useLanguage();
   const [activeImg, setActiveImg] = useState(0);
   const e = t.equipement;
+
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, []);
 
   return (
     <div className={styles.overlay} onClick={onClose}>
