@@ -545,6 +545,26 @@
   color: var(--text-muted, #9ca3af);
 }
 
+.priceTableSpecs th:nth-child(2),
+.priceTableSpecs td:nth-child(2) {
+  text-align: left;
+  min-width: 12rem;
+}
+
+.priceDetail {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.priceSize {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 .priceTable .priceTax {
   display: block;
   margin-left: 0;

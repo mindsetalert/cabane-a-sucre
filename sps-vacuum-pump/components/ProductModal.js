@@ -85,6 +85,36 @@ export default function ProductModal({ product, onClose }) {
                       </tbody>
                     </table>
                   </div>
+                ) : product.prices.some((p) => p.model && p.size) ? (
+                  <div className={styles.priceTableWrap}>
+                    <table className={`${styles.priceTable} ${styles.priceTableSpecs}`}>
+                      <thead>
+                        <tr>
+                          <th>{e.col_model}</th>
+                          <th>{e.col_detail}</th>
+                          <th>{e.col_size}</th>
+                          <th>{e.col_price}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {product.prices.map((p, i) => (
+                          <tr key={i}>
+                            <td>
+                              <span className={styles.priceModel}>{p.model}</span>
+                            </td>
+                            <td className={styles.priceDetail}>{p.detail}</td>
+                            <td className={styles.priceSize}>{p.size}</td>
+                            <td>
+                              <span className={styles.priceValue}>{p.amount}</span>
+                              {p.amount !== "Sur demande" && p.amount !== "On request" && (
+                                <span className={styles.priceTax}>{e.taxes}</span>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 ) : (
                 <div className={styles.priceList}>
                     {product.prices.map((p, i) => (

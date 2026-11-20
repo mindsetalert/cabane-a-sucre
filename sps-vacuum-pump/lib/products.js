@@ -161,18 +161,26 @@ Points forts :
     id: "trappe-humidite",
     name: "Trappes pour l'humidité et à vapeur | BHR Experts",
     short:
-      "Caisson entre le relâcheur et la pompe vacuum, avec arrêt d'urgence pour protéger le moteur.",
+      "Caisson entre le relâcheur et la pompe vacuum, avec interrupteur d'arrêt d'urgence pour protéger le moteur.",
     prices: [
       {
-        label: "25F01-BHRSO5E — Trappe 8\" × 27\" sortie 2\" bec de canard",
+        model: "25F01-BHR505",
+        size: "8 po × 27 po",
+        detail:
+          "Trappe d'humidité munie d'un interrupteur d'arrêt d'urgence. Comprend une enveloppe de 100 microns.",
         amount: "561.65$",
       },
       {
-        label: "25F01-BHR507-D — Trappe électrique avec mousse",
+        model: "25F01-BHR507-D",
+        size: "10 po × 24 po",
+        detail: "Trappe d'humidité électrique avec mousse.",
         amount: "708.65$",
       },
       {
-        label: "25F01-BHR506 — Trappe 12\" × 24\" sortie 2\" bec de canard",
+        model: "25F01-BHR506",
+        size: "12 po × 24 po",
+        detail:
+          "Trappe d'humidité munie d'un interrupteur d'arrêt d'urgence. Comprend une enveloppe de 100 microns.",
         amount: "735.40$",
       },
     ],
@@ -180,22 +188,22 @@ Points forts :
     stock: null,
     stockDate: null,
     notice:
-      "Ce produit est sur commande spéciale et nécessite un frais de shipping supplémentaire de 50$.",
+      "Ce produit est sur commande spéciale et nécessite des frais de livraison supplémentaires de 50$.",
     noticeAlert: true,
     description: `À quoi sert la trappe d'humidité?
 
 La trappe d'humidité est un caisson qui s'installe entre le relâcheur et la pompe vacuum. Elle est munie d'un interrupteur d'arrêt d'urgence qui sert à protéger la pompe vacuum. L'interrupteur coupe l'alimentation au moteur de la pompe lorsque l'eau s'accumule à l'intérieur de la trappe suite à une défectuosité du relâcheur, ce qui empêche l'eau de se rendre à votre pompe et lui causer des dommages.
 
-Modèles offerts :
-• 25F01-BHRSO5E — Trappe d'humidité 8" × 27", sortie 2", bec de canard
-• 25F01-BHR507-D — Trappe d'humidité électrique avec mousse
-• 25F01-BHR506 — Trappe d'humidité 12" × 24", sortie 2", bec de canard
+Trois modèles BHR Experts :
+• 25F01-BHR505 — Ø 8 po × L 27 po, enveloppe 100 microns, arrêt d'urgence
+• 25F01-BHR507-D — Ø 10 po × L 24 po, électrique avec mousse
+• 25F01-BHR506 — Ø 12 po × L 24 po, enveloppe 100 microns, arrêt d'urgence
 
-Produit BHR Experts, sur commande spéciale.`,
+Ø = diamètre · L = longueur · po = pouce`,
     images: [
       {
         src: "/images/equipement/trappe-humidite-enveloppe.png",
-        alt: "Trappe d'humidité à enveloppe BC remplaçable — bec de canard",
+        alt: "Trappe d'humidité à enveloppe 100 microns et arrêt d'urgence",
       },
       {
         src: "/images/equipement/trappe-humidite-mousse.png",
@@ -389,20 +397,28 @@ Highlights:
   },
   {
     id: "trappe-humidite",
-    name: "Moisture and Steam Traps | BHR Experts",
+    name: "Moisture and Vapor Traps | BHR Experts",
     short:
-      "Housing between the releaser and the vacuum pump, with an emergency shutoff to protect the motor.",
+      "Housing installed between the releaser and the vacuum pump, with an emergency shutoff switch to protect the motor.",
     prices: [
       {
-        label: "25F01-BHRSO5E — 8\" × 27\" trap, 2\" outlet, duckbill",
+        model: "25F01-BHR505",
+        size: "8 in × 27 in",
+        detail:
+          "Moisture trap with emergency shutoff switch. Includes a 100-micron liner.",
         amount: "$561.65",
       },
       {
-        label: "25F01-BHR507-D — Electric foam moisture trap",
+        model: "25F01-BHR507-D",
+        size: "10 in × 24 in",
+        detail: "Electric moisture trap with foam.",
         amount: "$708.65",
       },
       {
-        label: "25F01-BHR506 — 12\" × 24\" trap, 2\" outlet, duckbill",
+        model: "25F01-BHR506",
+        size: "12 in × 24 in",
+        detail:
+          "Moisture trap with emergency shutoff switch. Includes a 100-micron liner.",
         amount: "$735.40",
       },
     ],
@@ -410,22 +426,22 @@ Highlights:
     stock: null,
     stockDate: null,
     notice:
-      "This product is special order and requires an additional $50 shipping fee.",
+      "This product is special order and requires an additional $50 delivery fee.",
     noticeAlert: true,
     description: `What is a moisture trap for?
 
-The moisture trap is a housing installed between the releaser and the vacuum pump. It has an emergency shutoff switch that protects the vacuum pump. The switch cuts power to the pump motor when water builds up inside the trap after a releaser failure, keeping water from reaching your pump and damaging it.
+The moisture trap is a housing installed between the releaser and the vacuum pump. It includes an emergency shutoff switch that protects the vacuum pump. The switch cuts power to the pump motor when water builds up inside the trap after a releaser failure, preventing water from reaching your pump and damaging it.
 
-Available models:
-• 25F01-BHRSO5E — 8" × 27" moisture trap, 2" outlet, duckbill
-• 25F01-BHR507-D — Electric moisture trap with foam
-• 25F01-BHR506 — 12" × 24" moisture trap, 2" outlet, duckbill
+Three BHR Experts models:
+• 25F01-BHR505 — Ø 8 in × L 27 in, 100-micron liner, emergency shutoff
+• 25F01-BHR507-D — Ø 10 in × L 24 in, electric with foam
+• 25F01-BHR506 — Ø 12 in × L 24 in, 100-micron liner, emergency shutoff
 
-BHR Experts product, special order.`,
+Ø = diameter · L = length · in = inch`,
     images: [
       {
         src: "/images/equipement/trappe-humidite-enveloppe.png",
-        alt: "Moisture trap with replaceable BC liner — duckbill",
+        alt: "Moisture trap with 100-micron liner and emergency shutoff",
       },
       {
         src: "/images/equipement/trappe-humidite-mousse.png",
