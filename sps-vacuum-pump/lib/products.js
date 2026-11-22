@@ -222,6 +222,35 @@ Appelez-nous si vous avez un doute sur le modèle adapté à votre installation.
     callLabel: "Pour réserver ou acheter, contactez-nous :",
   },
   {
+    id: "trappe-vapeur",
+    name: "Trappe d'humidité à vapeur WÔ vap! | BHR Experts",
+    short:
+      "Trappe à vapeur haute colonne qui retient l'eau et la vapeur avant la pompe vacuum.",
+    price: "Prix sur demande",
+    stock: null,
+    stockDate: null,
+    notice:
+      "Ce produit est sur commande spéciale et nécessite des frais de livraison supplémentaires de 50$.",
+    noticeAlert: true,
+    description: `La trappe d'humidité à vapeur WÔ vap! de BHR Experts s'installe avant la pompe vacuum pour retenir l'eau et la vapeur qui arrivent du système, afin de protéger la pompe.
+
+Caractéristiques visibles :
+• Colonne haute en sections, fermée par des attaches rapides en acier inoxydable
+• 2 manomètres pour suivre le vide le long de la colonne
+• Raccords et vannes à bille en PVC
+• Purge au bas de la colonne
+
+Appelez-nous pour le prix, les dimensions et le modèle adapté à votre installation.`,
+    images: [
+      {
+        src: "/images/equipement/trappe-vapeur-wovap.png",
+        alt: "Trappe d'humidité à vapeur WÔ vap! de BHR Experts",
+      },
+    ],
+    category: "Trappe d'humidité",
+    callLabel: "Pour réserver ou acheter, contactez-nous :",
+  },
+  {
     id: "contacteur-relai-wifi",
     name: "Contacteur 60A AC-3 + Relai WiFi 110V — Démarrage à distance",
     short: "Démarrez votre vacuum ou toute autre machine à distance via WiFi avec application mobile.",
@@ -462,6 +491,35 @@ Call us if you are unsure which model fits your setup.
       {
         src: "/images/equipement/trappe-humidite-mousse.png",
         alt: "Electric moisture trap with foam",
+      },
+    ],
+    category: "Moisture trap",
+    callLabel: "To reserve or purchase, contact us:",
+  },
+  {
+    id: "trappe-vapeur",
+    name: "WÔ vap! Steam Moisture Trap | BHR Experts",
+    short:
+      "Tall-column steam trap that holds back water and vapor before the vacuum pump.",
+    price: "Price on request",
+    stock: null,
+    stockDate: null,
+    notice:
+      "This product is special order and requires an additional $50 delivery fee.",
+    noticeAlert: true,
+    description: `The BHR Experts WÔ vap! steam moisture trap is installed before the vacuum pump to hold back the water and vapor coming from the system, protecting the pump.
+
+Visible features:
+• Tall sectioned column closed with stainless steel quick latches
+• 2 vacuum gauges to monitor vacuum along the column
+• PVC fittings and ball valves
+• Drain at the bottom of the column
+
+Call us for price, dimensions and the right model for your setup.`,
+    images: [
+      {
+        src: "/images/equipement/trappe-vapeur-wovap.png",
+        alt: "BHR Experts WÔ vap! steam moisture trap",
       },
     ],
     category: "Moisture trap",
