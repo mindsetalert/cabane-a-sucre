@@ -159,28 +159,28 @@ Points forts :
   },
   {
     id: "trappe-humidite",
-    name: "Trappes pour l'humidité et à vapeur | BHR Experts",
+    name: "Trappes d'humidité (trappes à eau) | BHR Experts",
     short:
-      "Caisson entre le relâcheur et la pompe vacuum, avec interrupteur d'arrêt d'urgence pour protéger le moteur.",
+      "Trappe à eau entre le relâcheur et la pompe vacuum, avec arrêt d'urgence pour protéger le moteur.",
     prices: [
       {
         model: "25F01-BHR505",
         size: "8 po × 27 po",
         detail:
-          "Pompe à palettes 5 HP et moins (aussi 25R01-08). Arrêt d'urgence + enveloppe 100 microns.",
+          "Pompe à palettes, 5 HP et moins. Arrêt d'urgence et enveloppe de 100 microns.",
         amount: "561.65$",
       },
       {
         model: "25F01-BHR506",
         size: "12 po × 24 po",
         detail:
-          "Pompe à palettes 7,5 HP à 10 HP (aussi 25R01-08). Arrêt d'urgence + enveloppe 100 microns.",
+          "Pompe à palettes, 7,5 HP à 10 HP. Arrêt d'urgence et enveloppe de 100 microns.",
         amount: "735.40$",
       },
       {
         model: "25F01-BHR507-D",
         size: "10 po × 24 po",
-        detail: "Pour raccordement 3 po. Trappe électrique avec mousse.",
+        detail: "Raccordement de 3 po. Trappe électrique avec mousse.",
         amount: "708.65$",
       },
     ],
@@ -192,16 +192,22 @@ Points forts :
     noticeAlert: true,
     description: `À quoi sert la trappe d'humidité?
 
-La trappe d'humidité est un caisson qui s'installe entre le relâcheur et la pompe vacuum. Elle est munie d'un interrupteur d'arrêt d'urgence qui sert à protéger la pompe vacuum. L'interrupteur coupe l'alimentation au moteur de la pompe lorsque l'eau s'accumule à l'intérieur de la trappe suite à une défectuosité du relâcheur, ce qui empêche l'eau de se rendre à votre pompe et lui causer des dommages.
+Les modèles BHR505, BHR506 et BHR507-D sont des trappes à eau. Le caisson s'installe entre le relâcheur et la pompe vacuum. L'arrêt d'urgence coupe le moteur dès que l'eau s'accumule dans la trappe, après une défectuosité du relâcheur. L'eau n'atteint pas la pompe.
 
-Quelle trappe choisir selon votre pompe
+Quel modèle choisir
 
-• Pompe à vis : 25R01-12
-• Pompe à palettes 7,5 HP à 10 HP : 25R01-08 ou BHR506
-• Pompe à palettes 5 HP et moins : 25R01-08 ou BHR505
-• Raccordement 3 po : BHR507-D
+• Pompe à palettes, 5 HP et moins : BHR505
+• Pompe à palettes, 7,5 HP à 10 HP : BHR506
+• Raccordement de 3 po : BHR507-D
 
-Appelez-nous si vous avez un doute sur le modèle adapté à votre installation.
+Trappe à eau ou trappe à vapeur
+
+Ces modèles retiennent l'eau. Ils ne sont pas faits pour emprisonner la vapeur.
+
+Avec un relâcheur mécanique, la trappe à vapeur est le bon choix : ce type de relâcheur produit le plus de vapeur. Les trappes à vapeur froide 25R01-08 (8 po) et 25R01-12 (12 po) emprisonnent la vapeur avant la pompe. Elles coûtent plus cher, et elles protègent mieux la pompe dans ce cas.
+
+• Pompe à palettes : trappe à vapeur 25R01-08
+• Pompe à vis : trappe à vapeur 25R01-12
 
 Ø = diamètre · L = longueur · po = pouce`,
     images: [
@@ -223,24 +229,49 @@ Appelez-nous si vous avez un doute sur le modèle adapté à votre installation.
   },
   {
     id: "trappe-vapeur",
-    name: "Trappe d'humidité à vapeur WÔ vap! | BHR Experts",
+    name: "Trappe à vapeur froide WÔ vap! | BHR Experts",
     short:
-      "Trappe à vapeur haute colonne qui retient l'eau et la vapeur avant la pompe vacuum.",
-    price: "Prix sur demande",
+      "Trappe à vapeur froide, valves manuelles. Elle emprisonne la vapeur avant la pompe vacuum.",
+    prices: [
+      {
+        model: "25R01-08",
+        size: "8 po dia",
+        detail: "Pompe à palettes. Trappe à vapeur froide, valves manuelles.",
+        amount: "1 535.00$",
+      },
+      {
+        model: "25R01-12",
+        size: "12 po dia",
+        detail: "Pompe à vis. Trappe à vapeur froide, valves manuelles.",
+        amount: "2 440.00$",
+      },
+    ],
+    price: "À partir de 1 535.00$ + taxes",
     stock: null,
     stockDate: null,
     notice:
-      "Ce produit est sur commande spéciale et nécessite des frais de livraison supplémentaires de 50$.",
+      "Commande spéciale, livraison en sus de 50 $. Prix sujet à changement sans préavis.",
     noticeAlert: true,
-    description: `La trappe d'humidité à vapeur WÔ vap! de BHR Experts s'installe avant la pompe vacuum pour retenir l'eau et la vapeur qui arrivent du système, afin de protéger la pompe.
+    description: `À quoi sert la trappe à vapeur?
 
-Caractéristiques visibles :
-• Colonne haute en sections, fermée par des attaches rapides en acier inoxydable
-• 2 manomètres pour suivre le vide le long de la colonne
-• Raccords et vannes à bille en PVC
+La trappe à vapeur froide WÔ vap! s'installe avant la pompe vacuum. Elle emprisonne la vapeur, et elle retient aussi l'eau. Les trappes à eau BHR retiennent surtout l'eau : la trappe à vapeur va plus loin. Son prix est plus élevé, et la protection de la pompe est meilleure.
+
+Elle est particulièrement indiquée avec un relâcheur mécanique. Ce type de relâcheur produit le plus de vapeur, et c'est cette vapeur qui use la pompe si elle n'est pas arrêtée avant.
+
+Quel modèle choisir
+
+• 25R01-08, 8 po de diamètre, valves manuelles : pompe à palettes
+• 25R01-12, 12 po de diamètre, valves manuelles : pompe à vis
+
+Sans relâcheur mécanique, une trappe à eau peut suffire : BHR505 (5 HP et moins), BHR506 (7,5 HP à 10 HP) ou BHR507-D (raccordement de 3 po).
+
+Caractéristiques
+• Colonne en sections, fermée par des attaches rapides
+• Deux manomètres pour suivre le vide
+• Raccords et valves manuelles
 • Purge au bas de la colonne
 
-Appelez-nous pour le prix, les dimensions et le modèle adapté à votre installation.`,
+Ø = diamètre · po = pouce`,
     images: [
       {
         src: "/images/equipement/trappe-vapeur-wovap.png",
@@ -434,28 +465,28 @@ Highlights:
   },
   {
     id: "trappe-humidite",
-    name: "Moisture and Vapor Traps | BHR Experts",
+    name: "Moisture Traps (water traps) | BHR Experts",
     short:
-      "Housing installed between the releaser and the vacuum pump, with an emergency shutoff switch to protect the motor.",
+      "Water trap between the releaser and the vacuum pump, with an emergency shutoff to protect the motor.",
     prices: [
       {
         model: "25F01-BHR505",
         size: "8 in × 27 in",
         detail:
-          "Vane pumps 5 HP and under (also 25R01-08). Emergency shutoff + 100-micron liner.",
+          "Vane pumps, 5 HP and under. Emergency shutoff and 100-micron liner.",
         amount: "$561.65",
       },
       {
         model: "25F01-BHR506",
         size: "12 in × 24 in",
         detail:
-          "Vane pumps 7.5 HP to 10 HP (also 25R01-08). Emergency shutoff + 100-micron liner.",
+          "Vane pumps, 7.5 HP to 10 HP. Emergency shutoff and 100-micron liner.",
         amount: "$735.40",
       },
       {
         model: "25F01-BHR507-D",
         size: "10 in × 24 in",
-        detail: "For 3 in connection. Electric trap with foam.",
+        detail: "3 in connection. Electric trap with foam.",
         amount: "$708.65",
       },
     ],
@@ -467,16 +498,22 @@ Highlights:
     noticeAlert: true,
     description: `What is a moisture trap for?
 
-The moisture trap is a housing installed between the releaser and the vacuum pump. It includes an emergency shutoff switch that protects the vacuum pump. The switch cuts power to the pump motor when water builds up inside the trap after a releaser failure, preventing water from reaching your pump and damaging it.
+Models BHR505, BHR506 and BHR507-D are water traps. The housing sits between the releaser and the vacuum pump. The emergency shutoff cuts the motor as soon as water builds up in the trap after a releaser failure. The water never reaches the pump.
 
-Which trap for your pump
+Which model to choose
 
-• Screw pump: 25R01-12
-• Vane pumps 7.5 HP to 10 HP: 25R01-08 or BHR506
-• Vane pumps 5 HP and under: 25R01-08 or BHR505
+• Vane pumps, 5 HP and under: BHR505
+• Vane pumps, 7.5 HP to 10 HP: BHR506
 • 3 in connection: BHR507-D
 
-Call us if you are unsure which model fits your setup.
+Water trap or vapor trap
+
+These models hold back water. They are not built to trap vapor.
+
+With a mechanical releaser, the vapor trap is the right choice: that type of releaser produces the most vapor. The cold vapor traps 25R01-08 (8 in) and 25R01-12 (12 in) trap the vapor before the pump. They cost more, and they protect the pump better in that case.
+
+• Vane pumps: vapor trap 25R01-08
+• Screw pump: vapor trap 25R01-12
 
 Ø = diameter · L = length · in = inch`,
     images: [
@@ -498,24 +535,49 @@ Call us if you are unsure which model fits your setup.
   },
   {
     id: "trappe-vapeur",
-    name: "WÔ vap! Steam Moisture Trap | BHR Experts",
+    name: "WÔ vap! Cold Vapor Trap | BHR Experts",
     short:
-      "Tall-column steam trap that holds back water and vapor before the vacuum pump.",
-    price: "Price on request",
+      "Cold vapor trap with manual valves. It traps vapor before the vacuum pump.",
+    prices: [
+      {
+        model: "25R01-08",
+        size: "8 in dia",
+        detail: "Vane pumps. Cold vapor trap, manual valves.",
+        amount: "$1,535.00",
+      },
+      {
+        model: "25R01-12",
+        size: "12 in dia",
+        detail: "Screw pump. Cold vapor trap, manual valves.",
+        amount: "$2,440.00",
+      },
+    ],
+    price: "From $1,535.00 + taxes",
     stock: null,
     stockDate: null,
     notice:
-      "This product is special order and requires an additional $50 delivery fee.",
+      "Special order, plus a $50 delivery fee. Prices subject to change without notice.",
     noticeAlert: true,
-    description: `The BHR Experts WÔ vap! steam moisture trap is installed before the vacuum pump to hold back the water and vapor coming from the system, protecting the pump.
+    description: `What is a vapor trap for?
 
-Visible features:
-• Tall sectioned column closed with stainless steel quick latches
-• 2 vacuum gauges to monitor vacuum along the column
-• PVC fittings and ball valves
+The WÔ vap! cold vapor trap is installed before the vacuum pump. It traps the vapor, and it also holds back the water. BHR water traps mainly hold back water: the vapor trap goes further. It costs more, and the pump is better protected.
+
+It is the right choice with a mechanical releaser. That type of releaser produces the most vapor, and that vapor wears the pump if it is not stopped first.
+
+Which model to choose
+
+• 25R01-08, 8 in diameter, manual valves: vane pumps
+• 25R01-12, 12 in diameter, manual valves: screw pump
+
+Without a mechanical releaser, a water trap can be enough: BHR505 (5 HP and under), BHR506 (7.5 HP to 10 HP) or BHR507-D (3 in connection).
+
+Features
+• Sectioned column, closed with quick latches
+• Two gauges to monitor the vacuum
+• Fittings and manual valves
 • Drain at the bottom of the column
 
-Call us for price, dimensions and the right model for your setup.`,
+Ø = diameter · in = inch`,
     images: [
       {
         src: "/images/equipement/trappe-vapeur-wovap.png",
