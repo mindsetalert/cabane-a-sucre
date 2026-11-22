@@ -167,21 +167,21 @@ Points forts :
         model: "25F01-BHR505",
         size: "8 po × 27 po",
         detail:
-          "Trappe d'humidité munie d'un interrupteur d'arrêt d'urgence. Comprend une enveloppe de 100 microns.",
+          "Pompe à palettes 5 HP et moins (aussi 25R01-08). Arrêt d'urgence + enveloppe 100 microns.",
         amount: "561.65$",
-      },
-      {
-        model: "25F01-BHR507-D",
-        size: "10 po × 24 po",
-        detail: "Trappe d'humidité électrique avec mousse.",
-        amount: "708.65$",
       },
       {
         model: "25F01-BHR506",
         size: "12 po × 24 po",
         detail:
-          "Trappe d'humidité munie d'un interrupteur d'arrêt d'urgence. Comprend une enveloppe de 100 microns.",
+          "Pompe à palettes 7,5 HP à 10 HP (aussi 25R01-08). Arrêt d'urgence + enveloppe 100 microns.",
         amount: "735.40$",
+      },
+      {
+        model: "25F01-BHR507-D",
+        size: "10 po × 24 po",
+        detail: "Pour raccordement 3 po. Trappe électrique avec mousse.",
+        amount: "708.65$",
       },
     ],
     price: "À partir de 561.65$ + taxes",
@@ -194,8 +194,21 @@ Points forts :
 
 La trappe d'humidité est un caisson qui s'installe entre le relâcheur et la pompe vacuum. Elle est munie d'un interrupteur d'arrêt d'urgence qui sert à protéger la pompe vacuum. L'interrupteur coupe l'alimentation au moteur de la pompe lorsque l'eau s'accumule à l'intérieur de la trappe suite à une défectuosité du relâcheur, ce qui empêche l'eau de se rendre à votre pompe et lui causer des dommages.
 
+Quelle trappe choisir selon votre pompe
+
+• Pompe à vis : 25R01-12
+• Pompe à palettes 7,5 HP à 10 HP : 25R01-08 ou BHR506
+• Pompe à palettes 5 HP et moins : 25R01-08 ou BHR505
+• Raccordement 3 po : BHR507-D
+
+Appelez-nous si vous avez un doute sur le modèle adapté à votre installation.
+
 Ø = diamètre · L = longueur · po = pouce`,
     images: [
+      {
+        src: "/images/equipement/trappe-humidite-fiche.png",
+        alt: "Trappe d'humidité BHR Experts — protection et arrêt d'urgence",
+      },
       {
         src: "/images/equipement/trappe-humidite-enveloppe.png",
         alt: "Trappe d'humidité à enveloppe 100 microns et arrêt d'urgence",
@@ -400,21 +413,21 @@ Highlights:
         model: "25F01-BHR505",
         size: "8 in × 27 in",
         detail:
-          "Moisture trap with emergency shutoff switch. Includes a 100-micron liner.",
+          "Vane pumps 5 HP and under (also 25R01-08). Emergency shutoff + 100-micron liner.",
         amount: "$561.65",
-      },
-      {
-        model: "25F01-BHR507-D",
-        size: "10 in × 24 in",
-        detail: "Electric moisture trap with foam.",
-        amount: "$708.65",
       },
       {
         model: "25F01-BHR506",
         size: "12 in × 24 in",
         detail:
-          "Moisture trap with emergency shutoff switch. Includes a 100-micron liner.",
+          "Vane pumps 7.5 HP to 10 HP (also 25R01-08). Emergency shutoff + 100-micron liner.",
         amount: "$735.40",
+      },
+      {
+        model: "25F01-BHR507-D",
+        size: "10 in × 24 in",
+        detail: "For 3 in connection. Electric trap with foam.",
+        amount: "$708.65",
       },
     ],
     price: "From $561.65 + taxes",
@@ -427,8 +440,21 @@ Highlights:
 
 The moisture trap is a housing installed between the releaser and the vacuum pump. It includes an emergency shutoff switch that protects the vacuum pump. The switch cuts power to the pump motor when water builds up inside the trap after a releaser failure, preventing water from reaching your pump and damaging it.
 
+Which trap for your pump
+
+• Screw pump: 25R01-12
+• Vane pumps 7.5 HP to 10 HP: 25R01-08 or BHR506
+• Vane pumps 5 HP and under: 25R01-08 or BHR505
+• 3 in connection: BHR507-D
+
+Call us if you are unsure which model fits your setup.
+
 Ø = diameter · L = length · in = inch`,
     images: [
+      {
+        src: "/images/equipement/trappe-humidite-fiche.png",
+        alt: "BHR Experts moisture trap — protection and emergency shutoff",
+      },
       {
         src: "/images/equipement/trappe-humidite-enveloppe.png",
         alt: "Moisture trap with 100-micron liner and emergency shutoff",
