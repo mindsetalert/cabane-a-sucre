@@ -275,7 +275,11 @@ Caractéristiques
     images: [
       {
         src: "/images/equipement/trappe-vapeur-wovap.png",
-        alt: "Trappe d'humidité à vapeur WÔ vap! de BHR Experts",
+        alt: "Trappe à vapeur froide WÔ vap! de BHR Experts",
+      },
+      {
+        src: "/images/equipement/trappe-vapeur-schema.png",
+        alt: "Schéma de la trappe à eau et vapeur : 4 niveaux de protection, sans réduction de vacuum",
       },
     ],
     category: "Trappe d'humidité",
@@ -581,7 +585,11 @@ Features
     images: [
       {
         src: "/images/equipement/trappe-vapeur-wovap.png",
-        alt: "BHR Experts WÔ vap! steam moisture trap",
+        alt: "BHR Experts WÔ vap! cold vapor trap",
+      },
+      {
+        src: "/images/equipement/trappe-vapeur-schema.png",
+        alt: "Water and vapor trap diagram: 4 protection levels, no vacuum loss",
       },
     ],
     category: "Moisture trap",
