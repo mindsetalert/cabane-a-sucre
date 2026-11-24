@@ -832,6 +832,85 @@
     font-size: 0.7rem;
   }
 
+  /* trappes: le tableau a 4 colonnes trop etroites. Sur le cellulaire, meme liste que les autres produits */
+  .priceTableSpecs {
+    table-layout: auto;
+    border: none;
+  }
+
+  .priceTableSpecs thead {
+    display: none;
+  }
+
+  .priceTableSpecs,
+  .priceTableSpecs tbody,
+  .priceTableSpecs tr,
+  .priceTableSpecs td {
+    display: block;
+    width: auto;
+  }
+
+  .priceTableSpecs tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 0.75rem;
+    row-gap: 0.2rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .priceTableSpecs tr:first-child {
+    padding-top: 0.15rem;
+  }
+
+  .priceTableSpecs tr:last-child {
+    border-bottom: none;
+    padding-bottom: 0.15rem;
+  }
+
+  .priceTableSpecs td,
+  .priceTableSpecs td:nth-child(1),
+  .priceTableSpecs td:nth-child(2),
+  .priceTableSpecs td:nth-child(3),
+  .priceTableSpecs td:last-child {
+    border: none;
+    padding: 0;
+    width: auto;
+    min-width: 0;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .priceTableSpecs td:nth-child(1),
+  .priceTableSpecs td:nth-child(3) {
+    white-space: nowrap;
+  }
+
+  .priceTableSpecs td:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .priceTableSpecs td:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .priceTableSpecs td:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 0.85rem;
+  }
+
+  .priceTableSpecs td:last-child {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    align-self: center;
+    width: auto;
+    text-align: right;
+    white-space: nowrap;
+  }
+
   .cardPrice {
     font-size: 0.88rem;
     line-height: 1.45;
