@@ -35,8 +35,8 @@ export default function Pieces() {
         <Image
           src="/images/equipement/pieces-encor.png"
           alt="Pièces de remplacement SPS — pompe à vide SPS-1000 10 HP"
-          width={1600}
-          height={1100}
+          width={1536}
+          height={1024}
           className={styles.catalogImg}
           priority
         />
