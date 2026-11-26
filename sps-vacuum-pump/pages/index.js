@@ -212,17 +212,32 @@ export default function Accueil() {
               </div>
 
               <div className={homeStyles.januaryOrder}>
-                <p className={homeStyles.colEyebrow}>{h.january_title}</p>
-                <p className={homeStyles.groupIntro}>{h.january_intro}</p>
-                <ul className={homeStyles.stockList}>
-                  {h.january_vacuum.map((item) => (
-                    <li key={`jan-v-${item.model}`} className={homeStyles.stockItem}>
-                      <span className={homeStyles.stockQty}>{item.qty}</span>
-                      <span className={homeStyles.stockModel}>{item.model}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className={homeStyles.januaryNote}>{h.january_note}</p>
+                <div className={homeStyles.typeGrid}>
+                  <div className={homeStyles.typeCol}>
+                    <p className={homeStyles.reservedEyebrow}>{h.reserved_title}</p>
+                    <ul className={homeStyles.stockList}>
+                      {h.reserved_january_vacuum.map((item) => (
+                        <li key={`res-jan-${item.model}`} className={homeStyles.reservedItem}>
+                          <span className={homeStyles.reservedQty}>{item.qty}</span>
+                          <span className={homeStyles.stockModel}>{item.model}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={homeStyles.typeCol}>
+                    <p className={homeStyles.colEyebrow}>{h.january_title}</p>
+                    <p className={homeStyles.groupIntro}>{h.january_intro}</p>
+                    <ul className={homeStyles.stockList}>
+                      {h.january_vacuum.map((item) => (
+                        <li key={`jan-v-${item.model}`} className={homeStyles.stockItem}>
+                          <span className={homeStyles.stockQty}>{item.qty}</span>
+                          <span className={homeStyles.stockModel}>{item.model}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className={homeStyles.januaryNote}>{h.january_note}</p>
+                  </div>
+                </div>
               </div>
             </div>
 

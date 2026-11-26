@@ -86,7 +86,7 @@ export const translations = {
       group_canneuse: "Canneuses automatiques",
       reserved_vacuum: [
         { qty: "2 ×", model: "SPS 1000 — 10 HP" },
-        { qty: "1 ×", model: "SPS 500 — 5 HP" },
+        { qty: "2 ×", model: "SPS 500 — 5 HP" },
         { qty: "3 ×", model: "SPS 300 — 3 HP" },
       ],
       reserved_diaphragm: [
@@ -110,7 +110,10 @@ export const translations = {
       ],
       january_title: "Commande mi-janvier",
       january_intro: "13 pompes à vide :",
-      january_note: "1 × SPS 1000 — 10 HP déjà réservée · 1 encore disponible.",
+      january_note: "1 encore disponible sur les SPS 1000.",
+      reserved_january_vacuum: [
+        { qty: "1 ×", model: "SPS 1000 — 10 HP" },
+      ],
       january_vacuum: [
         { qty: "1 ×", model: "SPS 200 — 2 HP" },
         { qty: "4 ×", model: "SPS 300 — 3 HP" },
@@ -631,7 +634,7 @@ export const translations = {
       group_canneuse: "Automatic can sealers",
       reserved_vacuum: [
         { qty: "2 ×", model: "SPS 1000 — 10 HP" },
-        { qty: "1 ×", model: "SPS 500 — 5 HP" },
+        { qty: "2 ×", model: "SPS 500 — 5 HP" },
         { qty: "3 ×", model: "SPS 300 — 3 HP" },
       ],
       reserved_diaphragm: [
@@ -655,7 +658,10 @@ export const translations = {
       ],
       january_title: "Mid-January order",
       january_intro: "13 vacuum pumps:",
-      january_note: "1 × SPS 1000 — 10 HP already reserved · 1 still available.",
+      january_note: "1 SPS 1000 still available.",
+      reserved_january_vacuum: [
+        { qty: "1 ×", model: "SPS 1000 — 10 HP" },
+      ],
       january_vacuum: [
         { qty: "1 ×", model: "SPS 200 — 2 HP" },
         { qty: "4 ×", model: "SPS 300 — 3 HP" },
