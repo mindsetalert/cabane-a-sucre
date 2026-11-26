@@ -110,7 +110,7 @@ export const translations = {
       ],
       january_title: "Commande mi-janvier",
       january_intro: "13 pompes à vide :",
-      january_note: "Aucune réservée encore sur cette commande.",
+      january_note: "1 × SPS 1000 — 10 HP déjà réservée · 1 encore disponible.",
       january_vacuum: [
         { qty: "1 ×", model: "SPS 200 — 2 HP" },
         { qty: "4 ×", model: "SPS 300 — 3 HP" },
@@ -655,7 +655,7 @@ export const translations = {
       ],
       january_title: "Mid-January order",
       january_intro: "13 vacuum pumps:",
-      january_note: "None reserved yet on this order.",
+      january_note: "1 × SPS 1000 — 10 HP already reserved · 1 still available.",
       january_vacuum: [
         { qty: "1 ×", model: "SPS 200 — 2 HP" },
         { qty: "4 ×", model: "SPS 300 — 3 HP" },
